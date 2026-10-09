@@ -1,0 +1,32 @@
+PASS [brightwater] A1 downside revenue growth −5 pts: revenue↓ EBITDA↓ FCF-before-working-capital↓ leverage↑ coverage↓ — revenue 2213→2093; EBITDA 77.45→73.25; FCF -76.1→-63.38; net leverage 16.54→17.32; coverage 0.5979→0.5654
+PASS [brightwater] A2 exact: period-1 revenue = prior revenue × (1 + g − 5 pts); EBITDA = revenue × margin — revenue 2092.8000 vs expected 2092.8000; EBITDA 73.2480 vs 73.2480
+PASS [brightwater] A3 going-concern recovery value does not rise (distressed multiple × event EBITDA) — going-concern value 195.6→175.4
+PASS [brightwater] A4 downside-scenario return responds: downside IRR, MOIC and recovery % do not rise — or any rise is fully explained (asset-based recovery unchanged, extra cash from working-capital release / default timing) — downside IRR 0.00689→0.01931; MOIC 1.018→1.05; recovery 0.5485→0.5733; NON-MONOTONE, explained: claims 1308→1295, cash at event 0→0, valuation period 2027→2027, liquidation value unchanged 530.4
+PASS [brightwater] A5 base case unchanged by a downside-only edit — base IRR 0.1308→0.1308
+PASS [brightwater] B1 EBITDA margin −3 pts: EBITDA↓, net leverage↑, coverage↓, projected credit score↓ — EBITDA 77.45→11.06; net leverage 16.54→121.8; coverage 0.5979→0.08541; projected score 23.65→22.49
+PASS [brightwater] B2 exact: EBITDA = unchanged revenue × (margin − 3 pts); cash coverage = EBITDA ÷ cash interest — EBITDA 11.0640 vs expected 11.0640
+PASS [brightwater] B3 returns respond: IRR and MOIC of the selected scenario do not rise; covenant breaches do not fall; refinancing failures do not fall — IRR 0.00689→-0.0643; MOIC 1.018→0.8474; breaches 5→5; refinancing failures 4→4
+PASS [brightwater] C1 SOFR +100 bp: period-1 cash interest rises by floating balances × Δrate (floors respected) — Δ7.0000 vs expected 7.0000
+PASS [brightwater] C2 interest increase flows to cash flow one-for-one net of tax; coverage never improves; covenant breaches do not fall — ΔFCF -7.0000, Δinterest 7.0000, Δtax 0.0000; coverage 0.5979→0.5672; breaches 5→5
+PASS [brightwater] C2b return on the position: a floating-rate target tranche earns more coupon cash (IRR is then free to rise); a fixed-rate target's coupon cash is unchanged — target tranche floating; coupon cash 23.35→25.35; IRR 0.00689→0.0094; MOIC 1.018→1.024
+PASS [brightwater] C3 revolver draw does not fall; EBITDA unchanged — draw 36.3→43.3
+PASS [brightwater] D1 recovery value −65% (scenario 1): recovery %↓, IRR↓, MOIC↓; recovery value used = override — recovery % 0.8664→0.1134; IRR 0.1308→-0.3373; MOIC 1.393→0.4079
+PASS [brightwater] D2 recovery value +80%: recovery %↑ (capped at 100%), IRR↑ unless already fully recovered — recovery % 0.8664→1; IRR 0.1308→0.1797
+PASS [brightwater] D3l recovery waterfall bounds at the low override: no tranche above its claim; total recoveries ≤ net distributable value — Σ recoveries 211.81 ≤ net value 211.81; Σ claims 1237.46
+PASS [brightwater] D3h recovery waterfall bounds at the high override: no tranche above its claim; total recoveries ≤ net distributable value — Σ recoveries 1089.33 ≤ net value 1089.33; Σ claims 1237.46
+PASS [brightwater] D4 raising recovery value never lowers any tranche's recovery — per-tranche recoveries weakly increase
+PASS [brightwater] D5 going-concern value = distressed multiple × event EBITDA (multiple +1.0x) — going-concern value 195.6→244.5; Δ = 48.910 vs event EBITDA 48.910
+PASS [brightwater] D6 liquidation value = asset base × (1 − decline) × recovery factor (factor +10 pts); recovery value is the greater of going concern and liquidation, plus cash — liquidation value 530.4→618.8 (expected 618.8); recovery value 530.4→618.8
+PASS [brightwater] E1 purchase price +5 pts: IRR↓ MOIC↓ current yield↓; −5 pts: all ↑ — IRR 0.03341 / 0.00689 / -0.01723 at −5 / base / +5
+PASS [brightwater] E2 exact: cost = face × price × (1 + fees); cash received unchanged; capital gain moves by −Δprice × face; IRR matches an independent solve of the same cash flows — cost 73.36 / 78.39 / 83.42; cash received 79.78 unchanged; capital gain -16.57 / -21.57 / -26.57
+PASS [brightwater] F1 maturity moved to within ~9 months: debt due inside the alert window ↑, refinancing requirement in the new maturity period ↑, credit score ↓ — due window 480→1000; refinancing requirement in period 1: 0→355; score 30.45→24.93
+PASS [brightwater] F2 maturity pushed out 12 years: debt due in the alert window ↓, refinancing requirement ↓, refinancing failures do not rise — due window 480→180; Σ refinancing requirement 998.9→698.9; failures 4→3
+PASS [brightwater] F3 refinancing unavailable in the Base case (access test fails, opening cash 5, no asset sales): refinancing failures↑, payment default modelled, recovery computed — refinancing failures 0→4; default 1→1; recovery value 630.4
+PASS [brightwater] F4 market access always open (Base case): refinancing failures do not rise and no default is introduced where the baseline had none — failures 0→0; default 1→1
+PASS [brightwater] G1 covenant headroom = threshold − metric (max tests) or metric − threshold (min tests); status flips exactly at the threshold; negative headroom is never PASS — 1 active covenants × 5 periods — 5 covenant-period tests; 2 breach-side → BREACH, 2 pass-side → PASS, 1 at-threshold (|headroom|≈0, flag = [headroom<0]); violations: []
+PASS [brightwater] G2 risk flow (selected Downside): total breaches = Σ breach flags; Scenarios-tab count agrees; Investment Summary covenant evidence is consistent with its own value and requirement — breaches 5→2 (Σ flags 2); Scenarios-tab count 2; evidence row [0.53401404026047, 0.15] → PASS
+PASS [brightwater] G3 base case with every active covenant breached in all five periods: breaches counted = covenants × periods; base-case Investment Summary covenant-headroom evidence FAILS; minimum headroom is negative — breaches 0→5 (expected 5); Investment Summary evidence → FAIL; violations []
+PASS [brightwater] H1 scenario selector drives the detailed tabs: base revenue > downside revenue > severe revenue — revenue (selector 1/2/3): 2376 / 2213 / 1838
+PASS [brightwater] H2 covenant breaches in the downside scenarios are at least those in the base case — breaches base/downside/severe: 0 / 5 / 5
+
+30/30 change-impact tests passed; committed workbook unchanged: True

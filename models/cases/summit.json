@@ -1,0 +1,555 @@
+{
+ "id": "summit",
+ "name": "Summit Chemical",
+ "ticker": "SMCH",
+ "dataClass": "demo",
+ "termsLabel": "DEMO INVESTMENT TERMS",
+ "caseTitle": null,
+ "description": "Integrated chlor-alkali and specialty chemical producer with a concentrated 2027–28 maturity stack.",
+ "asOf": "2026-03-31",
+ "fyEndMonth": 12,
+ "baseYear": 2025,
+ "baseLabel": "FY2025A",
+ "periodLabels": [
+  "FY2026E",
+  "FY2027E",
+  "FY2028E",
+  "FY2029E",
+  "FY2030E"
+ ],
+ "sofr": [
+  0.0425,
+  0.04,
+  0.0375,
+  0.0375,
+  0.0375
+ ],
+ "taxRate": 0.25,
+ "minCash": 0,
+ "sweepPct": 1,
+ "adminPct": 0.04,
+ "accruedMonths": 3,
+ "resolutionLag": 1,
+ "deficiencyRank": 99,
+ "cash": 120,
+ "assetBase": 3000,
+ "assetComponents": null,
+ "assetCapRate": null,
+ "assetValueBasis": "Illustrative appraised / collateral value (DEMO)",
+ "evMultiple": 7,
+ "industryFactor": 0.45,
+ "tranches": [
+  {
+   "id": "rcf",
+   "name": "Revolver",
+   "kind": "revolver",
+   "seniority": 1,
+   "secured": true,
+   "principal": 100,
+   "commitment": 400,
+   "rate": 0.069,
+   "spread": 0.0265,
+   "floor": 0,
+   "pik": 0,
+   "floating": true,
+   "maturityDate": "2027-12-31",
+   "amortPct": 0,
+   "prepay": true,
+   "collateralPct": 0,
+   "price": 100,
+   "collateral": "",
+   "callProtection": ""
+  },
+  {
+   "id": "tl",
+   "name": "First-Lien Term Loan",
+   "kind": "term_loan",
+   "seniority": 1,
+   "secured": true,
+   "principal": 900,
+   "commitment": 0,
+   "rate": 0.081,
+   "spread": 0.0385,
+   "floor": 0,
+   "pik": 0,
+   "floating": true,
+   "maturityDate": "2028-03-31",
+   "amortPct": 0.01,
+   "prepay": false,
+   "collateralPct": 0,
+   "price": 97,
+   "collateral": "",
+   "callProtection": ""
+  },
+  {
+   "id": "sn",
+   "name": "Senior Unsecured Notes 5.75%",
+   "kind": "senior_notes",
+   "seniority": 3,
+   "secured": false,
+   "principal": 750,
+   "commitment": 0,
+   "rate": 0.0575,
+   "spread": 0,
+   "floor": 0,
+   "pik": 0,
+   "floating": false,
+   "maturityDate": "2028-10-15",
+   "amortPct": 0,
+   "prepay": false,
+   "collateralPct": 0,
+   "price": 92,
+   "collateral": "",
+   "callProtection": ""
+  }
+ ],
+ "target": {
+  "trancheId": "sn",
+  "index": 3,
+  "holdYears": 2,
+  "feePct": 0.005,
+  "face": 100,
+  "payFreq": 1
+ },
+ "assumptions": {
+  "base": {
+   "revenueGrowth": [
+    0.03,
+    0.03,
+    0.03,
+    0.03,
+    0.03
+   ],
+   "grossMargin": [
+    0.26,
+    0.262,
+    0.264,
+    0.266,
+    0.268
+   ],
+   "ebitdaMargin": [
+    0.15,
+    0.152,
+    0.154,
+    0.156,
+    0.158
+   ],
+   "capexPct": 0.055,
+   "nwcPctOfRevChange": 0.15,
+   "nwcExtraOutflowPct": 0,
+   "rateShock": 0,
+   "refiRate": 0.085,
+   "maxRefiNetLeverage": 8.5,
+   "minRefiCoverage": 1.2,
+   "exitMultiple": 7,
+   "exitPrice": 100,
+   "distressMultiple": 5,
+   "assetValueDecline": 0,
+   "liquidationRecovery": 0.55,
+   "assetSales": [
+    0,
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "downside": {
+   "revenueGrowth": [
+    -0.078,
+    -0.039,
+    0.015,
+    0.02,
+    0.02
+   ],
+   "grossMargin": [
+    0.23,
+    0.218,
+    0.224,
+    0.23,
+    0.23600000000000002
+   ],
+   "ebitdaMargin": [
+    0.12,
+    0.10799999999999998,
+    0.11399999999999999,
+    0.12,
+    0.126
+   ],
+   "capexPct": 0.05225,
+   "nwcPctOfRevChange": 0.15,
+   "nwcExtraOutflowPct": 0.002,
+   "rateShock": 0.015,
+   "refiRate": 0.11000000000000001,
+   "maxRefiNetLeverage": 5.5,
+   "minRefiCoverage": 1.8,
+   "exitMultiple": 5.5,
+   "exitPrice": 90,
+   "distressMultiple": 5,
+   "assetValueDecline": 0.15,
+   "liquidationRecovery": 0.55,
+   "assetSales": [
+    0,
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "severe": {
+   "revenueGrowth": [
+    -0.23399999999999999,
+    -0.13,
+    -0.026000000000000002,
+    0.01,
+    0.02
+   ],
+   "grossMargin": [
+    0.188,
+    0.16399999999999998,
+    0.176,
+    0.188,
+    0.2
+   ],
+   "ebitdaMargin": [
+    0.07799999999999999,
+    0.05399999999999998,
+    0.06599999999999998,
+    0.07799999999999999,
+    0.08999999999999998
+   ],
+   "capexPct": 0.044000000000000004,
+   "nwcPctOfRevChange": 0.15,
+   "nwcExtraOutflowPct": 0.006,
+   "rateShock": 0.03,
+   "refiRate": 0.135,
+   "maxRefiNetLeverage": 5,
+   "minRefiCoverage": 2,
+   "exitMultiple": 4,
+   "exitPrice": 70,
+   "distressMultiple": 5,
+   "assetValueDecline": 0.35,
+   "liquidationRecovery": 0.55,
+   "assetSales": [
+    0,
+    0,
+    0,
+    0,
+    0
+   ]
+  }
+ },
+ "probabilities": {
+  "base": 0.55,
+  "downside": 0.3,
+  "severe": 0.15
+ },
+ "thresholds": {
+  "hurdleIrr": 0.12,
+  "minYield": 0.09,
+  "maxNetLeverage": 6,
+  "minRecovery": 0.6,
+  "minCovenantHeadroom": 0.15,
+  "minDownsideIrr": 0
+ },
+ "covenants": [
+  {
+   "id": "lev",
+   "label": "Maximum net leverage",
+   "type": "maxNetLeverage",
+   "thresholds": [
+    5.5,
+    5.5,
+    5.5,
+    5.5,
+    5.5
+   ],
+   "basis": "hypothetical",
+   "note": "Demo covenant (illustrative)"
+  }
+ ],
+ "openHighDiligence": 7,
+ "historicalSpec": {
+  "mode": "bridge",
+  "columns": [
+   {
+    "id": "FY2022",
+    "label": "FY2022A",
+    "kind": "fy",
+    "year": 2022
+   },
+   {
+    "id": "FY2023",
+    "label": "FY2023A",
+    "kind": "fy",
+    "year": 2023
+   },
+   {
+    "id": "FY2024",
+    "label": "FY2024A",
+    "kind": "fy",
+    "year": 2024
+   },
+   {
+    "id": "FY2025",
+    "label": "FY2025A",
+    "kind": "fy",
+    "year": 2025
+   }
+  ],
+  "inputs": [
+   {
+    "key": "revenue",
+    "label": "Revenue",
+    "group": "income",
+    "values": {
+     "FY2022": 2450,
+     "FY2023": 2700,
+     "FY2024": 2650,
+     "FY2025": 2600
+    }
+   },
+   {
+    "key": "cogs",
+    "label": "COGS",
+    "group": "income",
+    "values": {
+     "FY2022": 1764,
+     "FY2023": 1957.5,
+     "FY2024": 1947.75,
+     "FY2025": 1924
+    }
+   },
+   {
+    "key": "opex",
+    "label": "Operating expenses (cash, ex-D&A)",
+    "group": "income",
+    "values": {
+     "FY2022": 269.49999999999994,
+     "FY2023": 297,
+     "FY2024": 291.5,
+     "FY2025": 286
+    }
+   },
+   {
+    "key": "da",
+    "label": "Depreciation & amortization",
+    "group": "income",
+    "values": {
+     "FY2022": 122.5,
+     "FY2023": 135,
+     "FY2024": 132.5,
+     "FY2025": 130
+    }
+   },
+   {
+    "key": "interest",
+    "label": "Interest expense",
+    "group": "income",
+    "values": {
+     "FY2022": 104.48625000000001,
+     "FY2023": 110.63250000000001,
+     "FY2024": 116.77875,
+     "FY2025": 122.92500000000001
+    }
+   },
+   {
+    "key": "taxes",
+    "label": "Taxes",
+    "group": "income",
+    "values": {
+     "FY2022": 47.37843750000001,
+     "FY2023": 49.966875,
+     "FY2024": 40.3678125,
+     "FY2025": 34.26875
+    }
+   },
+   {
+    "key": "capex",
+    "label": "Capex",
+    "group": "cash",
+    "values": {
+     "FY2022": 134.75,
+     "FY2023": 148.5,
+     "FY2024": 145.75,
+     "FY2025": 143
+    }
+   },
+   {
+    "key": "dnwc",
+    "label": "Increase in working capital",
+    "group": "cash",
+    "values": {
+     "FY2022": 10.703883495145623,
+     "FY2023": 37.5,
+     "FY2024": -7.5,
+     "FY2025": -7.5
+    }
+   }
+  ],
+  "lines": {
+   "revenue": [
+    [
+     "revenue",
+     1
+    ]
+   ],
+   "cogs": [
+    [
+     "cogs",
+     1
+    ]
+   ],
+   "opexAdj": [
+    [
+     "opex",
+     1
+    ]
+   ],
+   "da": [
+    [
+     "da",
+     1
+    ]
+   ],
+   "sbc": [],
+   "interest": [
+    [
+     "interest",
+     1
+    ]
+   ],
+   "taxes": [
+    [
+     "taxes",
+     1
+    ]
+   ],
+   "capex": [
+    [
+     "capex",
+     1
+    ]
+   ],
+   "dnwc": [
+    [
+     "dnwc",
+     1
+    ]
+   ]
+  }
+ },
+ "sources": [
+  {
+   "id": "summit-fin",
+   "source": "CreditIQ demo dataset",
+   "document": "Summit Chemical — illustrative financial statements FY2022–FY2025",
+   "documentDate": "2026-03-31",
+   "retrievedDate": "2026-03-31",
+   "dataType": "Income statement / cash flow",
+   "period": "FY2022–FY2025",
+   "isDemo": true
+  },
+  {
+   "id": "summit-debt",
+   "source": "CreditIQ demo dataset",
+   "document": "Summit Chemical — illustrative capital structure & covenants",
+   "documentDate": "2026-03-31",
+   "retrievedDate": "2026-03-31",
+   "dataType": "Debt schedule",
+   "period": "As of 2026-03-31",
+   "isDemo": true
+  },
+  {
+   "id": "summit-px",
+   "source": "CreditIQ demo dataset",
+   "document": "Illustrative indicative bid marks (% of par)",
+   "documentDate": "2026-03-31",
+   "retrievedDate": "2026-03-31",
+   "dataType": "Market price",
+   "period": "2026-03-31",
+   "isDemo": true
+  }
+ ],
+ "provenance": [],
+ "notes": [
+  "All figures are fictional and illustrative."
+ ],
+ "thesis": "Entire capital structure matures within 2.5 years. Base-case refinancing is feasible at ~8.5%, but downside coverage drops toward 2x. The unsecured notes at 92 pull to par if refinanced and are well asset-covered, but we need clarity on refinancing plans.",
+ "config": {
+  "scoreWeights": {
+   "leverage": 15,
+   "coverage": 15,
+   "liquidity": 10,
+   "fcf": 10,
+   "maturity": 10,
+   "marginStability": 10,
+   "revenueStability": 8,
+   "assetCoverage": 12,
+   "industry": 10
+  },
+  "scoreThresholds": {
+   "leverage": {
+    "best": 2,
+    "worst": 7,
+    "unit": "x net debt / EBITDA"
+   },
+   "coverage": {
+    "best": 5,
+    "worst": 1,
+    "unit": "x EBITDA / interest"
+   },
+   "liquidity": {
+    "best": 2,
+    "worst": 0.5,
+    "unit": "x liquidity / 12m obligations"
+   },
+   "fcf": {
+    "best": 0.12,
+    "worst": -0.02,
+    "unit": "FCF / total debt"
+   },
+   "maturity": {
+    "best": 0,
+    "worst": 0.5,
+    "unit": "% of debt due within window"
+   },
+   "marginStability": {
+    "best": 0.01,
+    "worst": 0.05,
+    "unit": "std-dev of EBITDA margin (pts)"
+   },
+   "revenueStability": {
+    "best": 0.03,
+    "worst": 0.15,
+    "unit": "std-dev of revenue growth"
+   },
+   "assetCoverage": {
+    "best": 2,
+    "worst": 0.6,
+    "unit": "x asset base / total debt"
+   }
+  },
+  "riskBands": [
+   {
+    "min": 75,
+    "label": "Low"
+   },
+   {
+    "min": 60,
+    "label": "Moderate"
+   },
+   {
+    "min": 45,
+    "label": "Elevated"
+   },
+   {
+    "min": 0,
+    "label": "High"
+   }
+  ],
+  "scoreWindow": 3,
+  "maturityMaterial": 0.15,
+  "maturityWindow": 3
+ }
+}

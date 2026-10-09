@@ -1,0 +1,555 @@
+{
+ "id": "atlas",
+ "name": "Atlas Logistics",
+ "ticker": "ATLS",
+ "dataClass": "demo",
+ "termsLabel": "DEMO INVESTMENT TERMS",
+ "caseTitle": null,
+ "description": "Truckload, brokerage and warehousing operator with freight-cycle exposure and a 2027 term loan maturity.",
+ "asOf": "2026-03-31",
+ "fyEndMonth": 12,
+ "baseYear": 2025,
+ "baseLabel": "FY2025A",
+ "periodLabels": [
+  "FY2026E",
+  "FY2027E",
+  "FY2028E",
+  "FY2029E",
+  "FY2030E"
+ ],
+ "sofr": [
+  0.0425,
+  0.04,
+  0.0375,
+  0.0375,
+  0.0375
+ ],
+ "taxRate": 0.25,
+ "minCash": 0,
+ "sweepPct": 1,
+ "adminPct": 0.04,
+ "accruedMonths": 3,
+ "resolutionLag": 1,
+ "deficiencyRank": 99,
+ "cash": 140,
+ "assetBase": 2000,
+ "assetComponents": null,
+ "assetCapRate": null,
+ "assetValueBasis": "Illustrative appraised / collateral value (DEMO)",
+ "evMultiple": 7,
+ "industryFactor": 0.5,
+ "tranches": [
+  {
+   "id": "abl",
+   "name": "ABL Revolver",
+   "kind": "revolver",
+   "seniority": 1,
+   "secured": true,
+   "principal": 150,
+   "commitment": 350,
+   "rate": 0.0775,
+   "spread": 0.035,
+   "floor": 0,
+   "pik": 0,
+   "floating": true,
+   "maturityDate": "2028-02-29",
+   "amortPct": 0,
+   "prepay": true,
+   "collateralPct": 0,
+   "price": 100,
+   "collateral": "",
+   "callProtection": ""
+  },
+  {
+   "id": "tl",
+   "name": "First-Lien Term Loan",
+   "kind": "term_loan",
+   "seniority": 1,
+   "secured": true,
+   "principal": 600,
+   "commitment": 0,
+   "rate": 0.079,
+   "spread": 0.0365,
+   "floor": 0,
+   "pik": 0,
+   "floating": true,
+   "maturityDate": "2027-06-30",
+   "amortPct": 0.01,
+   "prepay": false,
+   "collateralPct": 0,
+   "price": 96.5,
+   "collateral": "",
+   "callProtection": ""
+  },
+  {
+   "id": "sn",
+   "name": "Senior Unsecured Notes 6.50%",
+   "kind": "unsecured_notes",
+   "seniority": 3,
+   "secured": false,
+   "principal": 750,
+   "commitment": 0,
+   "rate": 0.065,
+   "spread": 0,
+   "floor": 0,
+   "pik": 0,
+   "floating": false,
+   "maturityDate": "2030-05-15",
+   "amortPct": 0,
+   "prepay": false,
+   "collateralPct": 0,
+   "price": 90,
+   "collateral": "",
+   "callProtection": ""
+  }
+ ],
+ "target": {
+  "trancheId": "tl",
+  "index": 2,
+  "holdYears": 1,
+  "feePct": 0.005,
+  "face": 100,
+  "payFreq": 1
+ },
+ "assumptions": {
+  "base": {
+   "revenueGrowth": [
+    0.02,
+    0.02,
+    0.02,
+    0.02,
+    0.02
+   ],
+   "grossMargin": [
+    0.22,
+    0.222,
+    0.224,
+    0.226,
+    0.22799999999999998
+   ],
+   "ebitdaMargin": [
+    0.11,
+    0.112,
+    0.114,
+    0.116,
+    0.118
+   ],
+   "capexPct": 0.06,
+   "nwcPctOfRevChange": 0.12,
+   "nwcExtraOutflowPct": 0,
+   "rateShock": 0,
+   "refiRate": 0.085,
+   "maxRefiNetLeverage": 8.5,
+   "minRefiCoverage": 1.2,
+   "exitMultiple": 7,
+   "exitPrice": 100,
+   "distressMultiple": 5,
+   "assetValueDecline": 0,
+   "liquidationRecovery": 0.55,
+   "assetSales": [
+    0,
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "downside": {
+   "revenueGrowth": [
+    -0.078,
+    -0.039,
+    0.01,
+    0.02,
+    0.02
+   ],
+   "grossMargin": [
+    0.19,
+    0.178,
+    0.184,
+    0.19,
+    0.196
+   ],
+   "ebitdaMargin": [
+    0.07999999999999999,
+    0.06799999999999999,
+    0.074,
+    0.07999999999999999,
+    0.086
+   ],
+   "capexPct": 0.056999999999999995,
+   "nwcPctOfRevChange": 0.12,
+   "nwcExtraOutflowPct": 0.002,
+   "rateShock": 0.015,
+   "refiRate": 0.11000000000000001,
+   "maxRefiNetLeverage": 5.5,
+   "minRefiCoverage": 1.8,
+   "exitMultiple": 5.5,
+   "exitPrice": 90,
+   "distressMultiple": 5,
+   "assetValueDecline": 0.15,
+   "liquidationRecovery": 0.55,
+   "assetSales": [
+    0,
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "severe": {
+   "revenueGrowth": [
+    -0.23399999999999999,
+    -0.13,
+    -0.026000000000000002,
+    0.01,
+    0.02
+   ],
+   "grossMargin": [
+    0.148,
+    0.12399999999999999,
+    0.13599999999999998,
+    0.148,
+    0.15999999999999998
+   ],
+   "ebitdaMargin": [
+    0.03799999999999999,
+    0.013999999999999985,
+    0.02599999999999998,
+    0.03799999999999999,
+    0.04999999999999999
+   ],
+   "capexPct": 0.048,
+   "nwcPctOfRevChange": 0.12,
+   "nwcExtraOutflowPct": 0.006,
+   "rateShock": 0.03,
+   "refiRate": 0.135,
+   "maxRefiNetLeverage": 5,
+   "minRefiCoverage": 2,
+   "exitMultiple": 4,
+   "exitPrice": 70,
+   "distressMultiple": 5,
+   "assetValueDecline": 0.35,
+   "liquidationRecovery": 0.55,
+   "assetSales": [
+    0,
+    0,
+    0,
+    0,
+    0
+   ]
+  }
+ },
+ "probabilities": {
+  "base": 0.55,
+  "downside": 0.3,
+  "severe": 0.15
+ },
+ "thresholds": {
+  "hurdleIrr": 0.12,
+  "minYield": 0.09,
+  "maxNetLeverage": 6,
+  "minRecovery": 0.6,
+  "minCovenantHeadroom": 0.15,
+  "minDownsideIrr": 0
+ },
+ "covenants": [
+  {
+   "id": "lev",
+   "label": "Maximum net leverage",
+   "type": "maxNetLeverage",
+   "thresholds": [
+    5.5,
+    5.5,
+    5.5,
+    5.5,
+    5.5
+   ],
+   "basis": "hypothetical",
+   "note": "Demo covenant (illustrative)"
+  }
+ ],
+ "openHighDiligence": 3,
+ "historicalSpec": {
+  "mode": "bridge",
+  "columns": [
+   {
+    "id": "FY2022",
+    "label": "FY2022A",
+    "kind": "fy",
+    "year": 2022
+   },
+   {
+    "id": "FY2023",
+    "label": "FY2023A",
+    "kind": "fy",
+    "year": 2023
+   },
+   {
+    "id": "FY2024",
+    "label": "FY2024A",
+    "kind": "fy",
+    "year": 2024
+   },
+   {
+    "id": "FY2025",
+    "label": "FY2025A",
+    "kind": "fy",
+    "year": 2025
+   }
+  ],
+  "inputs": [
+   {
+    "key": "revenue",
+    "label": "Revenue",
+    "group": "income",
+    "values": {
+     "FY2022": 2900,
+     "FY2023": 2950,
+     "FY2024": 2820,
+     "FY2025": 2800
+    }
+   },
+   {
+    "key": "cogs",
+    "label": "COGS",
+    "group": "income",
+    "values": {
+     "FY2022": 2218.5,
+     "FY2023": 2271.5,
+     "FY2024": 2185.5,
+     "FY2025": 2184
+    }
+   },
+   {
+    "key": "opex",
+    "label": "Operating expenses (cash, ex-D&A)",
+    "group": "income",
+    "values": {
+     "FY2022": 319,
+     "FY2023": 324.5,
+     "FY2024": 310.2,
+     "FY2025": 308
+    }
+   },
+   {
+    "key": "da",
+    "label": "Depreciation & amortization",
+    "group": "income",
+    "values": {
+     "FY2022": 145,
+     "FY2023": 147.5,
+     "FY2024": 141,
+     "FY2025": 140
+    }
+   },
+   {
+    "key": "interest",
+    "label": "Interest expense",
+    "group": "income",
+    "values": {
+     "FY2022": 91.60875,
+     "FY2023": 96.9975,
+     "FY2024": 102.38625,
+     "FY2025": 107.775
+    }
+   },
+   {
+    "key": "taxes",
+    "label": "Taxes",
+    "group": "income",
+    "values": {
+     "FY2022": 31.4728125,
+     "FY2023": 27.375625,
+     "FY2024": 20.228437500000002,
+     "FY2025": 15.056249999999999
+    }
+   },
+   {
+    "key": "capex",
+    "label": "Capex",
+    "group": "cash",
+    "values": {
+     "FY2022": 174,
+     "FY2023": 177,
+     "FY2024": 169.2,
+     "FY2025": 168
+    }
+   },
+   {
+    "key": "dnwc",
+    "label": "Increase in working capital",
+    "group": "cash",
+    "values": {
+     "FY2022": 6.823529411764721,
+     "FY2023": 6,
+     "FY2024": -15.6,
+     "FY2025": -2.4
+    }
+   }
+  ],
+  "lines": {
+   "revenue": [
+    [
+     "revenue",
+     1
+    ]
+   ],
+   "cogs": [
+    [
+     "cogs",
+     1
+    ]
+   ],
+   "opexAdj": [
+    [
+     "opex",
+     1
+    ]
+   ],
+   "da": [
+    [
+     "da",
+     1
+    ]
+   ],
+   "sbc": [],
+   "interest": [
+    [
+     "interest",
+     1
+    ]
+   ],
+   "taxes": [
+    [
+     "taxes",
+     1
+    ]
+   ],
+   "capex": [
+    [
+     "capex",
+     1
+    ]
+   ],
+   "dnwc": [
+    [
+     "dnwc",
+     1
+    ]
+   ]
+  }
+ },
+ "sources": [
+  {
+   "id": "atlas-fin",
+   "source": "CreditIQ demo dataset",
+   "document": "Atlas Logistics — illustrative financial statements FY2022–FY2025",
+   "documentDate": "2026-03-31",
+   "retrievedDate": "2026-03-31",
+   "dataType": "Income statement / cash flow",
+   "period": "FY2022–FY2025",
+   "isDemo": true
+  },
+  {
+   "id": "atlas-debt",
+   "source": "CreditIQ demo dataset",
+   "document": "Atlas Logistics — illustrative capital structure & covenants",
+   "documentDate": "2026-03-31",
+   "retrievedDate": "2026-03-31",
+   "dataType": "Debt schedule",
+   "period": "As of 2026-03-31",
+   "isDemo": true
+  },
+  {
+   "id": "atlas-px",
+   "source": "CreditIQ demo dataset",
+   "document": "Illustrative indicative bid marks (% of par)",
+   "documentDate": "2026-03-31",
+   "retrievedDate": "2026-03-31",
+   "dataType": "Market price",
+   "period": "2026-03-31",
+   "isDemo": true
+  }
+ ],
+ "provenance": [],
+ "notes": [
+  "All figures are fictional and illustrative."
+ ],
+ "thesis": "Term loan at 96.5 matures June 2027 and should refinance in the base case; the question is downside. Short-dated loan with asset coverage of 1.3x is a short-duration pull-to-par candidate if the refinancing window stays open.",
+ "config": {
+  "scoreWeights": {
+   "leverage": 15,
+   "coverage": 15,
+   "liquidity": 10,
+   "fcf": 10,
+   "maturity": 10,
+   "marginStability": 10,
+   "revenueStability": 8,
+   "assetCoverage": 12,
+   "industry": 10
+  },
+  "scoreThresholds": {
+   "leverage": {
+    "best": 2,
+    "worst": 7,
+    "unit": "x net debt / EBITDA"
+   },
+   "coverage": {
+    "best": 5,
+    "worst": 1,
+    "unit": "x EBITDA / interest"
+   },
+   "liquidity": {
+    "best": 2,
+    "worst": 0.5,
+    "unit": "x liquidity / 12m obligations"
+   },
+   "fcf": {
+    "best": 0.12,
+    "worst": -0.02,
+    "unit": "FCF / total debt"
+   },
+   "maturity": {
+    "best": 0,
+    "worst": 0.5,
+    "unit": "% of debt due within window"
+   },
+   "marginStability": {
+    "best": 0.01,
+    "worst": 0.05,
+    "unit": "std-dev of EBITDA margin (pts)"
+   },
+   "revenueStability": {
+    "best": 0.03,
+    "worst": 0.15,
+    "unit": "std-dev of revenue growth"
+   },
+   "assetCoverage": {
+    "best": 2,
+    "worst": 0.6,
+    "unit": "x asset base / total debt"
+   }
+  },
+  "riskBands": [
+   {
+    "min": 75,
+    "label": "Low"
+   },
+   {
+    "min": 60,
+    "label": "Moderate"
+   },
+   {
+    "min": 45,
+    "label": "Elevated"
+   },
+   {
+    "min": 0,
+    "label": "High"
+   }
+  ],
+  "scoreWindow": 3,
+  "maturityMaterial": 0.15,
+  "maturityWindow": 3
+ }
+}

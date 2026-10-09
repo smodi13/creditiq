@@ -1,0 +1,576 @@
+{
+ "id": "redwood",
+ "name": "Redwood Broadband",
+ "ticker": "RWBB",
+ "dataClass": "demo",
+ "termsLabel": "DEMO INVESTMENT TERMS",
+ "caseTitle": null,
+ "description": "Regional cable and fiber operator with accelerating customer losses and the largest debt load in our universe.",
+ "asOf": "2026-03-31",
+ "fyEndMonth": 12,
+ "baseYear": 2025,
+ "baseLabel": "FY2025A",
+ "periodLabels": [
+  "FY2026E",
+  "FY2027E",
+  "FY2028E",
+  "FY2029E",
+  "FY2030E"
+ ],
+ "sofr": [
+  0.0425,
+  0.04,
+  0.0375,
+  0.0375,
+  0.0375
+ ],
+ "taxRate": 0.25,
+ "minCash": 0,
+ "sweepPct": 1,
+ "adminPct": 0.04,
+ "accruedMonths": 3,
+ "resolutionLag": 1,
+ "deficiencyRank": 99,
+ "cash": 150,
+ "assetBase": 5200,
+ "assetComponents": null,
+ "assetCapRate": null,
+ "assetValueBasis": "Illustrative appraised / collateral value (DEMO)",
+ "evMultiple": 6.3,
+ "industryFactor": 0.45,
+ "tranches": [
+  {
+   "id": "rcf",
+   "name": "Revolver",
+   "kind": "revolver",
+   "seniority": 1,
+   "secured": true,
+   "principal": 200,
+   "commitment": 400,
+   "rate": 0.076,
+   "spread": 0.0335,
+   "floor": 0,
+   "pik": 0,
+   "floating": true,
+   "maturityDate": "2027-12-31",
+   "amortPct": 0,
+   "prepay": true,
+   "collateralPct": 0,
+   "price": 100,
+   "collateral": "",
+   "callProtection": ""
+  },
+  {
+   "id": "tl",
+   "name": "First-Lien Term Loan",
+   "kind": "term_loan",
+   "seniority": 1,
+   "secured": true,
+   "principal": 1700,
+   "commitment": 0,
+   "rate": 0.084,
+   "spread": 0.0415,
+   "floor": 0,
+   "pik": 0,
+   "floating": true,
+   "maturityDate": "2028-08-31",
+   "amortPct": 0.01,
+   "prepay": false,
+   "collateralPct": 0,
+   "price": 91,
+   "collateral": "",
+   "callProtection": ""
+  },
+  {
+   "id": "2l",
+   "name": "Second-Lien Notes 10.50%",
+   "kind": "second_lien",
+   "seniority": 2,
+   "secured": true,
+   "principal": 1000,
+   "commitment": 0,
+   "rate": 0.105,
+   "spread": 0,
+   "floor": 0,
+   "pik": 0,
+   "floating": false,
+   "maturityDate": "2029-03-15",
+   "amortPct": 0,
+   "prepay": false,
+   "collateralPct": 0,
+   "price": 78,
+   "collateral": "",
+   "callProtection": ""
+  },
+  {
+   "id": "un",
+   "name": "Senior Unsecured Notes 6.50%",
+   "kind": "unsecured_notes",
+   "seniority": 3,
+   "secured": false,
+   "principal": 1300,
+   "commitment": 0,
+   "rate": 0.065,
+   "spread": 0,
+   "floor": 0,
+   "pik": 0,
+   "floating": false,
+   "maturityDate": "2030-05-15",
+   "amortPct": 0,
+   "prepay": false,
+   "collateralPct": 0,
+   "price": 58,
+   "collateral": "",
+   "callProtection": ""
+  }
+ ],
+ "target": {
+  "trancheId": "2l",
+  "index": 3,
+  "holdYears": 3,
+  "feePct": 0.005,
+  "face": 100,
+  "payFreq": 1
+ },
+ "assumptions": {
+  "base": {
+   "revenueGrowth": [
+    -0.015,
+    -0.015,
+    -0.015,
+    -0.015,
+    -0.015
+   ],
+   "grossMargin": [
+    0.62,
+    0.622,
+    0.624,
+    0.626,
+    0.628
+   ],
+   "ebitdaMargin": [
+    0.38,
+    0.382,
+    0.384,
+    0.386,
+    0.388
+   ],
+   "capexPct": 0.21,
+   "nwcPctOfRevChange": 0.03,
+   "nwcExtraOutflowPct": 0,
+   "rateShock": 0,
+   "refiRate": 0.095,
+   "maxRefiNetLeverage": 8.5,
+   "minRefiCoverage": 1.2,
+   "exitMultiple": 6.3,
+   "exitPrice": 100,
+   "distressMultiple": 5.5,
+   "assetValueDecline": 0,
+   "liquidationRecovery": 0.55,
+   "assetSales": [
+    0,
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "downside": {
+   "revenueGrowth": [
+    -0.054,
+    -0.027,
+    -0.0075,
+    -0.015,
+    -0.015
+   ],
+   "grossMargin": [
+    0.6,
+    0.592,
+    0.596,
+    0.6,
+    0.604
+   ],
+   "ebitdaMargin": [
+    0.36,
+    0.352,
+    0.356,
+    0.36,
+    0.364
+   ],
+   "capexPct": 0.19949999999999998,
+   "nwcPctOfRevChange": 0.03,
+   "nwcExtraOutflowPct": 0.002,
+   "rateShock": 0.015,
+   "refiRate": 0.12,
+   "maxRefiNetLeverage": 5.5,
+   "minRefiCoverage": 1.8,
+   "exitMultiple": 4.8,
+   "exitPrice": 90,
+   "distressMultiple": 5.5,
+   "assetValueDecline": 0.15,
+   "liquidationRecovery": 0.55,
+   "assetSales": [
+    0,
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "severe": {
+   "revenueGrowth": [
+    -0.162,
+    -0.09000000000000001,
+    -0.018000000000000002,
+    -0.015,
+    -0.015
+   ],
+   "grossMargin": [
+    0.5720000000000001,
+    0.556,
+    0.5640000000000001,
+    0.5720000000000001,
+    0.58
+   ],
+   "ebitdaMargin": [
+    0.332,
+    0.316,
+    0.324,
+    0.332,
+    0.33999999999999997
+   ],
+   "capexPct": 0.168,
+   "nwcPctOfRevChange": 0.03,
+   "nwcExtraOutflowPct": 0.006,
+   "rateShock": 0.03,
+   "refiRate": 0.14500000000000002,
+   "maxRefiNetLeverage": 5,
+   "minRefiCoverage": 2,
+   "exitMultiple": 3.3,
+   "exitPrice": 70,
+   "distressMultiple": 5.5,
+   "assetValueDecline": 0.35,
+   "liquidationRecovery": 0.55,
+   "assetSales": [
+    0,
+    0,
+    0,
+    0,
+    0
+   ]
+  }
+ },
+ "probabilities": {
+  "base": 0.55,
+  "downside": 0.3,
+  "severe": 0.15
+ },
+ "thresholds": {
+  "hurdleIrr": 0.12,
+  "minYield": 0.09,
+  "maxNetLeverage": 6,
+  "minRecovery": 0.6,
+  "minCovenantHeadroom": 0.15,
+  "minDownsideIrr": 0
+ },
+ "covenants": [
+  {
+   "id": "lev",
+   "label": "Maximum net leverage",
+   "type": "maxNetLeverage",
+   "thresholds": [
+    7.5,
+    7.5,
+    7.5,
+    7.5,
+    7.5
+   ],
+   "basis": "hypothetical",
+   "note": "Demo covenant (illustrative)"
+  }
+ ],
+ "openHighDiligence": 5,
+ "historicalSpec": {
+  "mode": "bridge",
+  "columns": [
+   {
+    "id": "FY2022",
+    "label": "FY2022A",
+    "kind": "fy",
+    "year": 2022
+   },
+   {
+    "id": "FY2023",
+    "label": "FY2023A",
+    "kind": "fy",
+    "year": 2023
+   },
+   {
+    "id": "FY2024",
+    "label": "FY2024A",
+    "kind": "fy",
+    "year": 2024
+   },
+   {
+    "id": "FY2025",
+    "label": "FY2025A",
+    "kind": "fy",
+    "year": 2025
+   }
+  ],
+  "inputs": [
+   {
+    "key": "revenue",
+    "label": "Revenue",
+    "group": "income",
+    "values": {
+     "FY2022": 1720,
+     "FY2023": 1680,
+     "FY2024": 1640,
+     "FY2025": 1600
+    }
+   },
+   {
+    "key": "cogs",
+    "label": "COGS",
+    "group": "income",
+    "values": {
+     "FY2022": 619.1999999999999,
+     "FY2023": 621.6,
+     "FY2024": 615,
+     "FY2025": 608
+    }
+   },
+   {
+    "key": "opex",
+    "label": "Operating expenses (cash, ex-D&A)",
+    "group": "income",
+    "values": {
+     "FY2022": 412.8000000000002,
+     "FY2023": 403.20000000000005,
+     "FY2024": 393.6,
+     "FY2025": 384
+    }
+   },
+   {
+    "key": "da",
+    "label": "Depreciation & amortization",
+    "group": "income",
+    "values": {
+     "FY2022": 378.4,
+     "FY2023": 369.6,
+     "FY2024": 360.8,
+     "FY2025": 352
+    }
+   },
+   {
+    "key": "interest",
+    "label": "Interest expense",
+    "group": "income",
+    "values": {
+     "FY2022": 295.375,
+     "FY2023": 312.75,
+     "FY2024": 330.125,
+     "FY2025": 347.5
+    }
+   },
+   {
+    "key": "taxes",
+    "label": "Taxes",
+    "group": "income",
+    "values": {
+     "FY2022": 3.5562500000000057,
+     "FY2023": 0,
+     "FY2024": 0,
+     "FY2025": 0
+    }
+   },
+   {
+    "key": "capex",
+    "label": "Capex",
+    "group": "cash",
+    "values": {
+     "FY2022": 361.2,
+     "FY2023": 352.8,
+     "FY2024": 344.4,
+     "FY2025": 336
+    }
+   },
+   {
+    "key": "dnwc",
+    "label": "Increase in working capital",
+    "group": "cash",
+    "values": {
+     "FY2022": -0.7857868020304567,
+     "FY2023": -1.2,
+     "FY2024": -1.2,
+     "FY2025": -1.2
+    }
+   }
+  ],
+  "lines": {
+   "revenue": [
+    [
+     "revenue",
+     1
+    ]
+   ],
+   "cogs": [
+    [
+     "cogs",
+     1
+    ]
+   ],
+   "opexAdj": [
+    [
+     "opex",
+     1
+    ]
+   ],
+   "da": [
+    [
+     "da",
+     1
+    ]
+   ],
+   "sbc": [],
+   "interest": [
+    [
+     "interest",
+     1
+    ]
+   ],
+   "taxes": [
+    [
+     "taxes",
+     1
+    ]
+   ],
+   "capex": [
+    [
+     "capex",
+     1
+    ]
+   ],
+   "dnwc": [
+    [
+     "dnwc",
+     1
+    ]
+   ]
+  }
+ },
+ "sources": [
+  {
+   "id": "redwood-fin",
+   "source": "CreditIQ demo dataset",
+   "document": "Redwood Broadband — illustrative financial statements FY2022–FY2025",
+   "documentDate": "2026-03-31",
+   "retrievedDate": "2026-03-31",
+   "dataType": "Income statement / cash flow",
+   "period": "FY2022–FY2025",
+   "isDemo": true
+  },
+  {
+   "id": "redwood-debt",
+   "source": "CreditIQ demo dataset",
+   "document": "Redwood Broadband — illustrative capital structure & covenants",
+   "documentDate": "2026-03-31",
+   "retrievedDate": "2026-03-31",
+   "dataType": "Debt schedule",
+   "period": "As of 2026-03-31",
+   "isDemo": true
+  },
+  {
+   "id": "redwood-px",
+   "source": "CreditIQ demo dataset",
+   "document": "Illustrative indicative bid marks (% of par)",
+   "documentDate": "2026-03-31",
+   "retrievedDate": "2026-03-31",
+   "dataType": "Market price",
+   "period": "2026-03-31",
+   "isDemo": true
+  }
+ ],
+ "provenance": [],
+ "notes": [
+  "All figures are fictional and illustrative."
+ ],
+ "thesis": "Network assets (~$5.2B replacement-cost-based) provide asset coverage of 1.2x of total debt, but cash flow after capex is negative. The 10.5% second-lien at 78 is the fulcrum candidate in a restructuring where unsecured holders are the first to take losses.",
+ "config": {
+  "scoreWeights": {
+   "leverage": 15,
+   "coverage": 15,
+   "liquidity": 10,
+   "fcf": 10,
+   "maturity": 10,
+   "marginStability": 10,
+   "revenueStability": 8,
+   "assetCoverage": 12,
+   "industry": 10
+  },
+  "scoreThresholds": {
+   "leverage": {
+    "best": 2,
+    "worst": 7,
+    "unit": "x net debt / EBITDA"
+   },
+   "coverage": {
+    "best": 5,
+    "worst": 1,
+    "unit": "x EBITDA / interest"
+   },
+   "liquidity": {
+    "best": 2,
+    "worst": 0.5,
+    "unit": "x liquidity / 12m obligations"
+   },
+   "fcf": {
+    "best": 0.12,
+    "worst": -0.02,
+    "unit": "FCF / total debt"
+   },
+   "maturity": {
+    "best": 0,
+    "worst": 0.5,
+    "unit": "% of debt due within window"
+   },
+   "marginStability": {
+    "best": 0.01,
+    "worst": 0.05,
+    "unit": "std-dev of EBITDA margin (pts)"
+   },
+   "revenueStability": {
+    "best": 0.03,
+    "worst": 0.15,
+    "unit": "std-dev of revenue growth"
+   },
+   "assetCoverage": {
+    "best": 2,
+    "worst": 0.6,
+    "unit": "x asset base / total debt"
+   }
+  },
+  "riskBands": [
+   {
+    "min": 75,
+    "label": "Low"
+   },
+   {
+    "min": 60,
+    "label": "Moderate"
+   },
+   {
+    "min": 45,
+    "label": "Elevated"
+   },
+   {
+    "min": 0,
+    "label": "High"
+   }
+  ],
+  "scoreWindow": 3,
+  "maturityMaterial": 0.15,
+  "maturityWindow": 3
+ }
+}

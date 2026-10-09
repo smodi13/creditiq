@@ -1,0 +1,177 @@
+{
+ "case": "brightwater",
+ "formulas": 51295,
+ "inputs": 555,
+ "checks": [
+  {
+   "name": "[brightwater] S1 every numeric constant is a blue input on an input tab",
+   "ok": true,
+   "detail": "555 inputs; offenders []"
+  },
+  {
+   "name": "[brightwater] S2 no blue (input) cell contains a formula",
+   "ok": true,
+   "detail": "[]"
+  },
+  {
+   "name": "[brightwater] S3 pure cross-sheet links are green",
+   "ok": true,
+   "detail": "[]"
+  },
+  {
+   "name": "[brightwater] S4 no embedded numeric literals in formulas (beyond structural 0/1/2/12/31/99/100 and IRR starting guesses)",
+   "ok": true,
+   "detail": "51295 formulas; offenders []"
+  },
+  {
+   "name": "[brightwater] S5 no #REF!, #DIV/0!, #VALUE!, #N/A, #NAME?, #NUM! or circular-reference (Err:5xx) in any computed cell",
+   "ok": true,
+   "detail": "[]"
+  },
+  {
+   "name": "[brightwater] S6 every formula has a computed value",
+   "ok": true,
+   "detail": "0 uncomputed"
+  },
+  {
+   "name": "[brightwater] S7 rows labelled as calculated outputs contain only formulas",
+   "ok": true,
+   "detail": "[]"
+  },
+  {
+   "name": "[brightwater] S8 'Base-case IRR' traces back through formulas to blue inputs on Assumptions / Historical",
+   "ok": true,
+   "detail": "772 cells, input leaves on ['Assumptions', 'Calc Engine', 'Historical Financials']"
+  },
+  {
+   "name": "[brightwater] S8 'Probability-weighted IRR' traces back through formulas to blue inputs on Assumptions / Historical",
+   "ok": true,
+   "detail": "1970 cells, input leaves on ['Assumptions', 'Calc Engine', 'Historical Financials']"
+  },
+  {
+   "name": "[brightwater] S8 'Net leverage \u2014 base period' traces back through formulas to blue inputs on Assumptions / Historical",
+   "ok": true,
+   "detail": "26 cells, input leaves on ['Assumptions', 'Historical Financials']"
+  },
+  {
+   "name": "[brightwater] S8 'Credit score' traces back through formulas to blue inputs on Assumptions / Historical",
+   "ok": true,
+   "detail": "188 cells, input leaves on ['Assumptions', 'Historical Financials']"
+  },
+  {
+   "name": "[brightwater] S8 'Recovery (selected' traces back through formulas to blue inputs on Assumptions / Historical",
+   "ok": true,
+   "detail": "658 cells, input leaves on ['Assumptions', 'Historical Financials']"
+  },
+  {
+   "name": "[brightwater] S8b recommendation traces to inputs through Scenarios and Calc Engine",
+   "ok": true,
+   "detail": "2106 cells"
+  },
+  {
+   "name": "[brightwater] S9 in-workbook integrity checks all pass",
+   "ok": true,
+   "detail": "ALL CHECKS PASS"
+  },
+  {
+   "name": "[brightwater] S10 named ranges resolve to cells",
+   "ok": true,
+   "detail": "ActiveScenario, FaceValue, HoldPeriods, HurdleIRR, MinOperatingCash, PurchasePrice, RecoveryOverride"
+  },
+  {
+   "name": "[brightwater] S11 sensitivity monotonicity: IRR falls as purchase price rises; IRR and MOIC rise with recovery / exit value",
+   "ok": true,
+   "detail": "price table base col [0.178, 0.153, 0.131, 0.11, 0.09]"
+  },
+  {
+   "name": "[brightwater] S11b all seven sensitivity tables are fully populated (63 simulated cases) with no errors",
+   "ok": true,
+   "detail": "0 bad cells"
+  },
+  {
+   "name": "[brightwater] D1 independent Python recomputation of revenue, EBITDA and capex (5 periods, selected scenario) matches the workbook",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "[brightwater] D2 period-1 cash interest = \u03a3 face \u00d7 all-in rate (SOFR floor, spread, scenario shock) recomputed independently",
+   "ok": true,
+   "detail": "129.540"
+  },
+  {
+   "name": "[brightwater] D3 recovery waterfall (seniority, collateral pools, deficiency claims) matches an independent Python waterfall",
+   "ok": true,
+   "detail": "model [221.6, 287.6, 0, 0]"
+  },
+  {
+   "name": "[brightwater] D4 IRR and MOIC recomputed independently from the cash-flow row",
+   "ok": true,
+   "detail": "IRR 0.00689"
+  },
+  {
+   "name": "[brightwater] D3b recovery bounds: every tranche \u2264 its claim, total recoveries \u2264 net distributable value, equity residual only when all claims are paid",
+   "ok": true,
+   "detail": "recoveries 509.2 \u2264 net value 509.2; claims 1308.4"
+  },
+  {
+   "name": "[brightwater] D7 known-answer IRR: [-100, 10, 10, 110] \u2192 exactly 10.0000% (independent bisection)",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "[brightwater] D7b Excel XIRR equals an independent actual/365 XIRR of the same dated cash flows",
+   "ok": true,
+   "detail": "XIRR 0.00688 vs IRR 0.00689 (differences are leap-year day counts)"
+  },
+  {
+   "name": "[brightwater] D8a scenario probabilities sum to 100%",
+   "ok": true,
+   "detail": "[0.55, 0.3, 0.15]"
+  },
+  {
+   "name": "[brightwater] D8 probability-weighted IRR = IRR of the probability-weighted cash flows (independent), shown separately from the average of scenario IRRs",
+   "ok": true,
+   "detail": "expected-cash-flow IRR 0.06415; average of scenario IRRs 0.05324"
+  },
+  {
+   "name": "[brightwater] D9 contractual-timing IRR recomputed independently from the re-timed quarterly flows; total cash unchanged vs the annual model",
+   "ok": true,
+   "detail": "contractual IRR (base/downside/severe) [0.13082, 0.00689, -0.13853]; coupons per year 1"
+  },
+  {
+   "name": "[brightwater] D11 debt roll-forward recomputed independently: ending = beginning + draws + PIK \u2212 amortization \u2212 repayment \u2212 sweep (non-maturing periods), beginning = prior ending, cash interest = beginning balance \u00d7 all-in rate",
+   "ok": true,
+   "detail": "4 tranches \u00d7 5 periods; exceptions [] []"
+  },
+  {
+   "name": "[brightwater] D12 total debt = \u03a3 tranche ending balances; net debt = total debt \u2212 ending cash; net leverage = net debt \u00f7 EBITDA; coverage = EBITDA \u00f7 cash interest (all 5 periods, independent)",
+   "ok": true,
+   "detail": "exceptions []"
+  },
+  {
+   "name": "[brightwater] D13 contractual maturities by period equal the face balances of tranches whose maturity falls in that period (no amortization / PIK / sweep before maturity)",
+   "ok": true,
+   "detail": "schedule [0.0, 480, 520, 250, 0.0] vs Assumptions [0.0, 480.0, 520.0, 250.0, 0.0]"
+  },
+  {
+   "name": "[brightwater] D14 recovery value = MAX(going-concern, liquidation) + cash at the event (unless overridden); admin costs = value \u00d7 admin %; net = value \u2212 admin",
+   "ok": true,
+   "detail": "going concern 195.6, liquidation 530.4, cash 0.0 \u2192 value 530.4"
+  },
+  {
+   "name": "[brightwater] D15 loss given default = 1 \u2212 recovery % for every tranche; a more senior claim never recovers a lower % than a junior one (tranches without a specific collateral pool)",
+   "ok": true,
+   "detail": "LGD exceptions []; priority violations []"
+  },
+  {
+   "name": "[brightwater] D5 credit score recomputed independently from factor values, thresholds and weights",
+   "ok": true,
+   "detail": "30.45"
+  },
+  {
+   "name": "[brightwater] D6 Excel \u21c4 web reconciliation: every compared metric within tolerance",
+   "ok": true,
+   "detail": "178/178 PASS"
+  }
+ ]
+}

@@ -1,0 +1,32 @@
+PASS [bdn] A1 downside revenue growth −5 pts: revenue↓ EBITDA↓ FCF-before-working-capital↓ leverage↑ coverage↓ — revenue 468.4→443.5; EBITDA 234.2→221.7; FCF -60.92→-67.65; net leverage 10.67→11.3; coverage 1.25→1.183
+PASS [bdn] A2 exact: period-1 revenue = prior revenue × (1 + g − 5 pts); EBITDA = revenue × margin — revenue 443.4790 vs expected 443.4790; EBITDA 221.7395 vs 221.7395
+PASS [bdn] A3 going-concern recovery value does not rise (distressed multiple × event EBITDA) — going-concern value 1983→1781
+PASS [bdn] A4 downside-scenario return responds: downside IRR, MOIC and recovery % do not rise — or any rise is fully explained (asset-based recovery unchanged, extra cash from working-capital release / default timing) — downside IRR 0.0874→0.0874; MOIC 1.257→1.257; recovery 1→1; monotone
+PASS [bdn] A5 base case unchanged by a downside-only edit — base IRR 0.09582→0.09582
+PASS [bdn] B1 EBITDA margin −3 pts: EBITDA↓, net leverage↑, coverage↓, projected credit score↓ — EBITDA 234.2→220.1; net leverage 10.67→11.42; coverage 1.25→1.175; projected score 42.74→42.46
+PASS [bdn] B2 exact: EBITDA = unchanged revenue × (margin − 3 pts); cash coverage = EBITDA ÷ cash interest — EBITDA 220.1450 vs expected 220.1450
+PASS [bdn] B3 returns respond: IRR and MOIC of the selected scenario do not rise; covenant breaches do not fall; refinancing failures do not fall — IRR 0.0874→0.0874; MOIC 1.257→1.257; breaches 15→15; refinancing failures 7→7
+PASS [bdn] C1 SOFR +100 bp: period-1 cash interest rises by floating balances × Δrate (floors respected) — Δ4.7861 vs expected 4.7861
+PASS [bdn] C2 interest increase flows to cash flow one-for-one net of tax; coverage never improves; covenant breaches do not fall — ΔFCF -4.7861, Δinterest 4.7861, Δtax 0.0000; coverage 1.25→1.219; breaches 15→15
+PASS [bdn] C2b return on the position: a floating-rate target tranche earns more coupon cash (IRR is then free to rise); a fixed-rate target's coupon cash is unchanged — target tranche floating; coupon cash 21.15→23.15; IRR 0.0874→0.0954; MOIC 1.257→1.28
+PASS [bdn] C3 revolver draw does not fall; EBITDA unchanged — draw 0→0
+PASS [bdn] D1 recovery value −65% (scenario 2): recovery %↓, IRR↓, MOIC↓; recovery value used = override — recovery % 1→0.8179; IRR 0.0874→0.02436; MOIC 1.257→1.067
+PASS [bdn] D2 recovery value +80%: recovery %↑ (capped at 100%), IRR↑ unless already fully recovered — recovery % 1→1; IRR 0.0874→0.0874
+PASS [bdn] D3l recovery waterfall bounds at the low override: no tranche above its claim; total recoveries ≤ net distributable value — Σ recoveries 1096.72 ≤ net value 1096.72; Σ claims 2615.36
+PASS [bdn] D3h recovery waterfall bounds at the high override: no tranche above its claim; total recoveries ≤ net distributable value — Σ recoveries 2615.36 ≤ net value 5640.26; Σ claims 2615.36
+PASS [bdn] D4 raising recovery value never lowers any tranche's recovery — per-tranche recoveries weakly increase
+PASS [bdn] D5 going-concern value = distressed multiple × event EBITDA (multiple +1.0x) — going-concern value 1983→2204; Δ = 220.356 vs event EBITDA 220.356
+PASS [bdn] D6 liquidation value = asset base × (1 − decline) × recovery factor (factor +10 pts); recovery value is the greater of going concern and liquidation, plus cash — liquidation value 3264→3648 (expected 3648); recovery value 3264→3648
+PASS [bdn] E1 purchase price +5 pts: IRR↓ MOIC↓ current yield↓; −5 pts: all ↑ — IRR 0.1086 / 0.0874 / 0.06764 at −5 / base / +5
+PASS [bdn] E2 exact: cost = face × price × (1 + fees); cash received unchanged; capital gain moves by −Δprice × face; IRR matches an independent solve of the same cash flows — cost 93.47 / 98.49 / 103.5; cash received 123.8 unchanged; capital gain 9.625 / 4.625 / -0.375
+PASS [bdn] F1 maturity moved to within ~9 months: debt due inside the alert window ↑, refinancing requirement in the new maturity period ↑, credit score ↓ — due window 800→1350; refinancing requirement in period 1: 0→0; score 45.75→38.19
+PASS [bdn] F2 maturity pushed out 12 years: debt due in the alert window ↓, refinancing requirement ↓, refinancing failures do not rise — due window 800→350; Σ refinancing requirement 228.1→125.5; failures 7→6
+PASS [bdn] F3 refinancing unavailable in the Base case (access test fails, opening cash 5, no asset sales): refinancing failures↑, payment default modelled, recovery computed — refinancing failures 0→7; default 0→1; recovery value 3840
+PASS [bdn] F4 market access always open (Base case): refinancing failures do not rise and no default is introduced where the baseline had none — failures 0→0; default 0→0
+PASS [bdn] G1 covenant headroom = threshold − metric (max tests) or metric − threshold (min tests); status flips exactly at the threshold; negative headroom is never PASS — 5 active covenants × 5 periods — 25 covenant-period tests; 10 breach-side → BREACH, 10 pass-side → PASS, 5 at-threshold (|headroom|≈0, flag = [headroom<0]); violations: []
+PASS [bdn] G2 risk flow (selected Downside): total breaches = Σ breach flags; Scenarios-tab count agrees; Investment Summary covenant evidence is consistent with its own value and requirement — breaches 15→10 (Σ flags 10); Scenarios-tab count 10; evidence row [-0.463665393476762, 0.15] → FAIL
+PASS [bdn] G3 base case with every active covenant breached in all five periods: breaches counted = covenants × periods; base-case Investment Summary covenant-headroom evidence FAILS; minimum headroom is negative — breaches 8→25 (expected 25); Investment Summary evidence → FAIL; violations []
+PASS [bdn] H1 scenario selector drives the detailed tabs: base revenue > downside revenue > severe revenue — revenue (selector 1/2/3): 483.3 / 468.4 / 448.5
+PASS [bdn] H2 covenant breaches in the downside scenarios are at least those in the base case — breaches base/downside/severe: 8 / 15 / 15
+
+30/30 change-impact tests passed; committed workbook unchanged: True

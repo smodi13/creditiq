@@ -1,0 +1,1788 @@
+{
+ "case": "amcx",
+ "workbook": "models/CreditIQ_AMCX_Model.xlsx",
+ "rows": [
+  {
+   "key": "base.revenue.p1",
+   "label": "Base \u00b7 Revenue \u2014 first projected period",
+   "excel": 2145.08853,
+   "web": 2145.0885299999995,
+   "diff": 4.547473508864641e-13,
+   "tol": 0.05,
+   "kind": "usd",
+   "status": "PASS"
+  },
+  {
+   "key": "base.revenue.p5",
+   "label": "Base \u00b7 Revenue \u2014 fifth projected period",
+   "excel": 1869.76590235325,
+   "web": 1869.7659023532522,
+   "diff": -2.0463630789890885e-12,
+   "tol": 0.05,
+   "kind": "usd",
+   "status": "PASS"
+  },
+  {
+   "key": "base.ebitda.p1",
+   "label": "Base \u00b7 EBITDA \u2014 first projected period",
+   "excel": 300.3123942,
+   "web": 300.31239419999997,
+   "diff": 5.684341886080802e-14,
+   "tol": 0.05,
+   "kind": "usd",
+   "status": "PASS"
+  },
+  {
+   "key": "base.ebitda.p5",
+   "label": "Base \u00b7 EBITDA \u2014 fifth projected period",
+   "excel": 250.548630915336,
+   "web": 250.5486309153358,
+   "diff": 1.9895196601282805e-13,
+   "tol": 0.05,
+   "kind": "usd",
+   "status": "PASS"
+  },
+  {
+   "key": "base.fcf.sum",
+   "label": "Base \u00b7 Cumulative free cash flow (5 periods)",
+   "excel": 555.588348849095,
+   "web": 555.5883488490947,
+   "diff": 3.410605131648481e-13,
+   "tol": 0.05,
+   "kind": "usd",
+   "status": "PASS"
+  },
+  {
+   "key": "base.debt.p5",
+   "label": "Base \u00b7 Total debt \u2014 fifth period",
+   "excel": 1315.098,
+   "web": 1315.098,
+   "diff": 0.0,
+   "tol": 0.05,
+   "kind": "usd",
+   "status": "PASS"
+  },
+  {
+   "key": "base.cash.p5",
+   "label": "Base \u00b7 Cash \u2014 fifth period",
+   "excel": 599.128348849095,
+   "web": 599.1283488490948,
+   "diff": 2.2737367544323206e-13,
+   "tol": 0.05,
+   "kind": "usd",
+   "status": "PASS"
+  },
+  {
+   "key": "base.netlev.p1",
+   "label": "Base \u00b7 Net debt / EBITDA \u2014 first period",
+   "excel": 3.81499621093561,
+   "web": 3.8149962109356066,
+   "diff": 3.552713678800501e-15,
+   "tol": 0.005,
+   "kind": "ratio",
+   "status": "PASS"
+  },
+  {
+   "key": "base.coverage.p1",
+   "label": "Base \u00b7 EBITDA / interest \u2014 first period",
+   "excel": 1.92563899625449,
+   "web": 1.9256389962544884,
+   "diff": 1.5543122344752192e-15,
+   "tol": 0.005,
+   "kind": "ratio",
+   "status": "PASS"
+  },
+  {
+   "key": "base.liquidity.p1",
+   "label": "Base \u00b7 Liquidity \u2014 first period",
+   "excel": 589.86335403,
+   "web": 589.86335403,
+   "diff": 0.0,
+   "tol": 0.05,
+   "kind": "usd",
+   "status": "PASS"
+  },
+  {
+   "key": "base.default",
+   "label": "Base \u00b7 Payment default modelled (1 = yes)",
+   "excel": 0,
+   "web": 0,
+   "diff": 0.0,
+   "tol": 0.0,
+   "kind": "flag",
+   "status": "PASS"
+  },
+  {
+   "key": "base.covbreaches",
+   "label": "Base \u00b7 Covenant breaches (count)",
+   "excel": 0,
+   "web": 0,
+   "diff": 0.0,
+   "tol": 0.0,
+   "kind": "flag",
+   "status": "PASS"
+  },
+  {
+   "key": "base.refifail",
+   "label": "Base \u00b7 Refinancing failures (count)",
+   "excel": 0,
+   "web": 0,
+   "diff": 0.0,
+   "tol": 0.0,
+   "kind": "flag",
+   "status": "PASS"
+  },
+  {
+   "key": "base.recoveryValue",
+   "label": "Base \u00b7 Recovery value ($M)",
+   "excel": 1851.87150342577,
+   "web": 1851.8715034257739,
+   "diff": -3.865352482534945e-12,
+   "tol": 0.05,
+   "kind": "usd",
+   "status": "PASS"
+  },
+  {
+   "key": "base.recovery.target",
+   "label": "Base \u00b7 Target-tranche recovery %",
+   "excel": 1,
+   "web": 1,
+   "diff": 0.0,
+   "tol": 0.0005,
+   "kind": "pct",
+   "status": "PASS"
+  },
+  {
+   "key": "base.exitprice",
+   "label": "Base \u00b7 Exit price used",
+   "excel": 100,
+   "web": 100,
+   "diff": 0.0,
+   "tol": 0.05,
+   "kind": "price",
+   "status": "PASS"
+  },
+  {
+   "key": "base.irr",
+   "label": "Base \u00b7 IRR",
+   "excel": 0.126033624615204,
+   "web": 0.12603362461521772,
+   "diff": -1.3711254354120683e-14,
+   "tol": 0.0005,
+   "kind": "pct",
+   "status": "PASS"
+  },
+  {
+   "key": "base.moic",
+   "label": "Base \u00b7 MOIC",
+   "excel": 1.38421052631579,
+   "web": 1.3842105263157896,
+   "diff": 4.440892098500626e-16,
+   "tol": 0.005,
+   "kind": "ratio",
+   "status": "PASS"
+  },
+  {
+   "key": "base.profit",
+   "label": "Base \u00b7 Absolute profit ($M)",
+   "excel": 36.5,
+   "web": 36.5,
+   "diff": 0.0,
+   "tol": 0.05,
+   "kind": "usd",
+   "status": "PASS"
+  },
+  {
+   "key": "downside.revenue.p1",
+   "label": "Downside \u00b7 Revenue \u2014 first projected period",
+   "excel": 2066.47272,
+   "web": 2066.4727199999998,
+   "diff": 4.547473508864641e-13,
+   "tol": 0.05,
+   "kind": "usd",
+   "status": "PASS"
+  },
+  {
+   "key": "downside.revenue.p5",
+   "label": "Downside \u00b7 Revenue \u2014 fifth projected period",
+   "excel": 1630.37568277116,
+   "web": 1630.3756827711595,
+   "diff": 4.547473508864641e-13,
+   "tol": 0.05,
+   "kind": "usd",
+   "status": "PASS"
+  },
+  {
+   "key": "downside.ebitda.p1",
+   "label": "Downside \u00b7 EBITDA \u2014 first projected period",
+   "excel": 247.9767264,
+   "web": 247.97672639999996,
+   "diff": 2.842170943040401e-14,
+   "tol": 0.05,
+   "kind": "usd",
+   "status": "PASS"
+  },
+  {
+   "key": "downside.ebitda.p5",
+   "label": "Downside \u00b7 EBITDA \u2014 fifth projected period",
+   "excel": 163.037568277116,
+   "web": 163.03756827711595,
+   "diff": 5.684341886080802e-14,
+   "tol": 0.05,
+   "kind": "usd",
+   "status": "PASS"
+  },
+  {
+   "key": "downside.fcf.sum",
+   "label": "Downside \u00b7 Cumulative free cash flow (5 periods)",
+   "excel": 75.1374128562126,
+   "web": 75.13741285621256,
+   "diff": 4.263256414560601e-14,
+   "tol": 0.05,
+   "kind": "usd",
+   "status": "PASS"
+  },
+  {
+   "key": "downside.debt.p5",
+   "label": "Downside \u00b7 Total debt \u2014 fifth period",
+   "excel": 1315.098,
+   "web": 1315.098,
+   "diff": 0.0,
+   "tol": 0.05,
+   "kind": "usd",
+   "status": "PASS"
+  },
+  {
+   "key": "downside.cash.p5",
+   "label": "Downside \u00b7 Cash \u2014 fifth period",
+   "excel": 118.677412856212,
+   "web": 118.67741285621243,
+   "diff": -4.263256414560601e-13,
+   "tol": 0.05,
+   "kind": "usd",
+   "status": "PASS"
+  },
+  {
+   "key": "downside.netlev.p1",
+   "label": "Downside \u00b7 Net debt / EBITDA \u2014 first period",
+   "excel": 4.9066397085884,
+   "web": 4.906639708588396,
+   "diff": 3.552713678800501e-15,
+   "tol": 0.005,
+   "kind": "ratio",
+   "status": "PASS"
+  },
+  {
+   "key": "downside.coverage.p1",
+   "label": "Downside \u00b7 EBITDA / interest \u2014 first period",
+   "excel": 1.59005643370602,
+   "web": 1.5900564337060248,
+   "diff": -4.884981308350689e-15,
+   "tol": 0.005,
+   "kind": "ratio",
+   "status": "PASS"
+  },
+  {
+   "key": "downside.liquidity.p1",
+   "label": "Downside \u00b7 Liquidity \u2014 first period",
+   "excel": 518.82154744,
+   "web": 518.8215474399999,
+   "diff": 1.1368683772161603e-13,
+   "tol": 0.05,
+   "kind": "usd",
+   "status": "PASS"
+  },
+  {
+   "key": "downside.default",
+   "label": "Downside \u00b7 Payment default modelled (1 = yes)",
+   "excel": 0,
+   "web": 0,
+   "diff": 0.0,
+   "tol": 0.0,
+   "kind": "flag",
+   "status": "PASS"
+  },
+  {
+   "key": "downside.covbreaches",
+   "label": "Downside \u00b7 Covenant breaches (count)",
+   "excel": 11,
+   "web": 11,
+   "diff": 0.0,
+   "tol": 0.0,
+   "kind": "flag",
+   "status": "PASS"
+  },
+  {
+   "key": "downside.refifail",
+   "label": "Downside \u00b7 Refinancing failures (count)",
+   "excel": 2,
+   "web": 2,
+   "diff": 0.0,
+   "tol": 0.0,
+   "kind": "flag",
+   "status": "PASS"
+  },
+  {
+   "key": "downside.recoveryValue",
+   "label": "Downside \u00b7 Recovery value ($M)",
+   "excel": 852.346470103234,
+   "web": 852.3464701032342,
+   "diff": -2.2737367544323206e-13,
+   "tol": 0.05,
+   "kind": "usd",
+   "status": "PASS"
+  },
+  {
+   "key": "downside.recovery.target",
+   "label": "Downside \u00b7 Target-tranche recovery %",
+   "excel": 0.606284007392095,
+   "web": 0.6062840073920954,
+   "diff": -4.440892098500626e-16,
+   "tol": 0.0005,
+   "kind": "pct",
+   "status": "PASS"
+  },
+  {
+   "key": "downside.exitprice",
+   "label": "Downside \u00b7 Exit price used",
+   "excel": 81.2751604731729,
+   "web": 81.27516047317292,
+   "diff": -1.4210854715202004e-14,
+   "tol": 0.05,
+   "kind": "price",
+   "status": "PASS"
+  },
+  {
+   "key": "downside.irr",
+   "label": "Downside \u00b7 IRR",
+   "excel": 0.0653848807562152,
+   "web": 0.06538488075621529,
+   "diff": -9.71445146547012e-17,
+   "tol": 0.0005,
+   "kind": "pct",
+   "status": "PASS"
+  },
+  {
+   "key": "downside.moic",
+   "label": "Downside \u00b7 MOIC",
+   "excel": 1.18710695234919,
+   "web": 1.1871069523491886,
+   "diff": 1.3322676295501878e-15,
+   "tol": 0.005,
+   "kind": "ratio",
+   "status": "PASS"
+  },
+  {
+   "key": "downside.profit",
+   "label": "Downside \u00b7 Absolute profit ($M)",
+   "excel": 17.7751604731729,
+   "web": 17.775160473172917,
+   "diff": -1.7763568394002505e-14,
+   "tol": 0.05,
+   "kind": "usd",
+   "status": "PASS"
+  },
+  {
+   "key": "severe.revenue.p1",
+   "label": "Severe \u00b7 Revenue \u2014 first projected period",
+   "excel": 1931.70276,
+   "web": 1931.7027599999997,
+   "diff": 2.2737367544323206e-13,
+   "tol": 0.05,
+   "kind": "usd",
+   "status": "PASS"
+  },
+  {
+   "key": "severe.revenue.p5",
+   "label": "Severe \u00b7 Revenue \u2014 fifth projected period",
+   "excel": 1323.06494510362,
+   "web": 1323.0649451036159,
+   "diff": 4.092726157978177e-12,
+   "tol": 0.05,
+   "kind": "usd",
+   "status": "PASS"
+  },
+  {
+   "key": "severe.ebitda.p1",
+   "label": "Severe \u00b7 EBITDA \u2014 first projected period",
+   "excel": 173.8532484,
+   "web": 173.85324839999996,
+   "diff": 5.684341886080802e-14,
+   "tol": 0.05,
+   "kind": "usd",
+   "status": "PASS"
+  },
+  {
+   "key": "severe.ebitda.p5",
+   "label": "Severe \u00b7 EBITDA \u2014 fifth projected period",
+   "excel": 92.6145461572531,
+   "web": 92.61454615725312,
+   "diff": -1.4210854715202004e-14,
+   "tol": 0.05,
+   "kind": "usd",
+   "status": "PASS"
+  },
+  {
+   "key": "severe.fcf.sum",
+   "label": "Severe \u00b7 Cumulative free cash flow (5 periods)",
+   "excel": -362.406198194027,
+   "web": -362.40619819402656,
+   "diff": -4.547473508864641e-13,
+   "tol": 0.05,
+   "kind": "usd",
+   "status": "PASS"
+  },
+  {
+   "key": "severe.debt.p5",
+   "label": "Severe \u00b7 Total debt \u2014 fifth period",
+   "excel": 1465.18203256832,
+   "web": 1465.18203256832,
+   "diff": 0.0,
+   "tol": 0.05,
+   "kind": "usd",
+   "status": "PASS"
+  },
+  {
+   "key": "severe.cash.p5",
+   "label": "Severe \u00b7 Cash \u2014 fifth period",
+   "excel": -168.782165625707,
+   "web": -168.7821656257065,
+   "diff": -4.831690603168681e-13,
+   "tol": 0.05,
+   "kind": "usd",
+   "status": "PASS"
+  },
+  {
+   "key": "severe.netlev.p1",
+   "label": "Severe \u00b7 Net debt / EBITDA \u2014 first period",
+   "excel": 7.49990986858087,
+   "web": 7.499909868580865,
+   "diff": 5.329070518200751e-15,
+   "tol": 0.005,
+   "kind": "ratio",
+   "status": "PASS"
+  },
+  {
+   "key": "severe.coverage.p1",
+   "label": "Severe \u00b7 EBITDA / interest \u2014 first period",
+   "excel": 1.11476782580477,
+   "web": 1.1147678258047673,
+   "diff": 2.6645352591003757e-15,
+   "tol": 0.005,
+   "kind": "ratio",
+   "status": "PASS"
+  },
+  {
+   "key": "severe.liquidity.p1",
+   "label": "Severe \u00b7 Liquidity \u2014 first period",
+   "excel": 431.67030664,
+   "web": 431.6703066399999,
+   "diff": 5.684341886080802e-14,
+   "tol": 0.05,
+   "kind": "usd",
+   "status": "PASS"
+  },
+  {
+   "key": "severe.default",
+   "label": "Severe \u00b7 Payment default modelled (1 = yes)",
+   "excel": 1,
+   "web": 1,
+   "diff": 0.0,
+   "tol": 0.0,
+   "kind": "flag",
+   "status": "PASS"
+  },
+  {
+   "key": "severe.covbreaches",
+   "label": "Severe \u00b7 Covenant breaches (count)",
+   "excel": 13,
+   "web": 13,
+   "diff": 0.0,
+   "tol": 0.0,
+   "kind": "flag",
+   "status": "PASS"
+  },
+  {
+   "key": "severe.refifail",
+   "label": "Severe \u00b7 Refinancing failures (count)",
+   "excel": 2,
+   "web": 2,
+   "diff": 0.0,
+   "tol": 0.0,
+   "kind": "flag",
+   "status": "PASS"
+  },
+  {
+   "key": "severe.recoveryValue",
+   "label": "Severe \u00b7 Recovery value ($M)",
+   "excel": 478.719345,
+   "web": 478.719345,
+   "diff": 0.0,
+   "tol": 0.05,
+   "kind": "usd",
+   "status": "PASS"
+  },
+  {
+   "key": "severe.recovery.target",
+   "label": "Severe \u00b7 Target-tranche recovery %",
+   "excel": 0.340518665921812,
+   "web": 0.3405186659218122,
+   "diff": -1.6653345369377348e-16,
+   "tol": 0.0005,
+   "kind": "pct",
+   "status": "PASS"
+  },
+  {
+   "key": "severe.exitprice",
+   "label": "Severe \u00b7 Exit price used",
+   "excel": 32.5735727723409,
+   "web": 32.57357277234092,
+   "diff": -1.4210854715202004e-14,
+   "tol": 0.05,
+   "kind": "price",
+   "status": "PASS"
+  },
+  {
+   "key": "severe.irr",
+   "label": "Severe \u00b7 IRR",
+   "excel": -0.10811295237651,
+   "web": -0.10811295237651003,
+   "diff": 2.7755575615628914e-17,
+   "tol": 0.0005,
+   "kind": "pct",
+   "status": "PASS"
+  },
+  {
+   "key": "severe.moic",
+   "label": "Severe \u00b7 MOIC",
+   "excel": 0.699428716739221,
+   "web": 0.6994287167392207,
+   "diff": 3.3306690738754696e-16,
+   "tol": 0.005,
+   "kind": "ratio",
+   "status": "PASS"
+  },
+  {
+   "key": "severe.profit",
+   "label": "Severe \u00b7 Absolute profit ($M)",
+   "excel": -28.554271909774,
+   "web": -28.55427190977403,
+   "diff": 3.197442310920451e-14,
+   "tol": 0.05,
+   "kind": "usd",
+   "status": "PASS"
+  },
+  {
+   "key": "base.irr_ctr",
+   "label": "Base \u00b7 base.irr_ctr",
+   "excel": 0.129451072316102,
+   "web": 0.1294510723161022,
+   "diff": -1.942890293094024e-16,
+   "tol": 0.0005,
+   "kind": "pct",
+   "status": "PASS"
+  },
+  {
+   "key": "downside.irr_ctr",
+   "label": "Downside \u00b7 downside.irr_ctr",
+   "excel": 0.0672985704405034,
+   "web": 0.06729857044050425,
+   "diff": -8.465450562766819e-16,
+   "tol": 0.0005,
+   "kind": "pct",
+   "status": "PASS"
+  },
+  {
+   "key": "severe.irr_ctr",
+   "label": "Severe \u00b7 severe.irr_ctr",
+   "excel": -0.111463673277624,
+   "web": -0.11146367327762385,
+   "diff": -1.5265566588595902e-16,
+   "tol": 0.0005,
+   "kind": "pct",
+   "status": "PASS"
+  },
+  {
+   "key": "pw.irr_ctr",
+   "label": "Probability-weighted IRR on contractual timing",
+   "excel": 0.0628516314753818,
+   "web": 0.06285163147538286,
+   "diff": -1.0685896612017132e-15,
+   "tol": 0.0005,
+   "kind": "pct",
+   "status": "PASS"
+  },
+  {
+   "key": "pw.irr",
+   "label": "Probability-weighted IRR (IRR of expected cash flows)",
+   "excel": 0.0610922495868439,
+   "web": 0.061092249586843894,
+   "diff": 6.938893903907228e-18,
+   "tol": 0.0005,
+   "kind": "pct",
+   "status": "PASS"
+  },
+  {
+   "key": "pw.moic",
+   "label": "Probability-weighted MOIC",
+   "excel": 1.17826791351217,
+   "web": 1.1782679135121654,
+   "diff": 4.6629367034256575e-15,
+   "tol": 0.005,
+   "kind": "ratio",
+   "status": "PASS"
+  },
+  {
+   "key": "pw.default",
+   "label": "Probability of default",
+   "excel": 0.2,
+   "web": 0.2,
+   "diff": 0.0,
+   "tol": 0.0005,
+   "kind": "pct",
+   "status": "PASS"
+  },
+  {
+   "key": "pw.avgirr",
+   "label": "Memo: average of scenario IRRs",
+   "excel": 0.0579772488662152,
+   "web": 0.057977248866221326,
+   "diff": -6.127043317150083e-15,
+   "tol": 0.0005,
+   "kind": "pct",
+   "status": "PASS"
+  },
+  {
+   "key": "decision",
+   "label": "Recommendation (PROCEED/HOLD/PASS)",
+   "excel": "HOLD",
+   "web": "HOLD",
+   "diff": null,
+   "tol": 0.0,
+   "kind": "flag",
+   "status": "PASS"
+  },
+  {
+   "key": "score.total",
+   "label": "Credit score",
+   "excel": 59.3816373060825,
+   "web": 59.4,
+   "diff": -0.018362693917495676,
+   "tol": 0.05,
+   "kind": "price",
+   "status": "PASS"
+  },
+  {
+   "key": "ltm.netlev",
+   "label": "Net leverage \u2014 base period",
+   "excel": 4.06190164353368,
+   "web": 4.061901643533682,
+   "diff": -1.7763568394002505e-15,
+   "tol": 0.005,
+   "kind": "ratio",
+   "status": "PASS"
+  },
+  {
+   "key": "ltm.coverage",
+   "label": "EBITDA / interest \u2014 base period",
+   "excel": 1.83590107499135,
+   "web": 1.8359010749913474,
+   "diff": 2.6645352591003757e-15,
+   "tol": 0.005,
+   "kind": "ratio",
+   "status": "PASS"
+  },
+  {
+   "key": "ytm",
+   "label": "Yield to maturity",
+   "excel": 0.116999545084043,
+   "web": 0.11702798755423005,
+   "diff": -2.84424701870456e-05,
+   "tol": 0.0005,
+   "kind": "pct",
+   "status": "PASS"
+  },
+  {
+   "key": "sens.price.base.0",
+   "label": "Sensitivity \u00b7 Purchase price \u2192 IRR \u00b7 Base \u00b7 point 1",
+   "excel": 0.16318604473714,
+   "web": 0.1631860447371395,
+   "diff": 4.996003610813204e-16,
+   "tol": 0.0005,
+   "kind": "pct",
+   "status": "PASS"
+  },
+  {
+   "key": "sens.price.base.1",
+   "label": "Sensitivity \u00b7 Purchase price \u2192 IRR \u00b7 Base \u00b7 point 2",
+   "excel": 0.144028117459707,
+   "web": 0.14402811745970678,
+   "diff": 2.220446049250313e-16,
+   "tol": 0.0005,
+   "kind": "pct",
+   "status": "PASS"
+  },
+  {
+   "key": "sens.price.base.2",
+   "label": "Sensitivity \u00b7 Purchase price \u2192 IRR \u00b7 Base \u00b7 point 3",
+   "excel": 0.126033624615204,
+   "web": 0.12603362461521772,
+   "diff": -1.3711254354120683e-14,
+   "tol": 0.0005,
+   "kind": "pct",
+   "status": "PASS"
+  },
+  {
+   "key": "sens.price.base.3",
+   "label": "Sensitivity \u00b7 Purchase price \u2192 IRR \u00b7 Base \u00b7 point 4",
+   "excel": 0.10908562449235,
+   "web": 0.10908562449235426,
+   "diff": -4.260480856999038e-15,
+   "tol": 0.0005,
+   "kind": "pct",
+   "status": "PASS"
+  },
+  {
+   "key": "sens.price.base.4",
+   "label": "Sensitivity \u00b7 Purchase price \u2192 IRR \u00b7 Base \u00b7 point 5",
+   "excel": 0.0930831784395313,
+   "web": 0.09308317843953262,
+   "diff": -1.3183898417423734e-15,
+   "tol": 0.0005,
+   "kind": "pct",
+   "status": "PASS"
+  },
+  {
+   "key": "sens.price.downside.0",
+   "label": "Sensitivity \u00b7 Purchase price \u2192 IRR \u00b7 Downside \u00b7 point 1",
+   "excel": 0.100825526816342,
+   "web": 0.10082552681634926,
+   "diff": -7.258083023486961e-15,
+   "tol": 0.0005,
+   "kind": "pct",
+   "status": "PASS"
+  },
+  {
+   "key": "sens.price.downside.1",
+   "label": "Sensitivity \u00b7 Purchase price \u2192 IRR \u00b7 Downside \u00b7 point 2",
+   "excel": 0.0825476898494535,
+   "web": 0.08254768984945471,
+   "diff": -1.2073675392798577e-15,
+   "tol": 0.0005,
+   "kind": "pct",
+   "status": "PASS"
+  },
+  {
+   "key": "sens.price.downside.2",
+   "label": "Sensitivity \u00b7 Purchase price \u2192 IRR \u00b7 Downside \u00b7 point 3",
+   "excel": 0.0653848807562152,
+   "web": 0.06538488075621529,
+   "diff": -9.71445146547012e-17,
+   "tol": 0.0005,
+   "kind": "pct",
+   "status": "PASS"
+  },
+  {
+   "key": "sens.price.downside.3",
+   "label": "Sensitivity \u00b7 Purchase price \u2192 IRR \u00b7 Downside \u00b7 point 4",
+   "excel": 0.0492246474775621,
+   "web": 0.04922464747756228,
+   "diff": -1.8041124150158794e-16,
+   "tol": 0.0005,
+   "kind": "pct",
+   "status": "PASS"
+  },
+  {
+   "key": "sens.price.downside.4",
+   "label": "Sensitivity \u00b7 Purchase price \u2192 IRR \u00b7 Downside \u00b7 point 5",
+   "excel": 0.0339699682668682,
+   "web": 0.03396996826686827,
+   "diff": -6.938893903907228e-17,
+   "tol": 0.0005,
+   "kind": "pct",
+   "status": "PASS"
+  },
+  {
+   "key": "sens.price.severe.0",
+   "label": "Sensitivity \u00b7 Purchase price \u2192 IRR \u00b7 Severe \u00b7 point 1",
+   "excel": -0.0830808373164167,
+   "web": -0.08308083731641674,
+   "diff": 4.163336342344337e-17,
+   "tol": 0.0005,
+   "kind": "pct",
+   "status": "PASS"
+  },
+  {
+   "key": "sens.price.severe.1",
+   "label": "Sensitivity \u00b7 Purchase price \u2192 IRR \u00b7 Severe \u00b7 point 2",
+   "excel": -0.0959911589781775,
+   "web": -0.0959911589781775,
+   "diff": 0.0,
+   "tol": 0.0005,
+   "kind": "pct",
+   "status": "PASS"
+  },
+  {
+   "key": "sens.price.severe.2",
+   "label": "Sensitivity \u00b7 Purchase price \u2192 IRR \u00b7 Severe \u00b7 point 3",
+   "excel": -0.10811295237651,
+   "web": -0.10811295237651003,
+   "diff": 2.7755575615628914e-17,
+   "tol": 0.0005,
+   "kind": "pct",
+   "status": "PASS"
+  },
+  {
+   "key": "sens.price.severe.3",
+   "label": "Sensitivity \u00b7 Purchase price \u2192 IRR \u00b7 Severe \u00b7 point 4",
+   "excel": -0.119526771279425,
+   "web": -0.11952677127942496,
+   "diff": -4.163336342344337e-17,
+   "tol": 0.0005,
+   "kind": "pct",
+   "status": "PASS"
+  },
+  {
+   "key": "sens.price.severe.4",
+   "label": "Sensitivity \u00b7 Purchase price \u2192 IRR \u00b7 Severe \u00b7 point 5",
+   "excel": -0.130301948668078,
+   "web": -0.13030194866807704,
+   "diff": -9.71445146547012e-16,
+   "tol": 0.0005,
+   "kind": "pct",
+   "status": "PASS"
+  },
+  {
+   "key": "sens.rec.base.0",
+   "label": "Sensitivity \u00b7 Recovery / exit value \u2192 IRR \u00b7 Base \u00b7 point 1",
+   "excel": -0.22002894042474,
+   "web": -0.22002894042474036,
+   "diff": 3.608224830031759e-16,
+   "tol": 0.0005,
+   "kind": "pct",
+   "status": "PASS"
+  },
+  {
+   "key": "sens.rec.base.1",
+   "label": "Sensitivity \u00b7 Recovery / exit value \u2192 IRR \u00b7 Base \u00b7 point 2",
+   "excel": -0.103990625641738,
+   "web": -0.10399062564173772,
+   "diff": -2.7755575615628914e-16,
+   "tol": 0.0005,
+   "kind": "pct",
+   "status": "PASS"
+  },
+  {
+   "key": "sens.rec.base.2",
+   "label": "Sensitivity \u00b7 Recovery / exit value \u2192 IRR \u00b7 Base \u00b7 point 3",
+   "excel": -0.0140184707970688,
+   "web": -0.014018470797068805,
+   "diff": 5.204170427930421e-18,
+   "tol": 0.0005,
+   "kind": "pct",
+   "status": "PASS"
+  },
+  {
+   "key": "sens.rec.base.3",
+   "label": "Sensitivity \u00b7 Recovery / exit value \u2192 IRR \u00b7 Base \u00b7 point 4",
+   "excel": 0.0609775113549791,
+   "web": 0.0609775113549792,
+   "diff": -9.71445146547012e-17,
+   "tol": 0.0005,
+   "kind": "pct",
+   "status": "PASS"
+  },
+  {
+   "key": "sens.rec.base.4",
+   "label": "Sensitivity \u00b7 Recovery / exit value \u2192 IRR \u00b7 Base \u00b7 point 5",
+   "excel": 0.126033624615204,
+   "web": 0.12603362461521772,
+   "diff": -1.3711254354120683e-14,
+   "tol": 0.0005,
+   "kind": "pct",
+   "status": "PASS"
+  },
+  {
+   "key": "sens.rec.downside.0",
+   "label": "Sensitivity \u00b7 Recovery / exit value \u2192 IRR \u00b7 Downside \u00b7 point 1",
+   "excel": -0.22002894042474,
+   "web": -0.22002894042474036,
+   "diff": 3.608224830031759e-16,
+   "tol": 0.0005,
+   "kind": "pct",
+   "status": "PASS"
+  },
+  {
+   "key": "sens.rec.downside.1",
+   "label": "Sensitivity \u00b7 Recovery / exit value \u2192 IRR \u00b7 Downside \u00b7 point 2",
+   "excel": -0.103990625641738,
+   "web": -0.10399062564173772,
+   "diff": -2.7755575615628914e-16,
+   "tol": 0.0005,
+   "kind": "pct",
+   "status": "PASS"
+  },
+  {
+   "key": "sens.rec.downside.2",
+   "label": "Sensitivity \u00b7 Recovery / exit value \u2192 IRR \u00b7 Downside \u00b7 point 3",
+   "excel": -0.0140184707970688,
+   "web": -0.014018470797068805,
+   "diff": 5.204170427930421e-18,
+   "tol": 0.0005,
+   "kind": "pct",
+   "status": "PASS"
+  },
+  {
+   "key": "sens.rec.downside.3",
+   "label": "Sensitivity \u00b7 Recovery / exit value \u2192 IRR \u00b7 Downside \u00b7 point 4",
+   "excel": 0.0609775113549791,
+   "web": 0.0609775113549792,
+   "diff": -9.71445146547012e-17,
+   "tol": 0.0005,
+   "kind": "pct",
+   "status": "PASS"
+  },
+  {
+   "key": "sens.rec.downside.4",
+   "label": "Sensitivity \u00b7 Recovery / exit value \u2192 IRR \u00b7 Downside \u00b7 point 5",
+   "excel": 0.126033624615204,
+   "web": 0.12603362461521772,
+   "diff": -1.3711254354120683e-14,
+   "tol": 0.0005,
+   "kind": "pct",
+   "status": "PASS"
+  },
+  {
+   "key": "sens.rec.severe.0",
+   "label": "Sensitivity \u00b7 Recovery / exit value \u2192 IRR \u00b7 Severe \u00b7 point 1",
+   "excel": -0.189481664272586,
+   "web": -0.18948166427258534,
+   "diff": -6.661338147750939e-16,
+   "tol": 0.0005,
+   "kind": "pct",
+   "status": "PASS"
+  },
+  {
+   "key": "sens.rec.severe.1",
+   "label": "Sensitivity \u00b7 Recovery / exit value \u2192 IRR \u00b7 Severe \u00b7 point 2",
+   "excel": -0.0856298029339399,
+   "web": -0.08562980293393979,
+   "diff": -1.1102230246251565e-16,
+   "tol": 0.0005,
+   "kind": "pct",
+   "status": "PASS"
+  },
+  {
+   "key": "sens.rec.severe.2",
+   "label": "Sensitivity \u00b7 Recovery / exit value \u2192 IRR \u00b7 Severe \u00b7 point 3",
+   "excel": -0.0112501651617602,
+   "web": -0.011250165161760195,
+   "diff": -5.204170427930421e-18,
+   "tol": 0.0005,
+   "kind": "pct",
+   "status": "PASS"
+  },
+  {
+   "key": "sens.rec.severe.3",
+   "label": "Sensitivity \u00b7 Recovery / exit value \u2192 IRR \u00b7 Severe \u00b7 point 4",
+   "excel": 0.0480705325041448,
+   "web": 0.04807053250414606,
+   "diff": -1.2559397966072083e-15,
+   "tol": 0.0005,
+   "kind": "pct",
+   "status": "PASS"
+  },
+  {
+   "key": "sens.rec.severe.4",
+   "label": "Sensitivity \u00b7 Recovery / exit value \u2192 IRR \u00b7 Severe \u00b7 point 5",
+   "excel": 0.0980151912782897,
+   "web": 0.09801519127828973,
+   "diff": -2.7755575615628914e-17,
+   "tol": 0.0005,
+   "kind": "pct",
+   "status": "PASS"
+  },
+  {
+   "key": "sens.margin.base.0",
+   "label": "Sensitivity \u00b7 EBITDA margin shift \u2192 IRR \u00b7 Base \u00b7 point 1",
+   "excel": 0.10761133345211,
+   "web": 0.10761133345211482,
+   "diff": -4.8155923693116165e-15,
+   "tol": 0.0005,
+   "kind": "pct",
+   "status": "PASS"
+  },
+  {
+   "key": "sens.margin.base.1",
+   "label": "Sensitivity \u00b7 EBITDA margin shift \u2192 IRR \u00b7 Base \u00b7 point 2",
+   "excel": 0.126033624615204,
+   "web": 0.12603362461521772,
+   "diff": -1.3711254354120683e-14,
+   "tol": 0.0005,
+   "kind": "pct",
+   "status": "PASS"
+  },
+  {
+   "key": "sens.margin.base.2",
+   "label": "Sensitivity \u00b7 EBITDA margin shift \u2192 IRR \u00b7 Base \u00b7 point 3",
+   "excel": 0.126033624615204,
+   "web": 0.12603362461521772,
+   "diff": -1.3711254354120683e-14,
+   "tol": 0.0005,
+   "kind": "pct",
+   "status": "PASS"
+  },
+  {
+   "key": "sens.margin.base.3",
+   "label": "Sensitivity \u00b7 EBITDA margin shift \u2192 IRR \u00b7 Base \u00b7 point 4",
+   "excel": 0.126033624615204,
+   "web": 0.12603362461521772,
+   "diff": -1.3711254354120683e-14,
+   "tol": 0.0005,
+   "kind": "pct",
+   "status": "PASS"
+  },
+  {
+   "key": "sens.margin.base.4",
+   "label": "Sensitivity \u00b7 EBITDA margin shift \u2192 IRR \u00b7 Base \u00b7 point 5",
+   "excel": 0.126033624615204,
+   "web": 0.12603362461521772,
+   "diff": -1.3711254354120683e-14,
+   "tol": 0.0005,
+   "kind": "pct",
+   "status": "PASS"
+  },
+  {
+   "key": "sens.margin.downside.0",
+   "label": "Sensitivity \u00b7 EBITDA margin shift \u2192 IRR \u00b7 Downside \u00b7 point 1",
+   "excel": -0.0623549957525989,
+   "web": -0.062354995752598896,
+   "diff": -6.938893903907228e-18,
+   "tol": 0.0005,
+   "kind": "pct",
+   "status": "PASS"
+  },
+  {
+   "key": "sens.margin.downside.1",
+   "label": "Sensitivity \u00b7 EBITDA margin shift \u2192 IRR \u00b7 Downside \u00b7 point 2",
+   "excel": -0.0206908929736275,
+   "web": -0.020690892973627084,
+   "diff": -4.163336342344337e-16,
+   "tol": 0.0005,
+   "kind": "pct",
+   "status": "PASS"
+  },
+  {
+   "key": "sens.margin.downside.2",
+   "label": "Sensitivity \u00b7 EBITDA margin shift \u2192 IRR \u00b7 Downside \u00b7 point 3",
+   "excel": 0.0653848807562152,
+   "web": 0.06538488075621529,
+   "diff": -9.71445146547012e-17,
+   "tol": 0.0005,
+   "kind": "pct",
+   "status": "PASS"
+  },
+  {
+   "key": "sens.margin.downside.3",
+   "label": "Sensitivity \u00b7 EBITDA margin shift \u2192 IRR \u00b7 Downside \u00b7 point 4",
+   "excel": 0.110526315789467,
+   "web": 0.1105263157894737,
+   "diff": -6.689093723366568e-15,
+   "tol": 0.0005,
+   "kind": "pct",
+   "status": "PASS"
+  },
+  {
+   "key": "sens.margin.downside.4",
+   "label": "Sensitivity \u00b7 EBITDA margin shift \u2192 IRR \u00b7 Downside \u00b7 point 5",
+   "excel": 0.110526315789467,
+   "web": 0.1105263157894737,
+   "diff": -6.689093723366568e-15,
+   "tol": 0.0005,
+   "kind": "pct",
+   "status": "PASS"
+  },
+  {
+   "key": "sens.margin.severe.0",
+   "label": "Sensitivity \u00b7 EBITDA margin shift \u2192 IRR \u00b7 Severe \u00b7 point 1",
+   "excel": -0.10811295237651,
+   "web": -0.10811295237651003,
+   "diff": 2.7755575615628914e-17,
+   "tol": 0.0005,
+   "kind": "pct",
+   "status": "PASS"
+  },
+  {
+   "key": "sens.margin.severe.1",
+   "label": "Sensitivity \u00b7 EBITDA margin shift \u2192 IRR \u00b7 Severe \u00b7 point 2",
+   "excel": -0.10811295237651,
+   "web": -0.10811295237651003,
+   "diff": 2.7755575615628914e-17,
+   "tol": 0.0005,
+   "kind": "pct",
+   "status": "PASS"
+  },
+  {
+   "key": "sens.margin.severe.2",
+   "label": "Sensitivity \u00b7 EBITDA margin shift \u2192 IRR \u00b7 Severe \u00b7 point 3",
+   "excel": -0.10811295237651,
+   "web": -0.10811295237651003,
+   "diff": 2.7755575615628914e-17,
+   "tol": 0.0005,
+   "kind": "pct",
+   "status": "PASS"
+  },
+  {
+   "key": "sens.margin.severe.3",
+   "label": "Sensitivity \u00b7 EBITDA margin shift \u2192 IRR \u00b7 Severe \u00b7 point 4",
+   "excel": -0.0847564855019026,
+   "web": -0.08475648550190268,
+   "diff": 8.326672684688674e-17,
+   "tol": 0.0005,
+   "kind": "pct",
+   "status": "PASS"
+  },
+  {
+   "key": "sens.margin.severe.4",
+   "label": "Sensitivity \u00b7 EBITDA margin shift \u2192 IRR \u00b7 Severe \u00b7 point 5",
+   "excel": -0.032883675698974,
+   "web": -0.032883675698973935,
+   "diff": -6.245004513516506e-17,
+   "tol": 0.0005,
+   "kind": "pct",
+   "status": "PASS"
+  },
+  {
+   "key": "sens.growth.base.0",
+   "label": "Sensitivity \u00b7 Revenue growth shift \u2192 IRR \u00b7 Base \u00b7 point 1",
+   "excel": 0.126033624615204,
+   "web": 0.12603362461521772,
+   "diff": -1.3711254354120683e-14,
+   "tol": 0.0005,
+   "kind": "pct",
+   "status": "PASS"
+  },
+  {
+   "key": "sens.growth.base.1",
+   "label": "Sensitivity \u00b7 Revenue growth shift \u2192 IRR \u00b7 Base \u00b7 point 2",
+   "excel": 0.126033624615204,
+   "web": 0.12603362461521772,
+   "diff": -1.3711254354120683e-14,
+   "tol": 0.0005,
+   "kind": "pct",
+   "status": "PASS"
+  },
+  {
+   "key": "sens.growth.base.2",
+   "label": "Sensitivity \u00b7 Revenue growth shift \u2192 IRR \u00b7 Base \u00b7 point 3",
+   "excel": 0.126033624615204,
+   "web": 0.12603362461521772,
+   "diff": -1.3711254354120683e-14,
+   "tol": 0.0005,
+   "kind": "pct",
+   "status": "PASS"
+  },
+  {
+   "key": "sens.growth.base.3",
+   "label": "Sensitivity \u00b7 Revenue growth shift \u2192 IRR \u00b7 Base \u00b7 point 4",
+   "excel": 0.126033624615204,
+   "web": 0.12603362461521772,
+   "diff": -1.3711254354120683e-14,
+   "tol": 0.0005,
+   "kind": "pct",
+   "status": "PASS"
+  },
+  {
+   "key": "sens.growth.base.4",
+   "label": "Sensitivity \u00b7 Revenue growth shift \u2192 IRR \u00b7 Base \u00b7 point 5",
+   "excel": 0.126033624615204,
+   "web": 0.12603362461521772,
+   "diff": -1.3711254354120683e-14,
+   "tol": 0.0005,
+   "kind": "pct",
+   "status": "PASS"
+  },
+  {
+   "key": "sens.growth.downside.0",
+   "label": "Sensitivity \u00b7 Revenue growth shift \u2192 IRR \u00b7 Downside \u00b7 point 1",
+   "excel": -0.0206908929736275,
+   "web": -0.020690892973627084,
+   "diff": -4.163336342344337e-16,
+   "tol": 0.0005,
+   "kind": "pct",
+   "status": "PASS"
+  },
+  {
+   "key": "sens.growth.downside.1",
+   "label": "Sensitivity \u00b7 Revenue growth shift \u2192 IRR \u00b7 Downside \u00b7 point 2",
+   "excel": 0.0103197837160626,
+   "web": 0.01031978371606257,
+   "diff": 3.122502256758253e-17,
+   "tol": 0.0005,
+   "kind": "pct",
+   "status": "PASS"
+  },
+  {
+   "key": "sens.growth.downside.2",
+   "label": "Sensitivity \u00b7 Revenue growth shift \u2192 IRR \u00b7 Downside \u00b7 point 3",
+   "excel": 0.0653848807562152,
+   "web": 0.06538488075621529,
+   "diff": -9.71445146547012e-17,
+   "tol": 0.0005,
+   "kind": "pct",
+   "status": "PASS"
+  },
+  {
+   "key": "sens.growth.downside.3",
+   "label": "Sensitivity \u00b7 Revenue growth shift \u2192 IRR \u00b7 Downside \u00b7 point 4",
+   "excel": 0.110526315789467,
+   "web": 0.1105263157894737,
+   "diff": -6.689093723366568e-15,
+   "tol": 0.0005,
+   "kind": "pct",
+   "status": "PASS"
+  },
+  {
+   "key": "sens.growth.downside.4",
+   "label": "Sensitivity \u00b7 Revenue growth shift \u2192 IRR \u00b7 Downside \u00b7 point 5",
+   "excel": 0.110526315789467,
+   "web": 0.1105263157894737,
+   "diff": -6.689093723366568e-15,
+   "tol": 0.0005,
+   "kind": "pct",
+   "status": "PASS"
+  },
+  {
+   "key": "sens.growth.severe.0",
+   "label": "Sensitivity \u00b7 Revenue growth shift \u2192 IRR \u00b7 Severe \u00b7 point 1",
+   "excel": -0.10811295237651,
+   "web": -0.10811295237651003,
+   "diff": 2.7755575615628914e-17,
+   "tol": 0.0005,
+   "kind": "pct",
+   "status": "PASS"
+  },
+  {
+   "key": "sens.growth.severe.1",
+   "label": "Sensitivity \u00b7 Revenue growth shift \u2192 IRR \u00b7 Severe \u00b7 point 2",
+   "excel": -0.10811295237651,
+   "web": -0.10811295237651003,
+   "diff": 2.7755575615628914e-17,
+   "tol": 0.0005,
+   "kind": "pct",
+   "status": "PASS"
+  },
+  {
+   "key": "sens.growth.severe.2",
+   "label": "Sensitivity \u00b7 Revenue growth shift \u2192 IRR \u00b7 Severe \u00b7 point 3",
+   "excel": -0.10811295237651,
+   "web": -0.10811295237651003,
+   "diff": 2.7755575615628914e-17,
+   "tol": 0.0005,
+   "kind": "pct",
+   "status": "PASS"
+  },
+  {
+   "key": "sens.growth.severe.3",
+   "label": "Sensitivity \u00b7 Revenue growth shift \u2192 IRR \u00b7 Severe \u00b7 point 4",
+   "excel": -0.0991394936188768,
+   "web": -0.0991394936188767,
+   "diff": -1.1102230246251565e-16,
+   "tol": 0.0005,
+   "kind": "pct",
+   "status": "PASS"
+  },
+  {
+   "key": "sens.growth.severe.4",
+   "label": "Sensitivity \u00b7 Revenue growth shift \u2192 IRR \u00b7 Severe \u00b7 point 5",
+   "excel": -0.0723453280188484,
+   "web": -0.07234532801884846,
+   "diff": 6.938893903907228e-17,
+   "tol": 0.0005,
+   "kind": "pct",
+   "status": "PASS"
+  },
+  {
+   "key": "sens.sofr.base.0",
+   "label": "Sensitivity \u00b7 SOFR shift \u2192 IRR \u00b7 Base \u00b7 point 1",
+   "excel": 0.126033624615204,
+   "web": 0.12603362461521772,
+   "diff": -1.3711254354120683e-14,
+   "tol": 0.0005,
+   "kind": "pct",
+   "status": "PASS"
+  },
+  {
+   "key": "sens.sofr.base.1",
+   "label": "Sensitivity \u00b7 SOFR shift \u2192 IRR \u00b7 Base \u00b7 point 2",
+   "excel": 0.126033624615204,
+   "web": 0.12603362461521772,
+   "diff": -1.3711254354120683e-14,
+   "tol": 0.0005,
+   "kind": "pct",
+   "status": "PASS"
+  },
+  {
+   "key": "sens.sofr.base.2",
+   "label": "Sensitivity \u00b7 SOFR shift \u2192 IRR \u00b7 Base \u00b7 point 3",
+   "excel": 0.126033624615204,
+   "web": 0.12603362461521772,
+   "diff": -1.3711254354120683e-14,
+   "tol": 0.0005,
+   "kind": "pct",
+   "status": "PASS"
+  },
+  {
+   "key": "sens.sofr.base.3",
+   "label": "Sensitivity \u00b7 SOFR shift \u2192 IRR \u00b7 Base \u00b7 point 4",
+   "excel": 0.126033624615204,
+   "web": 0.12603362461521772,
+   "diff": -1.3711254354120683e-14,
+   "tol": 0.0005,
+   "kind": "pct",
+   "status": "PASS"
+  },
+  {
+   "key": "sens.sofr.base.4",
+   "label": "Sensitivity \u00b7 SOFR shift \u2192 IRR \u00b7 Base \u00b7 point 5",
+   "excel": 0.126033624615204,
+   "web": 0.12603362461521772,
+   "diff": -1.3711254354120683e-14,
+   "tol": 0.0005,
+   "kind": "pct",
+   "status": "PASS"
+  },
+  {
+   "key": "sens.sofr.downside.0",
+   "label": "Sensitivity \u00b7 SOFR shift \u2192 IRR \u00b7 Downside \u00b7 point 1",
+   "excel": 0.0653848807562152,
+   "web": 0.06538488075621529,
+   "diff": -9.71445146547012e-17,
+   "tol": 0.0005,
+   "kind": "pct",
+   "status": "PASS"
+  },
+  {
+   "key": "sens.sofr.downside.1",
+   "label": "Sensitivity \u00b7 SOFR shift \u2192 IRR \u00b7 Downside \u00b7 point 2",
+   "excel": 0.0653848807562152,
+   "web": 0.06538488075621529,
+   "diff": -9.71445146547012e-17,
+   "tol": 0.0005,
+   "kind": "pct",
+   "status": "PASS"
+  },
+  {
+   "key": "sens.sofr.downside.2",
+   "label": "Sensitivity \u00b7 SOFR shift \u2192 IRR \u00b7 Downside \u00b7 point 3",
+   "excel": 0.0653848807562152,
+   "web": 0.06538488075621529,
+   "diff": -9.71445146547012e-17,
+   "tol": 0.0005,
+   "kind": "pct",
+   "status": "PASS"
+  },
+  {
+   "key": "sens.sofr.downside.3",
+   "label": "Sensitivity \u00b7 SOFR shift \u2192 IRR \u00b7 Downside \u00b7 point 4",
+   "excel": 0.0653848807562152,
+   "web": 0.06538488075621529,
+   "diff": -9.71445146547012e-17,
+   "tol": 0.0005,
+   "kind": "pct",
+   "status": "PASS"
+  },
+  {
+   "key": "sens.sofr.downside.4",
+   "label": "Sensitivity \u00b7 SOFR shift \u2192 IRR \u00b7 Downside \u00b7 point 5",
+   "excel": 0.0653848807562152,
+   "web": 0.06538488075621529,
+   "diff": -9.71445146547012e-17,
+   "tol": 0.0005,
+   "kind": "pct",
+   "status": "PASS"
+  },
+  {
+   "key": "sens.sofr.severe.0",
+   "label": "Sensitivity \u00b7 SOFR shift \u2192 IRR \u00b7 Severe \u00b7 point 1",
+   "excel": -0.10811295237651,
+   "web": -0.10811295237651003,
+   "diff": 2.7755575615628914e-17,
+   "tol": 0.0005,
+   "kind": "pct",
+   "status": "PASS"
+  },
+  {
+   "key": "sens.sofr.severe.1",
+   "label": "Sensitivity \u00b7 SOFR shift \u2192 IRR \u00b7 Severe \u00b7 point 2",
+   "excel": -0.10811295237651,
+   "web": -0.10811295237651003,
+   "diff": 2.7755575615628914e-17,
+   "tol": 0.0005,
+   "kind": "pct",
+   "status": "PASS"
+  },
+  {
+   "key": "sens.sofr.severe.2",
+   "label": "Sensitivity \u00b7 SOFR shift \u2192 IRR \u00b7 Severe \u00b7 point 3",
+   "excel": -0.10811295237651,
+   "web": -0.10811295237651003,
+   "diff": 2.7755575615628914e-17,
+   "tol": 0.0005,
+   "kind": "pct",
+   "status": "PASS"
+  },
+  {
+   "key": "sens.sofr.severe.3",
+   "label": "Sensitivity \u00b7 SOFR shift \u2192 IRR \u00b7 Severe \u00b7 point 4",
+   "excel": -0.10811295237651,
+   "web": -0.10811295237651003,
+   "diff": 2.7755575615628914e-17,
+   "tol": 0.0005,
+   "kind": "pct",
+   "status": "PASS"
+  },
+  {
+   "key": "sens.sofr.severe.4",
+   "label": "Sensitivity \u00b7 SOFR shift \u2192 IRR \u00b7 Severe \u00b7 point 5",
+   "excel": -0.10811295237651,
+   "web": -0.10811295237651003,
+   "diff": 2.7755575615628914e-17,
+   "tol": 0.0005,
+   "kind": "pct",
+   "status": "PASS"
+  },
+  {
+   "key": "sens.mult.base.0",
+   "label": "Sensitivity \u00b7 Distressed multiple shift \u2192 recovery % \u00b7 Base \u00b7 point 1",
+   "excel": 0.960821507452371,
+   "web": 0.960821507452371,
+   "diff": 0.0,
+   "tol": 0.0005,
+   "kind": "pct",
+   "status": "PASS"
+  },
+  {
+   "key": "sens.mult.base.1",
+   "label": "Sensitivity \u00b7 Distressed multiple shift \u2192 recovery % \u00b7 Base \u00b7 point 2",
+   "excel": 1,
+   "web": 1,
+   "diff": 0.0,
+   "tol": 0.0005,
+   "kind": "pct",
+   "status": "PASS"
+  },
+  {
+   "key": "sens.mult.base.2",
+   "label": "Sensitivity \u00b7 Distressed multiple shift \u2192 recovery % \u00b7 Base \u00b7 point 3",
+   "excel": 1,
+   "web": 1,
+   "diff": 0.0,
+   "tol": 0.0005,
+   "kind": "pct",
+   "status": "PASS"
+  },
+  {
+   "key": "sens.mult.base.3",
+   "label": "Sensitivity \u00b7 Distressed multiple shift \u2192 recovery % \u00b7 Base \u00b7 point 4",
+   "excel": 1,
+   "web": 1,
+   "diff": 0.0,
+   "tol": 0.0005,
+   "kind": "pct",
+   "status": "PASS"
+  },
+  {
+   "key": "sens.mult.base.4",
+   "label": "Sensitivity \u00b7 Distressed multiple shift \u2192 recovery % \u00b7 Base \u00b7 point 5",
+   "excel": 1,
+   "web": 1,
+   "diff": 0.0,
+   "tol": 0.0005,
+   "kind": "pct",
+   "status": "PASS"
+  },
+  {
+   "key": "sens.mult.downside.0",
+   "label": "Sensitivity \u00b7 Distressed multiple shift \u2192 recovery % \u00b7 Downside \u00b7 point 1",
+   "excel": 0.529710271054573,
+   "web": 0.5297102710545727,
+   "diff": 3.3306690738754696e-16,
+   "tol": 0.0005,
+   "kind": "pct",
+   "status": "PASS"
+  },
+  {
+   "key": "sens.mult.downside.1",
+   "label": "Sensitivity \u00b7 Distressed multiple shift \u2192 recovery % \u00b7 Downside \u00b7 point 2",
+   "excel": 0.529710271054573,
+   "web": 0.5297102710545727,
+   "diff": 3.3306690738754696e-16,
+   "tol": 0.0005,
+   "kind": "pct",
+   "status": "PASS"
+  },
+  {
+   "key": "sens.mult.downside.2",
+   "label": "Sensitivity \u00b7 Distressed multiple shift \u2192 recovery % \u00b7 Downside \u00b7 point 3",
+   "excel": 0.606284007392095,
+   "web": 0.6062840073920954,
+   "diff": -4.440892098500626e-16,
+   "tol": 0.0005,
+   "kind": "pct",
+   "status": "PASS"
+  },
+  {
+   "key": "sens.mult.downside.3",
+   "label": "Sensitivity \u00b7 Distressed multiple shift \u2192 recovery % \u00b7 Downside \u00b7 point 4",
+   "excel": 0.722254535478567,
+   "web": 0.7222545354785672,
+   "diff": -2.220446049250313e-16,
+   "tol": 0.0005,
+   "kind": "pct",
+   "status": "PASS"
+  },
+  {
+   "key": "sens.mult.downside.4",
+   "label": "Sensitivity \u00b7 Distressed multiple shift \u2192 recovery % \u00b7 Downside \u00b7 point 5",
+   "excel": 0.838225063565039,
+   "web": 0.8382250635650389,
+   "diff": 1.1102230246251565e-16,
+   "tol": 0.0005,
+   "kind": "pct",
+   "status": "PASS"
+  },
+  {
+   "key": "sens.mult.severe.0",
+   "label": "Sensitivity \u00b7 Distressed multiple shift \u2192 recovery % \u00b7 Severe \u00b7 point 1",
+   "excel": 0.340518665921812,
+   "web": 0.3405186659218122,
+   "diff": -1.6653345369377348e-16,
+   "tol": 0.0005,
+   "kind": "pct",
+   "status": "PASS"
+  },
+  {
+   "key": "sens.mult.severe.1",
+   "label": "Sensitivity \u00b7 Distressed multiple shift \u2192 recovery % \u00b7 Severe \u00b7 point 2",
+   "excel": 0.340518665921812,
+   "web": 0.3405186659218122,
+   "diff": -1.6653345369377348e-16,
+   "tol": 0.0005,
+   "kind": "pct",
+   "status": "PASS"
+  },
+  {
+   "key": "sens.mult.severe.2",
+   "label": "Sensitivity \u00b7 Distressed multiple shift \u2192 recovery % \u00b7 Severe \u00b7 point 3",
+   "excel": 0.340518665921812,
+   "web": 0.3405186659218122,
+   "diff": -1.6653345369377348e-16,
+   "tol": 0.0005,
+   "kind": "pct",
+   "status": "PASS"
+  },
+  {
+   "key": "sens.mult.severe.3",
+   "label": "Sensitivity \u00b7 Distressed multiple shift \u2192 recovery % \u00b7 Severe \u00b7 point 4",
+   "excel": 0.380884651174754,
+   "web": 0.38088465117475373,
+   "diff": 2.7755575615628914e-16,
+   "tol": 0.0005,
+   "kind": "pct",
+   "status": "PASS"
+  },
+  {
+   "key": "sens.mult.severe.4",
+   "label": "Sensitivity \u00b7 Distressed multiple shift \u2192 recovery % \u00b7 Severe \u00b7 point 5",
+   "excel": 0.457061581409704,
+   "web": 0.4570615814097044,
+   "diff": -3.885780586188048e-16,
+   "tol": 0.0005,
+   "kind": "pct",
+   "status": "PASS"
+  },
+  {
+   "key": "sens.mrec.base.0",
+   "label": "Sensitivity \u00b7 Recovery value \u2192 MOIC \u00b7 Base \u00b7 point 1",
+   "excel": 0.542105263157895,
+   "web": 0.5421052631578948,
+   "diff": 2.220446049250313e-16,
+   "tol": 0.005,
+   "kind": "ratio",
+   "status": "PASS"
+  },
+  {
+   "key": "sens.mrec.base.1",
+   "label": "Sensitivity \u00b7 Recovery value \u2192 MOIC \u00b7 Base \u00b7 point 2",
+   "excel": 0.752631578947368,
+   "web": 0.7526315789473684,
+   "diff": -4.440892098500626e-16,
+   "tol": 0.005,
+   "kind": "ratio",
+   "status": "PASS"
+  },
+  {
+   "key": "sens.mrec.base.2",
+   "label": "Sensitivity \u00b7 Recovery value \u2192 MOIC \u00b7 Base \u00b7 point 3",
+   "excel": 0.963157894736842,
+   "web": 0.9631578947368421,
+   "diff": -1.1102230246251565e-16,
+   "tol": 0.005,
+   "kind": "ratio",
+   "status": "PASS"
+  },
+  {
+   "key": "sens.mrec.base.3",
+   "label": "Sensitivity \u00b7 Recovery value \u2192 MOIC \u00b7 Base \u00b7 point 4",
+   "excel": 1.17368421052632,
+   "web": 1.1736842105263159,
+   "diff": 4.218847493575595e-15,
+   "tol": 0.005,
+   "kind": "ratio",
+   "status": "PASS"
+  },
+  {
+   "key": "sens.mrec.base.4",
+   "label": "Sensitivity \u00b7 Recovery value \u2192 MOIC \u00b7 Base \u00b7 point 5",
+   "excel": 1.38421052631579,
+   "web": 1.3842105263157896,
+   "diff": 4.440892098500626e-16,
+   "tol": 0.005,
+   "kind": "ratio",
+   "status": "PASS"
+  },
+  {
+   "key": "sens.mrec.downside.0",
+   "label": "Sensitivity \u00b7 Recovery value \u2192 MOIC \u00b7 Downside \u00b7 point 1",
+   "excel": 0.542105263157895,
+   "web": 0.5421052631578948,
+   "diff": 2.220446049250313e-16,
+   "tol": 0.005,
+   "kind": "ratio",
+   "status": "PASS"
+  },
+  {
+   "key": "sens.mrec.downside.1",
+   "label": "Sensitivity \u00b7 Recovery value \u2192 MOIC \u00b7 Downside \u00b7 point 2",
+   "excel": 0.752631578947368,
+   "web": 0.7526315789473684,
+   "diff": -4.440892098500626e-16,
+   "tol": 0.005,
+   "kind": "ratio",
+   "status": "PASS"
+  },
+  {
+   "key": "sens.mrec.downside.2",
+   "label": "Sensitivity \u00b7 Recovery value \u2192 MOIC \u00b7 Downside \u00b7 point 3",
+   "excel": 0.963157894736842,
+   "web": 0.9631578947368421,
+   "diff": -1.1102230246251565e-16,
+   "tol": 0.005,
+   "kind": "ratio",
+   "status": "PASS"
+  },
+  {
+   "key": "sens.mrec.downside.3",
+   "label": "Sensitivity \u00b7 Recovery value \u2192 MOIC \u00b7 Downside \u00b7 point 4",
+   "excel": 1.17368421052632,
+   "web": 1.1736842105263159,
+   "diff": 4.218847493575595e-15,
+   "tol": 0.005,
+   "kind": "ratio",
+   "status": "PASS"
+  },
+  {
+   "key": "sens.mrec.downside.4",
+   "label": "Sensitivity \u00b7 Recovery value \u2192 MOIC \u00b7 Downside \u00b7 point 5",
+   "excel": 1.38421052631579,
+   "web": 1.3842105263157896,
+   "diff": 4.440892098500626e-16,
+   "tol": 0.005,
+   "kind": "ratio",
+   "status": "PASS"
+  },
+  {
+   "key": "sens.mrec.severe.0",
+   "label": "Sensitivity \u00b7 Recovery value \u2192 MOIC \u00b7 Severe \u00b7 point 1",
+   "excel": 0.542105263157895,
+   "web": 0.5421052631578948,
+   "diff": 2.220446049250313e-16,
+   "tol": 0.005,
+   "kind": "ratio",
+   "status": "PASS"
+  },
+  {
+   "key": "sens.mrec.severe.1",
+   "label": "Sensitivity \u00b7 Recovery value \u2192 MOIC \u00b7 Severe \u00b7 point 2",
+   "excel": 0.752631578947368,
+   "web": 0.7526315789473684,
+   "diff": -4.440892098500626e-16,
+   "tol": 0.005,
+   "kind": "ratio",
+   "status": "PASS"
+  },
+  {
+   "key": "sens.mrec.severe.2",
+   "label": "Sensitivity \u00b7 Recovery value \u2192 MOIC \u00b7 Severe \u00b7 point 3",
+   "excel": 0.963157894736842,
+   "web": 0.9631578947368421,
+   "diff": -1.1102230246251565e-16,
+   "tol": 0.005,
+   "kind": "ratio",
+   "status": "PASS"
+  },
+  {
+   "key": "sens.mrec.severe.3",
+   "label": "Sensitivity \u00b7 Recovery value \u2192 MOIC \u00b7 Severe \u00b7 point 4",
+   "excel": 1.17368421052632,
+   "web": 1.1736842105263159,
+   "diff": 4.218847493575595e-15,
+   "tol": 0.005,
+   "kind": "ratio",
+   "status": "PASS"
+  },
+  {
+   "key": "sens.mrec.severe.4",
+   "label": "Sensitivity \u00b7 Recovery value \u2192 MOIC \u00b7 Severe \u00b7 point 5",
+   "excel": 1.38421052631579,
+   "web": 1.3842105263157896,
+   "diff": 4.440892098500626e-16,
+   "tol": 0.005,
+   "kind": "ratio",
+   "status": "PASS"
+  },
+  {
+   "key": "base.defaultYear",
+   "label": "Base \u00b7 Default period (0 = none)",
+   "excel": 0,
+   "web": 0,
+   "diff": null,
+   "tol": 0,
+   "kind": "flag",
+   "status": "PASS"
+  },
+  {
+   "key": "downside.defaultYear",
+   "label": "Downside \u00b7 Default period (0 = none)",
+   "excel": 0,
+   "web": 0,
+   "diff": null,
+   "tol": 0,
+   "kind": "flag",
+   "status": "PASS"
+  },
+  {
+   "key": "severe.defaultYear",
+   "label": "Severe \u00b7 Default period (0 = none)",
+   "excel": 2029,
+   "web": 2029,
+   "diff": null,
+   "tol": 0,
+   "kind": "flag",
+   "status": "PASS"
+  }
+ ],
+ "pass_count": 178,
+ "total": 178
+}

@@ -1,0 +1,197 @@
+{
+ "case": "amcx",
+ "formulas": 48921,
+ "inputs": 608,
+ "checks": [
+  {
+   "name": "[amcx] S1 every numeric constant is a blue input on an input tab",
+   "ok": true,
+   "detail": "608 inputs; offenders []"
+  },
+  {
+   "name": "[amcx] S2 no blue (input) cell contains a formula",
+   "ok": true,
+   "detail": "[]"
+  },
+  {
+   "name": "[amcx] S3 pure cross-sheet links are green",
+   "ok": true,
+   "detail": "[]"
+  },
+  {
+   "name": "[amcx] S4 no embedded numeric literals in formulas (beyond structural 0/1/2/12/31/99/100 and IRR starting guesses)",
+   "ok": true,
+   "detail": "48921 formulas; offenders []"
+  },
+  {
+   "name": "[amcx] S5 no #REF!, #DIV/0!, #VALUE!, #N/A, #NAME?, #NUM! or circular-reference (Err:5xx) in any computed cell",
+   "ok": true,
+   "detail": "[]"
+  },
+  {
+   "name": "[amcx] S6 every formula has a computed value",
+   "ok": true,
+   "detail": "0 uncomputed"
+  },
+  {
+   "name": "[amcx] S7 rows labelled as calculated outputs contain only formulas",
+   "ok": true,
+   "detail": "[]"
+  },
+  {
+   "name": "[amcx] S8 'Base-case IRR' traces back through formulas to blue inputs on Assumptions / Historical",
+   "ok": true,
+   "detail": "687 cells, input leaves on ['Assumptions', 'Calc Engine', 'Historical Financials']"
+  },
+  {
+   "name": "[amcx] S8 'Probability-weighted IRR' traces back through formulas to blue inputs on Assumptions / Historical",
+   "ok": true,
+   "detail": "1719 cells, input leaves on ['Assumptions', 'Calc Engine', 'Historical Financials']"
+  },
+  {
+   "name": "[amcx] S8 'Net leverage \u2014 base period' traces back through formulas to blue inputs on Assumptions / Historical",
+   "ok": true,
+   "detail": "45 cells, input leaves on ['Assumptions', 'Historical Financials']"
+  },
+  {
+   "name": "[amcx] S8 'Credit score' traces back through formulas to blue inputs on Assumptions / Historical",
+   "ok": true,
+   "detail": "204 cells, input leaves on ['Assumptions', 'Historical Financials']"
+  },
+  {
+   "name": "[amcx] S8 'Recovery (selected' traces back through formulas to blue inputs on Assumptions / Historical",
+   "ok": true,
+   "detail": "584 cells, input leaves on ['Assumptions', 'Historical Financials']"
+  },
+  {
+   "name": "[amcx] S8b recommendation traces to inputs through Scenarios and Calc Engine",
+   "ok": true,
+   "detail": "1922 cells"
+  },
+  {
+   "name": "[amcx] S9 in-workbook integrity checks all pass",
+   "ok": true,
+   "detail": "ALL CHECKS PASS"
+  },
+  {
+   "name": "[amcx] S10 named ranges resolve to cells",
+   "ok": true,
+   "detail": "ActiveScenario, FaceValue, HoldPeriods, HurdleIRR, MinOperatingCash, PurchasePrice, RecoveryOverride"
+  },
+  {
+   "name": "[amcx] S11 sensitivity monotonicity: IRR falls as purchase price rises; IRR and MOIC rise with recovery / exit value",
+   "ok": true,
+   "detail": "price table base col [0.163, 0.144, 0.126, 0.109, 0.093]"
+  },
+  {
+   "name": "[amcx] S11b all seven sensitivity tables are fully populated (63 simulated cases) with no errors",
+   "ok": true,
+   "detail": "0 bad cells"
+  },
+  {
+   "name": "[amcx] S12a every sourced historical input has a datapoint (filing, accession, page/section, URL)",
+   "ok": true,
+   "detail": "89 datapoints; missing []"
+  },
+  {
+   "name": "[amcx] S12b Sources register values are live links that equal the Historical Financials inputs",
+   "ok": true,
+   "detail": "98 register rows; mismatches []"
+  },
+  {
+   "name": "[amcx] S12c model-calculated EBITDA / NOI equals the company-reported figure in every period (to $0.005M)",
+   "ok": true,
+   "detail": "6 periods, max |diff| 0.0000"
+  },
+  {
+   "name": "[amcx] D1 independent Python recomputation of revenue, EBITDA and capex (5 periods, selected scenario) matches the workbook",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "[amcx] D2 period-1 cash interest = \u03a3 face \u00d7 all-in rate (SOFR floor, spread, scenario shock) recomputed independently",
+   "ok": true,
+   "detail": "155.955"
+  },
+  {
+   "name": "[amcx] D3 recovery waterfall (seniority, collateral pools, deficiency claims) matches an independent Python waterfall",
+   "ok": true,
+   "detail": "model [818.3, 0, 0]"
+  },
+  {
+   "name": "[amcx] D4 IRR and MOIC recomputed independently from the cash-flow row",
+   "ok": true,
+   "detail": "IRR 0.06538"
+  },
+  {
+   "name": "[amcx] D3b recovery bounds: every tranche \u2264 its claim, total recoveries \u2264 net distributable value, equity residual only when all claims are paid",
+   "ok": true,
+   "detail": "recoveries 818.3 \u2264 net value 818.3; claims 1349.6"
+  },
+  {
+   "name": "[amcx] D7 known-answer IRR: [-100, 10, 10, 110] \u2192 exactly 10.0000% (independent bisection)",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "[amcx] D7b Excel XIRR equals an independent actual/365 XIRR of the same dated cash flows",
+   "ok": true,
+   "detail": "XIRR 0.06532 vs IRR 0.06538 (differences are leap-year day counts)"
+  },
+  {
+   "name": "[amcx] D8a scenario probabilities sum to 100%",
+   "ok": true,
+   "detail": "[0.45, 0.35, 0.2]"
+  },
+  {
+   "name": "[amcx] D8 probability-weighted IRR = IRR of the probability-weighted cash flows (independent), shown separately from the average of scenario IRRs",
+   "ok": true,
+   "detail": "expected-cash-flow IRR 0.06109; average of scenario IRRs 0.05798"
+  },
+  {
+   "name": "[amcx] D9 contractual-timing IRR recomputed independently from the re-timed quarterly flows; total cash unchanged vs the annual model",
+   "ok": true,
+   "detail": "contractual IRR (base/downside/severe) [0.12945, 0.0673, -0.11146]; coupons per year 2"
+  },
+  {
+   "name": "[amcx] D9b contractual-timing IRR agrees with an actual/365 XIRR on calendar-month dates (base case, \u00b15 bp)",
+   "ok": true,
+   "detail": "XIRR 0.12932 vs 0.12945"
+  },
+  {
+   "name": "[amcx] D11 debt roll-forward recomputed independently: ending = beginning + draws + PIK \u2212 amortization \u2212 repayment \u2212 sweep (non-maturing periods), beginning = prior ending, cash interest = beginning balance \u00d7 all-in rate",
+   "ok": true,
+   "detail": "3 tranches \u00d7 5 periods; exceptions [] []"
+  },
+  {
+   "name": "[amcx] D12 total debt = \u03a3 tranche ending balances; net debt = total debt \u2212 ending cash; net leverage = net debt \u00f7 EBITDA; coverage = EBITDA \u00f7 cash interest (all 5 periods, independent)",
+   "ok": true,
+   "detail": "exceptions []"
+  },
+  {
+   "name": "[amcx] D13 contractual maturities by period equal the face balances of tranches whose maturity falls in that period (no amortization / PIK / sweep before maturity)",
+   "ok": true,
+   "detail": "schedule [0.0, 0.0, 420.5, 0.0, 0.0] vs Assumptions [0.0, 0.0, 420.5, 0.0, 0.0]"
+  },
+  {
+   "name": "[amcx] D14 recovery value = MAX(going-concern, liquidation) + cash at the event (unless overridden); admin costs = value \u00d7 admin %; net = value \u2212 admin",
+   "ok": true,
+   "detail": "going concern 733.7, liquidation 626.0, cash 118.7 \u2192 value 852.3"
+  },
+  {
+   "name": "[amcx] D15 loss given default = 1 \u2212 recovery % for every tranche; a more senior claim never recovers a lower % than a junior one (tranches without a specific collateral pool)",
+   "ok": true,
+   "detail": "LGD exceptions []; priority violations []"
+  },
+  {
+   "name": "[amcx] D5 credit score recomputed independently from factor values, thresholds and weights",
+   "ok": true,
+   "detail": "59.38"
+  },
+  {
+   "name": "[amcx] D6 Excel \u21c4 web reconciliation: every compared metric within tolerance",
+   "ok": true,
+   "detail": "178/178 PASS"
+  }
+ ]
+}

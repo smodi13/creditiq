@@ -1,0 +1,555 @@
+{
+ "id": "orchard",
+ "name": "Orchard Foods",
+ "ticker": "ORCH",
+ "dataClass": "demo",
+ "termsLabel": "DEMO INVESTMENT TERMS",
+ "caseTitle": null,
+ "description": "Branded and private-label shelf-stable foods; volume-pressured but with strong cash conversion.",
+ "asOf": "2026-03-31",
+ "fyEndMonth": 12,
+ "baseYear": 2025,
+ "baseLabel": "FY2025A",
+ "periodLabels": [
+  "FY2026E",
+  "FY2027E",
+  "FY2028E",
+  "FY2029E",
+  "FY2030E"
+ ],
+ "sofr": [
+  0.0425,
+  0.04,
+  0.0375,
+  0.0375,
+  0.0375
+ ],
+ "taxRate": 0.25,
+ "minCash": 0,
+ "sweepPct": 1,
+ "adminPct": 0.04,
+ "accruedMonths": 3,
+ "resolutionLag": 1,
+ "deficiencyRank": 99,
+ "cash": 150,
+ "assetBase": 3300,
+ "assetComponents": null,
+ "assetCapRate": null,
+ "assetValueBasis": "Illustrative appraised / collateral value (DEMO)",
+ "evMultiple": 8.5,
+ "industryFactor": 0.45,
+ "tranches": [
+  {
+   "id": "tl",
+   "name": "First-Lien Term Loan",
+   "kind": "term_loan",
+   "seniority": 1,
+   "secured": true,
+   "principal": 900,
+   "commitment": 0,
+   "rate": 0.076,
+   "spread": 0.0335,
+   "floor": 0,
+   "pik": 0,
+   "floating": true,
+   "maturityDate": "2029-05-31",
+   "amortPct": 0.01,
+   "prepay": false,
+   "collateralPct": 0,
+   "price": 99,
+   "collateral": "",
+   "callProtection": ""
+  },
+  {
+   "id": "sn",
+   "name": "Senior Notes 5.50%",
+   "kind": "senior_notes",
+   "seniority": 3,
+   "secured": false,
+   "principal": 800,
+   "commitment": 0,
+   "rate": 0.055,
+   "spread": 0,
+   "floor": 0,
+   "pik": 0,
+   "floating": false,
+   "maturityDate": "2030-12-15",
+   "amortPct": 0,
+   "prepay": false,
+   "collateralPct": 0,
+   "price": 94.5,
+   "collateral": "",
+   "callProtection": ""
+  },
+  {
+   "id": "sub",
+   "name": "Subordinated Notes 8.25%",
+   "kind": "subordinated",
+   "seniority": 4,
+   "secured": false,
+   "principal": 500,
+   "commitment": 0,
+   "rate": 0.0825,
+   "spread": 0,
+   "floor": 0,
+   "pik": 0,
+   "floating": false,
+   "maturityDate": "2031-09-15",
+   "amortPct": 0,
+   "prepay": false,
+   "collateralPct": 0,
+   "price": 94,
+   "collateral": "",
+   "callProtection": ""
+  }
+ ],
+ "target": {
+  "trancheId": "sub",
+  "index": 3,
+  "holdYears": 3,
+  "feePct": 0.005,
+  "face": 100,
+  "payFreq": 1
+ },
+ "assumptions": {
+  "base": {
+   "revenueGrowth": [
+    0.01,
+    0.01,
+    0.01,
+    0.01,
+    0.01
+   ],
+   "grossMargin": [
+    0.3,
+    0.302,
+    0.304,
+    0.306,
+    0.308
+   ],
+   "ebitdaMargin": [
+    0.16,
+    0.162,
+    0.164,
+    0.166,
+    0.168
+   ],
+   "capexPct": 0.03,
+   "nwcPctOfRevChange": 0.12,
+   "nwcExtraOutflowPct": 0,
+   "rateShock": 0,
+   "refiRate": 0.08,
+   "maxRefiNetLeverage": 8.5,
+   "minRefiCoverage": 1.2,
+   "exitMultiple": 8.5,
+   "exitPrice": 100,
+   "distressMultiple": 6.5,
+   "assetValueDecline": 0,
+   "liquidationRecovery": 0.5,
+   "assetSales": [
+    0,
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "downside": {
+   "revenueGrowth": [
+    -0.051,
+    -0.0255,
+    0.005,
+    0.01,
+    0.01
+   ],
+   "grossMargin": [
+    0.28125,
+    0.27375,
+    0.27749999999999997,
+    0.28125,
+    0.28500000000000003
+   ],
+   "ebitdaMargin": [
+    0.14125,
+    0.13375,
+    0.1375,
+    0.14125,
+    0.14500000000000002
+   ],
+   "capexPct": 0.028499999999999998,
+   "nwcPctOfRevChange": 0.12,
+   "nwcExtraOutflowPct": 0.002,
+   "rateShock": 0.015,
+   "refiRate": 0.10500000000000001,
+   "maxRefiNetLeverage": 5.5,
+   "minRefiCoverage": 1.8,
+   "exitMultiple": 7,
+   "exitPrice": 90,
+   "distressMultiple": 6.5,
+   "assetValueDecline": 0.15,
+   "liquidationRecovery": 0.5,
+   "assetSales": [
+    0,
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "severe": {
+   "revenueGrowth": [
+    -0.153,
+    -0.085,
+    -0.017,
+    0.01,
+    0.01
+   ],
+   "grossMargin": [
+    0.255,
+    0.24,
+    0.2475,
+    0.255,
+    0.26249999999999996
+   ],
+   "ebitdaMargin": [
+    0.115,
+    0.1,
+    0.1075,
+    0.115,
+    0.1225
+   ],
+   "capexPct": 0.024,
+   "nwcPctOfRevChange": 0.12,
+   "nwcExtraOutflowPct": 0.006,
+   "rateShock": 0.03,
+   "refiRate": 0.13,
+   "maxRefiNetLeverage": 5,
+   "minRefiCoverage": 2,
+   "exitMultiple": 5.5,
+   "exitPrice": 70,
+   "distressMultiple": 6.5,
+   "assetValueDecline": 0.35,
+   "liquidationRecovery": 0.5,
+   "assetSales": [
+    0,
+    0,
+    0,
+    0,
+    0
+   ]
+  }
+ },
+ "probabilities": {
+  "base": 0.55,
+  "downside": 0.3,
+  "severe": 0.15
+ },
+ "thresholds": {
+  "hurdleIrr": 0.12,
+  "minYield": 0.09,
+  "maxNetLeverage": 6,
+  "minRecovery": 0.6,
+  "minCovenantHeadroom": 0.15,
+  "minDownsideIrr": 0
+ },
+ "covenants": [
+  {
+   "id": "lev",
+   "label": "Maximum net leverage",
+   "type": "maxNetLeverage",
+   "thresholds": [
+    5.75,
+    5.75,
+    5.75,
+    5.75,
+    5.75
+   ],
+   "basis": "hypothetical",
+   "note": "Demo covenant (illustrative)"
+  }
+ ],
+ "openHighDiligence": 5,
+ "historicalSpec": {
+  "mode": "bridge",
+  "columns": [
+   {
+    "id": "FY2022",
+    "label": "FY2022A",
+    "kind": "fy",
+    "year": 2022
+   },
+   {
+    "id": "FY2023",
+    "label": "FY2023A",
+    "kind": "fy",
+    "year": 2023
+   },
+   {
+    "id": "FY2024",
+    "label": "FY2024A",
+    "kind": "fy",
+    "year": 2024
+   },
+   {
+    "id": "FY2025",
+    "label": "FY2025A",
+    "kind": "fy",
+    "year": 2025
+   }
+  ],
+  "inputs": [
+   {
+    "key": "revenue",
+    "label": "Revenue",
+    "group": "income",
+    "values": {
+     "FY2022": 2850,
+     "FY2023": 3000,
+     "FY2024": 3020,
+     "FY2025": 3000
+    }
+   },
+   {
+    "key": "cogs",
+    "label": "COGS",
+    "group": "income",
+    "values": {
+     "FY2022": 1966.4999999999998,
+     "FY2023": 2085,
+     "FY2024": 2114,
+     "FY2025": 2100
+    }
+   },
+   {
+    "key": "opex",
+    "label": "Operating expenses (cash, ex-D&A)",
+    "group": "income",
+    "values": {
+     "FY2022": 399.00000000000017,
+     "FY2023": 420,
+     "FY2024": 422.8,
+     "FY2025": 420
+    }
+   },
+   {
+    "key": "da",
+    "label": "Depreciation & amortization",
+    "group": "income",
+    "values": {
+     "FY2022": 99.75000000000001,
+     "FY2023": 105.00000000000001,
+     "FY2024": 105.70000000000002,
+     "FY2025": 105.00000000000001
+    }
+   },
+   {
+    "key": "interest",
+    "label": "Interest expense",
+    "group": "income",
+    "values": {
+     "FY2022": 130.6025,
+     "FY2023": 138.285,
+     "FY2024": 145.9675,
+     "FY2025": 153.65
+    }
+   },
+   {
+    "key": "taxes",
+    "label": "Taxes",
+    "group": "income",
+    "values": {
+     "FY2022": 63.536875000000016,
+     "FY2023": 62.92875,
+     "FY2024": 57.883125,
+     "FY2025": 55.3375
+    }
+   },
+   {
+    "key": "capex",
+    "label": "Capex",
+    "group": "cash",
+    "values": {
+     "FY2022": 85.5,
+     "FY2023": 90,
+     "FY2024": 90.6,
+     "FY2025": 90
+    }
+   },
+   {
+    "key": "dnwc",
+    "label": "Increase in working capital",
+    "group": "cash",
+    "values": {
+     "FY2022": 3.3861386138614034,
+     "FY2023": 18,
+     "FY2024": 2.4,
+     "FY2025": -2.4
+    }
+   }
+  ],
+  "lines": {
+   "revenue": [
+    [
+     "revenue",
+     1
+    ]
+   ],
+   "cogs": [
+    [
+     "cogs",
+     1
+    ]
+   ],
+   "opexAdj": [
+    [
+     "opex",
+     1
+    ]
+   ],
+   "da": [
+    [
+     "da",
+     1
+    ]
+   ],
+   "sbc": [],
+   "interest": [
+    [
+     "interest",
+     1
+    ]
+   ],
+   "taxes": [
+    [
+     "taxes",
+     1
+    ]
+   ],
+   "capex": [
+    [
+     "capex",
+     1
+    ]
+   ],
+   "dnwc": [
+    [
+     "dnwc",
+     1
+    ]
+   ]
+  }
+ },
+ "sources": [
+  {
+   "id": "orchard-fin",
+   "source": "CreditIQ demo dataset",
+   "document": "Orchard Foods — illustrative financial statements FY2022–FY2025",
+   "documentDate": "2026-03-31",
+   "retrievedDate": "2026-03-31",
+   "dataType": "Income statement / cash flow",
+   "period": "FY2022–FY2025",
+   "isDemo": true
+  },
+  {
+   "id": "orchard-debt",
+   "source": "CreditIQ demo dataset",
+   "document": "Orchard Foods — illustrative capital structure & covenants",
+   "documentDate": "2026-03-31",
+   "retrievedDate": "2026-03-31",
+   "dataType": "Debt schedule",
+   "period": "As of 2026-03-31",
+   "isDemo": true
+  },
+  {
+   "id": "orchard-px",
+   "source": "CreditIQ demo dataset",
+   "document": "Illustrative indicative bid marks (% of par)",
+   "documentDate": "2026-03-31",
+   "retrievedDate": "2026-03-31",
+   "dataType": "Market price",
+   "period": "2026-03-31",
+   "isDemo": true
+  }
+ ],
+ "provenance": [],
+ "notes": [
+  "All figures are fictional and illustrative."
+ ],
+ "thesis": "Defensive end market but 4.3x net leverage and volume decline. The subordinated notes at 94 yield ~9.5% and are covered in all scenarios on EV, though this is a carry trade rather than a distressed idea.",
+ "config": {
+  "scoreWeights": {
+   "leverage": 15,
+   "coverage": 15,
+   "liquidity": 10,
+   "fcf": 10,
+   "maturity": 10,
+   "marginStability": 10,
+   "revenueStability": 8,
+   "assetCoverage": 12,
+   "industry": 10
+  },
+  "scoreThresholds": {
+   "leverage": {
+    "best": 2,
+    "worst": 7,
+    "unit": "x net debt / EBITDA"
+   },
+   "coverage": {
+    "best": 5,
+    "worst": 1,
+    "unit": "x EBITDA / interest"
+   },
+   "liquidity": {
+    "best": 2,
+    "worst": 0.5,
+    "unit": "x liquidity / 12m obligations"
+   },
+   "fcf": {
+    "best": 0.12,
+    "worst": -0.02,
+    "unit": "FCF / total debt"
+   },
+   "maturity": {
+    "best": 0,
+    "worst": 0.5,
+    "unit": "% of debt due within window"
+   },
+   "marginStability": {
+    "best": 0.01,
+    "worst": 0.05,
+    "unit": "std-dev of EBITDA margin (pts)"
+   },
+   "revenueStability": {
+    "best": 0.03,
+    "worst": 0.15,
+    "unit": "std-dev of revenue growth"
+   },
+   "assetCoverage": {
+    "best": 2,
+    "worst": 0.6,
+    "unit": "x asset base / total debt"
+   }
+  },
+  "riskBands": [
+   {
+    "min": 75,
+    "label": "Low"
+   },
+   {
+    "min": 60,
+    "label": "Moderate"
+   },
+   {
+    "min": 45,
+    "label": "Elevated"
+   },
+   {
+    "min": 0,
+    "label": "High"
+   }
+  ],
+  "scoreWindow": 3,
+  "maturityMaterial": 0.15,
+  "maturityWindow": 3
+ }
+}

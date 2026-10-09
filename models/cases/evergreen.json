@@ -1,0 +1,555 @@
+{
+ "id": "evergreen",
+ "name": "Evergreen Physician Group",
+ "ticker": "EVPG",
+ "dataClass": "demo",
+ "termsLabel": "DEMO INVESTMENT TERMS",
+ "caseTitle": null,
+ "description": "Roll-up of specialty physician practices, margins squeezed by payer rate changes and labor costs.",
+ "asOf": "2026-03-31",
+ "fyEndMonth": 12,
+ "baseYear": 2025,
+ "baseLabel": "FY2025A",
+ "periodLabels": [
+  "FY2026E",
+  "FY2027E",
+  "FY2028E",
+  "FY2029E",
+  "FY2030E"
+ ],
+ "sofr": [
+  0.0425,
+  0.04,
+  0.0375,
+  0.0375,
+  0.0375
+ ],
+ "taxRate": 0.25,
+ "minCash": 0,
+ "sweepPct": 1,
+ "adminPct": 0.04,
+ "accruedMonths": 3,
+ "resolutionLag": 1,
+ "deficiencyRank": 99,
+ "cash": 80,
+ "assetBase": 1400,
+ "assetComponents": null,
+ "assetCapRate": null,
+ "assetValueBasis": "Illustrative appraised / collateral value (DEMO)",
+ "evMultiple": 9.5,
+ "industryFactor": 0.8,
+ "tranches": [
+  {
+   "id": "rcf",
+   "name": "Revolver",
+   "kind": "revolver",
+   "seniority": 1,
+   "secured": true,
+   "principal": 120,
+   "commitment": 200,
+   "rate": 0.078,
+   "spread": 0.0355,
+   "floor": 0,
+   "pik": 0,
+   "floating": true,
+   "maturityDate": "2028-01-31",
+   "amortPct": 0,
+   "prepay": true,
+   "collateralPct": 0,
+   "price": 100,
+   "collateral": "",
+   "callProtection": ""
+  },
+  {
+   "id": "tl",
+   "name": "First-Lien Term Loan",
+   "kind": "term_loan",
+   "seniority": 1,
+   "secured": true,
+   "principal": 900,
+   "commitment": 0,
+   "rate": 0.086,
+   "spread": 0.0435,
+   "floor": 0,
+   "pik": 0,
+   "floating": true,
+   "maturityDate": "2029-03-31",
+   "amortPct": 0.01,
+   "prepay": false,
+   "collateralPct": 0,
+   "price": 93,
+   "collateral": "",
+   "callProtection": ""
+  },
+  {
+   "id": "sn",
+   "name": "Senior Unsecured Notes 8.00%",
+   "kind": "unsecured_notes",
+   "seniority": 3,
+   "secured": false,
+   "principal": 600,
+   "commitment": 0,
+   "rate": 0.08,
+   "spread": 0,
+   "floor": 0,
+   "pik": 0,
+   "floating": false,
+   "maturityDate": "2031-06-15",
+   "amortPct": 0,
+   "prepay": false,
+   "collateralPct": 0,
+   "price": 82,
+   "collateral": "",
+   "callProtection": ""
+  }
+ ],
+ "target": {
+  "trancheId": "tl",
+  "index": 2,
+  "holdYears": 3,
+  "feePct": 0.005,
+  "face": 100,
+  "payFreq": 1
+ },
+ "assumptions": {
+  "base": {
+   "revenueGrowth": [
+    0.05,
+    0.05,
+    0.05,
+    0.05,
+    0.05
+   ],
+   "grossMargin": [
+    0.4,
+    0.402,
+    0.404,
+    0.406,
+    0.40800000000000003
+   ],
+   "ebitdaMargin": [
+    0.13,
+    0.132,
+    0.134,
+    0.136,
+    0.138
+   ],
+   "capexPct": 0.025,
+   "nwcPctOfRevChange": 0.14,
+   "nwcExtraOutflowPct": 0,
+   "rateShock": 0,
+   "refiRate": 0.095,
+   "maxRefiNetLeverage": 8.5,
+   "minRefiCoverage": 1.2,
+   "exitMultiple": 9.5,
+   "exitPrice": 100,
+   "distressMultiple": 6,
+   "assetValueDecline": 0,
+   "liquidationRecovery": 0.3,
+   "assetSales": [
+    0,
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "downside": {
+   "revenueGrowth": [
+    -0.048,
+    -0.024,
+    0.025,
+    0.02,
+    0.02
+   ],
+   "grossMargin": [
+    0.3825,
+    0.37550000000000006,
+    0.379,
+    0.3825,
+    0.386
+   ],
+   "ebitdaMargin": [
+    0.1125,
+    0.10550000000000001,
+    0.10900000000000001,
+    0.1125,
+    0.116
+   ],
+   "capexPct": 0.02375,
+   "nwcPctOfRevChange": 0.14,
+   "nwcExtraOutflowPct": 0.002,
+   "rateShock": 0.015,
+   "refiRate": 0.12,
+   "maxRefiNetLeverage": 5.5,
+   "minRefiCoverage": 1.8,
+   "exitMultiple": 8,
+   "exitPrice": 90,
+   "distressMultiple": 6,
+   "assetValueDecline": 0.15,
+   "liquidationRecovery": 0.3,
+   "assetSales": [
+    0,
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "severe": {
+   "revenueGrowth": [
+    -0.144,
+    -0.08000000000000002,
+    -0.016,
+    0.01,
+    0.02
+   ],
+   "grossMargin": [
+    0.35800000000000004,
+    0.34400000000000003,
+    0.35100000000000003,
+    0.35800000000000004,
+    0.365
+   ],
+   "ebitdaMargin": [
+    0.08800000000000001,
+    0.07400000000000001,
+    0.081,
+    0.08800000000000001,
+    0.095
+   ],
+   "capexPct": 0.020000000000000004,
+   "nwcPctOfRevChange": 0.14,
+   "nwcExtraOutflowPct": 0.006,
+   "rateShock": 0.03,
+   "refiRate": 0.14500000000000002,
+   "maxRefiNetLeverage": 5,
+   "minRefiCoverage": 2,
+   "exitMultiple": 6.5,
+   "exitPrice": 70,
+   "distressMultiple": 6,
+   "assetValueDecline": 0.35,
+   "liquidationRecovery": 0.3,
+   "assetSales": [
+    0,
+    0,
+    0,
+    0,
+    0
+   ]
+  }
+ },
+ "probabilities": {
+  "base": 0.55,
+  "downside": 0.3,
+  "severe": 0.15
+ },
+ "thresholds": {
+  "hurdleIrr": 0.12,
+  "minYield": 0.09,
+  "maxNetLeverage": 6,
+  "minRecovery": 0.6,
+  "minCovenantHeadroom": 0.15,
+  "minDownsideIrr": 0
+ },
+ "covenants": [
+  {
+   "id": "lev",
+   "label": "Maximum net leverage",
+   "type": "maxNetLeverage",
+   "thresholds": [
+    7,
+    7,
+    7,
+    7,
+    7
+   ],
+   "basis": "hypothetical",
+   "note": "Demo covenant (illustrative)"
+  }
+ ],
+ "openHighDiligence": 3,
+ "historicalSpec": {
+  "mode": "bridge",
+  "columns": [
+   {
+    "id": "FY2022",
+    "label": "FY2022A",
+    "kind": "fy",
+    "year": 2022
+   },
+   {
+    "id": "FY2023",
+    "label": "FY2023A",
+    "kind": "fy",
+    "year": 2023
+   },
+   {
+    "id": "FY2024",
+    "label": "FY2024A",
+    "kind": "fy",
+    "year": 2024
+   },
+   {
+    "id": "FY2025",
+    "label": "FY2025A",
+    "kind": "fy",
+    "year": 2025
+   }
+  ],
+  "inputs": [
+   {
+    "key": "revenue",
+    "label": "Revenue",
+    "group": "income",
+    "values": {
+     "FY2022": 1550,
+     "FY2023": 1700,
+     "FY2024": 1800,
+     "FY2025": 1900
+    }
+   },
+   {
+    "key": "cogs",
+    "label": "COGS",
+    "group": "income",
+    "values": {
+     "FY2022": 906.75,
+     "FY2023": 1003,
+     "FY2024": 1071,
+     "FY2025": 1140
+    }
+   },
+   {
+    "key": "opex",
+    "label": "Operating expenses (cash, ex-D&A)",
+    "group": "income",
+    "values": {
+     "FY2022": 418.5,
+     "FY2023": 459,
+     "FY2024": 486,
+     "FY2025": 513
+    }
+   },
+   {
+    "key": "da",
+    "label": "Depreciation & amortization",
+    "group": "income",
+    "values": {
+     "FY2022": 46.5,
+     "FY2023": 51,
+     "FY2024": 54,
+     "FY2025": 57
+    }
+   },
+   {
+    "key": "interest",
+    "label": "Interest expense",
+    "group": "income",
+    "values": {
+     "FY2022": 114.54599999999999,
+     "FY2023": 121.28399999999999,
+     "FY2024": 128.022,
+     "FY2025": 134.76
+    }
+   },
+   {
+    "key": "taxes",
+    "label": "Taxes",
+    "group": "income",
+    "values": {
+     "FY2022": 15.925999999999995,
+     "FY2023": 16.42900000000001,
+     "FY2024": 15.24450000000001,
+     "FY2025": 13.810000000000002
+    }
+   },
+   {
+    "key": "capex",
+    "label": "Capex",
+    "group": "cash",
+    "values": {
+     "FY2022": 38.75,
+     "FY2023": 42.5,
+     "FY2024": 45,
+     "FY2025": 47.5
+    }
+   },
+   {
+    "key": "dnwc",
+    "label": "Increase in working capital",
+    "group": "cash",
+    "values": {
+     "FY2022": 10.333333333333341,
+     "FY2023": 21.000000000000004,
+     "FY2024": 14.000000000000002,
+     "FY2025": 14.000000000000002
+    }
+   }
+  ],
+  "lines": {
+   "revenue": [
+    [
+     "revenue",
+     1
+    ]
+   ],
+   "cogs": [
+    [
+     "cogs",
+     1
+    ]
+   ],
+   "opexAdj": [
+    [
+     "opex",
+     1
+    ]
+   ],
+   "da": [
+    [
+     "da",
+     1
+    ]
+   ],
+   "sbc": [],
+   "interest": [
+    [
+     "interest",
+     1
+    ]
+   ],
+   "taxes": [
+    [
+     "taxes",
+     1
+    ]
+   ],
+   "capex": [
+    [
+     "capex",
+     1
+    ]
+   ],
+   "dnwc": [
+    [
+     "dnwc",
+     1
+    ]
+   ]
+  }
+ },
+ "sources": [
+  {
+   "id": "evergreen-fin",
+   "source": "CreditIQ demo dataset",
+   "document": "Evergreen Physician Group — illustrative financial statements FY2022–FY2025",
+   "documentDate": "2026-03-31",
+   "retrievedDate": "2026-03-31",
+   "dataType": "Income statement / cash flow",
+   "period": "FY2022–FY2025",
+   "isDemo": true
+  },
+  {
+   "id": "evergreen-debt",
+   "source": "CreditIQ demo dataset",
+   "document": "Evergreen Physician Group — illustrative capital structure & covenants",
+   "documentDate": "2026-03-31",
+   "retrievedDate": "2026-03-31",
+   "dataType": "Debt schedule",
+   "period": "As of 2026-03-31",
+   "isDemo": true
+  },
+  {
+   "id": "evergreen-px",
+   "source": "CreditIQ demo dataset",
+   "document": "Illustrative indicative bid marks (% of par)",
+   "documentDate": "2026-03-31",
+   "retrievedDate": "2026-03-31",
+   "dataType": "Market price",
+   "period": "2026-03-31",
+   "isDemo": true
+  }
+ ],
+ "provenance": [],
+ "notes": [
+  "All figures are fictional and illustrative."
+ ],
+ "thesis": "Margins have declined 150bps in two years and coverage is 1.8x, but the platform is growing and the first-lien loan is trading at a discount. We need to understand organic vs acquired growth and payer-contract exposure before underwriting.",
+ "config": {
+  "scoreWeights": {
+   "leverage": 15,
+   "coverage": 15,
+   "liquidity": 10,
+   "fcf": 10,
+   "maturity": 10,
+   "marginStability": 10,
+   "revenueStability": 8,
+   "assetCoverage": 12,
+   "industry": 10
+  },
+  "scoreThresholds": {
+   "leverage": {
+    "best": 2,
+    "worst": 7,
+    "unit": "x net debt / EBITDA"
+   },
+   "coverage": {
+    "best": 5,
+    "worst": 1,
+    "unit": "x EBITDA / interest"
+   },
+   "liquidity": {
+    "best": 2,
+    "worst": 0.5,
+    "unit": "x liquidity / 12m obligations"
+   },
+   "fcf": {
+    "best": 0.12,
+    "worst": -0.02,
+    "unit": "FCF / total debt"
+   },
+   "maturity": {
+    "best": 0,
+    "worst": 0.5,
+    "unit": "% of debt due within window"
+   },
+   "marginStability": {
+    "best": 0.01,
+    "worst": 0.05,
+    "unit": "std-dev of EBITDA margin (pts)"
+   },
+   "revenueStability": {
+    "best": 0.03,
+    "worst": 0.15,
+    "unit": "std-dev of revenue growth"
+   },
+   "assetCoverage": {
+    "best": 2,
+    "worst": 0.6,
+    "unit": "x asset base / total debt"
+   }
+  },
+  "riskBands": [
+   {
+    "min": 75,
+    "label": "Low"
+   },
+   {
+    "min": 60,
+    "label": "Moderate"
+   },
+   {
+    "min": 45,
+    "label": "Elevated"
+   },
+   {
+    "min": 0,
+    "label": "High"
+   }
+  ],
+  "scoreWindow": 3,
+  "maturityMaterial": 0.15,
+  "maturityWindow": 3
+ }
+}

@@ -1,0 +1,555 @@
+{
+ "id": "ridgeline",
+ "name": "Ridgeline Infrastructure Services",
+ "ticker": "RDGL",
+ "dataClass": "demo",
+ "termsLabel": "DEMO INVESTMENT TERMS",
+ "caseTitle": null,
+ "description": "Contracted engineering and maintenance services for regulated utilities under multi-year MSAs.",
+ "asOf": "2026-03-31",
+ "fyEndMonth": 12,
+ "baseYear": 2025,
+ "baseLabel": "FY2025A",
+ "periodLabels": [
+  "FY2026E",
+  "FY2027E",
+  "FY2028E",
+  "FY2029E",
+  "FY2030E"
+ ],
+ "sofr": [
+  0.0425,
+  0.04,
+  0.0375,
+  0.0375,
+  0.0375
+ ],
+ "taxRate": 0.25,
+ "minCash": 0,
+ "sweepPct": 1,
+ "adminPct": 0.04,
+ "accruedMonths": 3,
+ "resolutionLag": 1,
+ "deficiencyRank": 99,
+ "cash": 90,
+ "assetBase": 2600,
+ "assetComponents": null,
+ "assetCapRate": null,
+ "assetValueBasis": "Illustrative appraised / collateral value (DEMO)",
+ "evMultiple": 11,
+ "industryFactor": 0.85,
+ "tranches": [
+  {
+   "id": "rcf",
+   "name": "Revolver",
+   "kind": "revolver",
+   "seniority": 1,
+   "secured": true,
+   "principal": 80,
+   "commitment": 300,
+   "rate": 0.068,
+   "spread": 0.0255,
+   "floor": 0,
+   "pik": 0,
+   "floating": true,
+   "maturityDate": "2029-12-31",
+   "amortPct": 0,
+   "prepay": true,
+   "collateralPct": 0,
+   "price": 100,
+   "collateral": "",
+   "callProtection": ""
+  },
+  {
+   "id": "tl",
+   "name": "First-Lien Term Loan",
+   "kind": "term_loan",
+   "seniority": 1,
+   "secured": true,
+   "principal": 800,
+   "commitment": 0,
+   "rate": 0.075,
+   "spread": 0.0325,
+   "floor": 0,
+   "pik": 0,
+   "floating": true,
+   "maturityDate": "2030-06-30",
+   "amortPct": 0.01,
+   "prepay": false,
+   "collateralPct": 0,
+   "price": 99.25,
+   "collateral": "",
+   "callProtection": ""
+  },
+  {
+   "id": "sn",
+   "name": "Senior Notes 6.25%",
+   "kind": "senior_notes",
+   "seniority": 3,
+   "secured": false,
+   "principal": 700,
+   "commitment": 0,
+   "rate": 0.0625,
+   "spread": 0,
+   "floor": 0,
+   "pik": 0,
+   "floating": false,
+   "maturityDate": "2032-04-15",
+   "amortPct": 0,
+   "prepay": false,
+   "collateralPct": 0,
+   "price": 95,
+   "collateral": "",
+   "callProtection": ""
+  }
+ ],
+ "target": {
+  "trancheId": "sn",
+  "index": 3,
+  "holdYears": 3,
+  "feePct": 0.005,
+  "face": 100,
+  "payFreq": 1
+ },
+ "assumptions": {
+  "base": {
+   "revenueGrowth": [
+    0.04,
+    0.04,
+    0.04,
+    0.04,
+    0.04
+   ],
+   "grossMargin": [
+    0.3,
+    0.302,
+    0.304,
+    0.306,
+    0.308
+   ],
+   "ebitdaMargin": [
+    0.18,
+    0.182,
+    0.184,
+    0.186,
+    0.188
+   ],
+   "capexPct": 0.04,
+   "nwcPctOfRevChange": 0.1,
+   "nwcExtraOutflowPct": 0,
+   "rateShock": 0,
+   "refiRate": 0.075,
+   "maxRefiNetLeverage": 8.5,
+   "minRefiCoverage": 1.2,
+   "exitMultiple": 11,
+   "exitPrice": 100,
+   "distressMultiple": 6.5,
+   "assetValueDecline": 0,
+   "liquidationRecovery": 0.5,
+   "assetSales": [
+    0,
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "downside": {
+   "revenueGrowth": [
+    -0.051,
+    -0.0255,
+    0.02,
+    0.02,
+    0.02
+   ],
+   "grossMargin": [
+    0.28125,
+    0.27375,
+    0.27749999999999997,
+    0.28125,
+    0.285
+   ],
+   "ebitdaMargin": [
+    0.16125,
+    0.15375,
+    0.1575,
+    0.16125,
+    0.16499999999999998
+   ],
+   "capexPct": 0.038,
+   "nwcPctOfRevChange": 0.1,
+   "nwcExtraOutflowPct": 0.002,
+   "rateShock": 0.015,
+   "refiRate": 0.1,
+   "maxRefiNetLeverage": 5.5,
+   "minRefiCoverage": 1.8,
+   "exitMultiple": 9.5,
+   "exitPrice": 90,
+   "distressMultiple": 6.5,
+   "assetValueDecline": 0.15,
+   "liquidationRecovery": 0.5,
+   "assetSales": [
+    0,
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "severe": {
+   "revenueGrowth": [
+    -0.153,
+    -0.085,
+    -0.017,
+    0.01,
+    0.02
+   ],
+   "grossMargin": [
+    0.255,
+    0.24,
+    0.2475,
+    0.255,
+    0.26249999999999996
+   ],
+   "ebitdaMargin": [
+    0.135,
+    0.12,
+    0.1275,
+    0.135,
+    0.1425
+   ],
+   "capexPct": 0.032,
+   "nwcPctOfRevChange": 0.1,
+   "nwcExtraOutflowPct": 0.006,
+   "rateShock": 0.03,
+   "refiRate": 0.125,
+   "maxRefiNetLeverage": 5,
+   "minRefiCoverage": 2,
+   "exitMultiple": 8,
+   "exitPrice": 70,
+   "distressMultiple": 6.5,
+   "assetValueDecline": 0.35,
+   "liquidationRecovery": 0.5,
+   "assetSales": [
+    0,
+    0,
+    0,
+    0,
+    0
+   ]
+  }
+ },
+ "probabilities": {
+  "base": 0.55,
+  "downside": 0.3,
+  "severe": 0.15
+ },
+ "thresholds": {
+  "hurdleIrr": 0.12,
+  "minYield": 0.09,
+  "maxNetLeverage": 6,
+  "minRecovery": 0.6,
+  "minCovenantHeadroom": 0.15,
+  "minDownsideIrr": 0
+ },
+ "covenants": [
+  {
+   "id": "lev",
+   "label": "Maximum net leverage",
+   "type": "maxNetLeverage",
+   "thresholds": [
+    5.5,
+    5.5,
+    5.5,
+    5.5,
+    5.5
+   ],
+   "basis": "hypothetical",
+   "note": "Demo covenant (illustrative)"
+  }
+ ],
+ "openHighDiligence": 3,
+ "historicalSpec": {
+  "mode": "bridge",
+  "columns": [
+   {
+    "id": "FY2022",
+    "label": "FY2022A",
+    "kind": "fy",
+    "year": 2022
+   },
+   {
+    "id": "FY2023",
+    "label": "FY2023A",
+    "kind": "fy",
+    "year": 2023
+   },
+   {
+    "id": "FY2024",
+    "label": "FY2024A",
+    "kind": "fy",
+    "year": 2024
+   },
+   {
+    "id": "FY2025",
+    "label": "FY2025A",
+    "kind": "fy",
+    "year": 2025
+   }
+  ],
+  "inputs": [
+   {
+    "key": "revenue",
+    "label": "Revenue",
+    "group": "income",
+    "values": {
+     "FY2022": 1750,
+     "FY2023": 1880,
+     "FY2024": 1990,
+     "FY2025": 2100
+    }
+   },
+   {
+    "key": "cogs",
+    "label": "COGS",
+    "group": "income",
+    "values": {
+     "FY2022": 1233.7500000000002,
+     "FY2023": 1316,
+     "FY2024": 1393,
+     "FY2025": 1470
+    }
+   },
+   {
+    "key": "opex",
+    "label": "Operating expenses (cash, ex-D&A)",
+    "group": "income",
+    "values": {
+     "FY2022": 209.99999999999977,
+     "FY2023": 225.60000000000002,
+     "FY2024": 238.8,
+     "FY2025": 252
+    }
+   },
+   {
+    "key": "da",
+    "label": "Depreciation & amortization",
+    "group": "income",
+    "values": {
+     "FY2022": 61.25000000000001,
+     "FY2023": 65.80000000000001,
+     "FY2024": 69.65,
+     "FY2025": 73.5
+    }
+   },
+   {
+    "key": "interest",
+    "label": "Interest expense",
+    "group": "income",
+    "values": {
+     "FY2022": 92.81150000000001,
+     "FY2023": 98.27100000000002,
+     "FY2024": 103.7305,
+     "FY2025": 109.19000000000001
+    }
+   },
+   {
+    "key": "taxes",
+    "label": "Taxes",
+    "group": "income",
+    "values": {
+     "FY2022": 38.047124999999994,
+     "FY2023": 43.58224999999999,
+     "FY2024": 46.20487499999999,
+     "FY2025": 48.8275
+    }
+   },
+   {
+    "key": "capex",
+    "label": "Capex",
+    "group": "cash",
+    "values": {
+     "FY2022": 70,
+     "FY2023": 75.2,
+     "FY2024": 79.60000000000001,
+     "FY2025": 84
+    }
+   },
+   {
+    "key": "dnwc",
+    "label": "Increase in working capital",
+    "group": "cash",
+    "values": {
+     "FY2022": 6.730769230769238,
+     "FY2023": 13,
+     "FY2024": 11,
+     "FY2025": 11
+    }
+   }
+  ],
+  "lines": {
+   "revenue": [
+    [
+     "revenue",
+     1
+    ]
+   ],
+   "cogs": [
+    [
+     "cogs",
+     1
+    ]
+   ],
+   "opexAdj": [
+    [
+     "opex",
+     1
+    ]
+   ],
+   "da": [
+    [
+     "da",
+     1
+    ]
+   ],
+   "sbc": [],
+   "interest": [
+    [
+     "interest",
+     1
+    ]
+   ],
+   "taxes": [
+    [
+     "taxes",
+     1
+    ]
+   ],
+   "capex": [
+    [
+     "capex",
+     1
+    ]
+   ],
+   "dnwc": [
+    [
+     "dnwc",
+     1
+    ]
+   ]
+  }
+ },
+ "sources": [
+  {
+   "id": "ridgeline-fin",
+   "source": "CreditIQ demo dataset",
+   "document": "Ridgeline Infrastructure Services — illustrative financial statements FY2022–FY2025",
+   "documentDate": "2026-03-31",
+   "retrievedDate": "2026-03-31",
+   "dataType": "Income statement / cash flow",
+   "period": "FY2022–FY2025",
+   "isDemo": true
+  },
+  {
+   "id": "ridgeline-debt",
+   "source": "CreditIQ demo dataset",
+   "document": "Ridgeline Infrastructure Services — illustrative capital structure & covenants",
+   "documentDate": "2026-03-31",
+   "retrievedDate": "2026-03-31",
+   "dataType": "Debt schedule",
+   "period": "As of 2026-03-31",
+   "isDemo": true
+  },
+  {
+   "id": "ridgeline-px",
+   "source": "CreditIQ demo dataset",
+   "document": "Illustrative indicative bid marks (% of par)",
+   "documentDate": "2026-03-31",
+   "retrievedDate": "2026-03-31",
+   "dataType": "Market price",
+   "period": "2026-03-31",
+   "isDemo": true
+  }
+ ],
+ "provenance": [],
+ "notes": [
+  "All figures are fictional and illustrative."
+ ],
+ "thesis": "Contracted utility spend gives visible cash flow, but 4x net leverage and working-capital intensity warrant a wider spread than the current mark offers.",
+ "config": {
+  "scoreWeights": {
+   "leverage": 15,
+   "coverage": 15,
+   "liquidity": 10,
+   "fcf": 10,
+   "maturity": 10,
+   "marginStability": 10,
+   "revenueStability": 8,
+   "assetCoverage": 12,
+   "industry": 10
+  },
+  "scoreThresholds": {
+   "leverage": {
+    "best": 2,
+    "worst": 7,
+    "unit": "x net debt / EBITDA"
+   },
+   "coverage": {
+    "best": 5,
+    "worst": 1,
+    "unit": "x EBITDA / interest"
+   },
+   "liquidity": {
+    "best": 2,
+    "worst": 0.5,
+    "unit": "x liquidity / 12m obligations"
+   },
+   "fcf": {
+    "best": 0.12,
+    "worst": -0.02,
+    "unit": "FCF / total debt"
+   },
+   "maturity": {
+    "best": 0,
+    "worst": 0.5,
+    "unit": "% of debt due within window"
+   },
+   "marginStability": {
+    "best": 0.01,
+    "worst": 0.05,
+    "unit": "std-dev of EBITDA margin (pts)"
+   },
+   "revenueStability": {
+    "best": 0.03,
+    "worst": 0.15,
+    "unit": "std-dev of revenue growth"
+   },
+   "assetCoverage": {
+    "best": 2,
+    "worst": 0.6,
+    "unit": "x asset base / total debt"
+   }
+  },
+  "riskBands": [
+   {
+    "min": 75,
+    "label": "Low"
+   },
+   {
+    "min": 60,
+    "label": "Moderate"
+   },
+   {
+    "min": 45,
+    "label": "Elevated"
+   },
+   {
+    "min": 0,
+    "label": "High"
+   }
+  ],
+  "scoreWindow": 3,
+  "maturityMaterial": 0.15,
+  "maturityWindow": 3
+ }
+}

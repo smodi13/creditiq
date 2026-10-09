@@ -1,0 +1,561 @@
+{
+ "id": "meridian",
+ "name": "Meridian Industrial REIT",
+ "ticker": "MIR",
+ "dataClass": "demo",
+ "termsLabel": "DEMO INVESTMENT TERMS",
+ "caseTitle": null,
+ "description": "Class-A logistics and light-industrial portfolio, 96% leased with a staggered lease expiry profile.",
+ "asOf": "2026-03-31",
+ "fyEndMonth": 12,
+ "baseYear": 2025,
+ "baseLabel": "FY2025A",
+ "periodLabels": [
+  "FY2026E",
+  "FY2027E",
+  "FY2028E",
+  "FY2029E",
+  "FY2030E"
+ ],
+ "sofr": [
+  0.0425,
+  0.04,
+  0.0375,
+  0.0375,
+  0.0375
+ ],
+ "taxRate": 0.25,
+ "minCash": 0,
+ "sweepPct": 1,
+ "adminPct": 0.04,
+ "accruedMonths": 3,
+ "resolutionLag": 1,
+ "deficiencyRank": 99,
+ "cash": 60,
+ "assetBase": 6100,
+ "assetComponents": null,
+ "assetCapRate": null,
+ "assetValueBasis": "Illustrative appraised / collateral value (DEMO)",
+ "evMultiple": 17,
+ "industryFactor": 0.5,
+ "tranches": [
+  {
+   "id": "rcf",
+   "name": "Revolver",
+   "kind": "revolver",
+   "seniority": 1,
+   "secured": false,
+   "principal": 150,
+   "commitment": 600,
+   "rate": 0.063,
+   "spread": 0.0205,
+   "floor": 0,
+   "pik": 0,
+   "floating": true,
+   "maturityDate": "2029-11-30",
+   "amortPct": 0,
+   "prepay": true,
+   "collateralPct": 0,
+   "price": 100,
+   "collateral": "",
+   "callProtection": ""
+  },
+  {
+   "id": "tl",
+   "name": "Unsecured Term Loan",
+   "kind": "term_loan",
+   "seniority": 1,
+   "secured": false,
+   "principal": 400,
+   "commitment": 0,
+   "rate": 0.066,
+   "spread": 0.0235,
+   "floor": 0,
+   "pik": 0,
+   "floating": true,
+   "maturityDate": "2030-06-30",
+   "amortPct": 0,
+   "prepay": false,
+   "collateralPct": 0,
+   "price": 99.5,
+   "collateral": "",
+   "callProtection": ""
+  },
+  {
+   "id": "n31",
+   "name": "Senior Unsecured Notes 3.90%",
+   "kind": "senior_notes",
+   "seniority": 1,
+   "secured": false,
+   "principal": 700,
+   "commitment": 0,
+   "rate": 0.039,
+   "spread": 0,
+   "floor": 0,
+   "pik": 0,
+   "floating": false,
+   "maturityDate": "2031-03-15",
+   "amortPct": 0,
+   "prepay": false,
+   "collateralPct": 0,
+   "price": 88,
+   "collateral": "",
+   "callProtection": ""
+  },
+  {
+   "id": "n33",
+   "name": "Senior Unsecured Notes 5.20%",
+   "kind": "senior_notes",
+   "seniority": 1,
+   "secured": false,
+   "principal": 500,
+   "commitment": 0,
+   "rate": 0.052,
+   "spread": 0,
+   "floor": 0,
+   "pik": 0,
+   "floating": false,
+   "maturityDate": "2033-09-15",
+   "amortPct": 0,
+   "prepay": false,
+   "collateralPct": 0,
+   "price": 93,
+   "collateral": "",
+   "callProtection": ""
+  }
+ ],
+ "target": {
+  "trancheId": "n31",
+  "index": 3,
+  "holdYears": 3,
+  "feePct": 0.005,
+  "face": 100,
+  "payFreq": 1
+ },
+ "assumptions": {
+  "base": {
+   "revenueGrowth": [
+    0.04,
+    0.04,
+    0.04,
+    0.04,
+    0.04
+   ],
+   "grossMargin": [
+    0.72,
+    0.722,
+    0.724,
+    0.726,
+    0.728
+   ],
+   "ebitdaMargin": [
+    0.7,
+    0.702,
+    0.704,
+    0.706,
+    0.708
+   ],
+   "capexPct": 0.1,
+   "nwcPctOfRevChange": 0.03,
+   "nwcExtraOutflowPct": 0,
+   "rateShock": 0,
+   "refiRate": 0.062,
+   "maxRefiNetLeverage": 8.5,
+   "minRefiCoverage": 1.2,
+   "exitMultiple": 17,
+   "exitPrice": 100,
+   "distressMultiple": 14,
+   "assetValueDecline": 0,
+   "liquidationRecovery": 0.85,
+   "assetSales": [
+    0,
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "downside": {
+   "revenueGrowth": [
+    -0.056999999999999995,
+    -0.028499999999999998,
+    0.02,
+    0.02,
+    0.02
+   ],
+   "grossMargin": [
+    0.69875,
+    0.6902499999999999,
+    0.6945,
+    0.69875,
+    0.703
+   ],
+   "ebitdaMargin": [
+    0.67875,
+    0.6702499999999999,
+    0.6745,
+    0.67875,
+    0.6829999999999999
+   ],
+   "capexPct": 0.095,
+   "nwcPctOfRevChange": 0.03,
+   "nwcExtraOutflowPct": 0.002,
+   "rateShock": 0.015,
+   "refiRate": 0.087,
+   "maxRefiNetLeverage": 5.5,
+   "minRefiCoverage": 1.8,
+   "exitMultiple": 15.5,
+   "exitPrice": 90,
+   "distressMultiple": 14,
+   "assetValueDecline": 0.15,
+   "liquidationRecovery": 0.85,
+   "assetSales": [
+    0,
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "severe": {
+   "revenueGrowth": [
+    -0.17099999999999999,
+    -0.095,
+    -0.019,
+    0.01,
+    0.02
+   ],
+   "grossMargin": [
+    0.6689999999999999,
+    0.6519999999999999,
+    0.6605,
+    0.6689999999999999,
+    0.6775
+   ],
+   "ebitdaMargin": [
+    0.6489999999999999,
+    0.6319999999999999,
+    0.6405,
+    0.6489999999999999,
+    0.6575
+   ],
+   "capexPct": 0.08000000000000002,
+   "nwcPctOfRevChange": 0.03,
+   "nwcExtraOutflowPct": 0.006,
+   "rateShock": 0.03,
+   "refiRate": 0.112,
+   "maxRefiNetLeverage": 5,
+   "minRefiCoverage": 2,
+   "exitMultiple": 14,
+   "exitPrice": 70,
+   "distressMultiple": 14,
+   "assetValueDecline": 0.35,
+   "liquidationRecovery": 0.85,
+   "assetSales": [
+    0,
+    0,
+    0,
+    0,
+    0
+   ]
+  }
+ },
+ "probabilities": {
+  "base": 0.55,
+  "downside": 0.3,
+  "severe": 0.15
+ },
+ "thresholds": {
+  "hurdleIrr": 0.12,
+  "minYield": 0.09,
+  "maxNetLeverage": 6,
+  "minRecovery": 0.6,
+  "minCovenantHeadroom": 0.15,
+  "minDownsideIrr": 0
+ },
+ "covenants": [],
+ "openHighDiligence": 3,
+ "historicalSpec": {
+  "mode": "bridge",
+  "columns": [
+   {
+    "id": "FY2022",
+    "label": "FY2022A",
+    "kind": "fy",
+    "year": 2022
+   },
+   {
+    "id": "FY2023",
+    "label": "FY2023A",
+    "kind": "fy",
+    "year": 2023
+   },
+   {
+    "id": "FY2024",
+    "label": "FY2024A",
+    "kind": "fy",
+    "year": 2024
+   },
+   {
+    "id": "FY2025",
+    "label": "FY2025A",
+    "kind": "fy",
+    "year": 2025
+   }
+  ],
+  "inputs": [
+   {
+    "key": "revenue",
+    "label": "Revenue",
+    "group": "income",
+    "values": {
+     "FY2022": 440,
+     "FY2023": 470,
+     "FY2024": 495,
+     "FY2025": 520
+    }
+   },
+   {
+    "key": "cogs",
+    "label": "COGS",
+    "group": "income",
+    "values": {
+     "FY2022": 127.60000000000002,
+     "FY2023": 131.60000000000002,
+     "FY2024": 138.60000000000002,
+     "FY2025": 145.60000000000002
+    }
+   },
+   {
+    "key": "opex",
+    "label": "Operating expenses (cash, ex-D&A)",
+    "group": "income",
+    "values": {
+     "FY2022": 8.800000000000011,
+     "FY2023": 9.399999999999977,
+     "FY2024": 9.899999999999977,
+     "FY2025": 10.399999999999977
+    }
+   },
+   {
+    "key": "da",
+    "label": "Depreciation & amortization",
+    "group": "income",
+    "values": {
+     "FY2022": 132,
+     "FY2023": 141,
+     "FY2024": 148.5,
+     "FY2025": 156
+    }
+   },
+   {
+    "key": "interest",
+    "label": "Interest expense",
+    "group": "income",
+    "values": {
+     "FY2022": 75.7775,
+     "FY2023": 80.23500000000001,
+     "FY2024": 84.6925,
+     "FY2025": 89.15
+    }
+   },
+   {
+    "key": "taxes",
+    "label": "Taxes",
+    "group": "income",
+    "values": {
+     "FY2022": 23.95562499999999,
+     "FY2023": 26.941249999999997,
+     "FY2024": 28.326875,
+     "FY2025": 29.7125
+    }
+   },
+   {
+    "key": "capex",
+    "label": "Capex",
+    "group": "cash",
+    "values": {
+     "FY2022": 44,
+     "FY2023": 47,
+     "FY2024": 49.5,
+     "FY2025": 52
+    }
+   },
+   {
+    "key": "dnwc",
+    "label": "Increase in working capital",
+    "group": "cash",
+    "values": {
+     "FY2022": 0.5076923076923089,
+     "FY2023": 0.8999999999999999,
+     "FY2024": 0.75,
+     "FY2025": 0.75
+    }
+   }
+  ],
+  "lines": {
+   "revenue": [
+    [
+     "revenue",
+     1
+    ]
+   ],
+   "cogs": [
+    [
+     "cogs",
+     1
+    ]
+   ],
+   "opexAdj": [
+    [
+     "opex",
+     1
+    ]
+   ],
+   "da": [
+    [
+     "da",
+     1
+    ]
+   ],
+   "sbc": [],
+   "interest": [
+    [
+     "interest",
+     1
+    ]
+   ],
+   "taxes": [
+    [
+     "taxes",
+     1
+    ]
+   ],
+   "capex": [
+    [
+     "capex",
+     1
+    ]
+   ],
+   "dnwc": [
+    [
+     "dnwc",
+     1
+    ]
+   ]
+  }
+ },
+ "sources": [
+  {
+   "id": "meridian-fin",
+   "source": "CreditIQ demo dataset",
+   "document": "Meridian Industrial REIT — illustrative financial statements FY2022–FY2025",
+   "documentDate": "2026-03-31",
+   "retrievedDate": "2026-03-31",
+   "dataType": "Income statement / cash flow",
+   "period": "FY2022–FY2025",
+   "isDemo": true
+  },
+  {
+   "id": "meridian-debt",
+   "source": "CreditIQ demo dataset",
+   "document": "Meridian Industrial REIT — illustrative capital structure & covenants",
+   "documentDate": "2026-03-31",
+   "retrievedDate": "2026-03-31",
+   "dataType": "Debt schedule",
+   "period": "As of 2026-03-31",
+   "isDemo": true
+  },
+  {
+   "id": "meridian-px",
+   "source": "CreditIQ demo dataset",
+   "document": "Illustrative indicative bid marks (% of par)",
+   "documentDate": "2026-03-31",
+   "retrievedDate": "2026-03-31",
+   "dataType": "Market price",
+   "period": "2026-03-31",
+   "isDemo": true
+  }
+ ],
+ "provenance": [],
+ "notes": [
+  "All figures are fictional and illustrative."
+ ],
+ "thesis": "Low-coupon 2031 notes trade at 88 against a 3.5x asset-coverage cushion; pull-to-par plus coupon gives a high-single-digit return with limited loss potential even if industrial values fall 35%.",
+ "config": {
+  "scoreWeights": {
+   "leverage": 15,
+   "coverage": 15,
+   "liquidity": 10,
+   "fcf": 10,
+   "maturity": 10,
+   "marginStability": 10,
+   "revenueStability": 8,
+   "assetCoverage": 12,
+   "industry": 10
+  },
+  "scoreThresholds": {
+   "leverage": {
+    "best": 2,
+    "worst": 7,
+    "unit": "x net debt / EBITDA"
+   },
+   "coverage": {
+    "best": 5,
+    "worst": 1,
+    "unit": "x EBITDA / interest"
+   },
+   "liquidity": {
+    "best": 2,
+    "worst": 0.5,
+    "unit": "x liquidity / 12m obligations"
+   },
+   "fcf": {
+    "best": 0.12,
+    "worst": -0.02,
+    "unit": "FCF / total debt"
+   },
+   "maturity": {
+    "best": 0,
+    "worst": 0.5,
+    "unit": "% of debt due within window"
+   },
+   "marginStability": {
+    "best": 0.01,
+    "worst": 0.05,
+    "unit": "std-dev of EBITDA margin (pts)"
+   },
+   "revenueStability": {
+    "best": 0.03,
+    "worst": 0.15,
+    "unit": "std-dev of revenue growth"
+   },
+   "assetCoverage": {
+    "best": 2,
+    "worst": 0.6,
+    "unit": "x asset base / total debt"
+   }
+  },
+  "riskBands": [
+   {
+    "min": 75,
+    "label": "Low"
+   },
+   {
+    "min": 60,
+    "label": "Moderate"
+   },
+   {
+    "min": 45,
+    "label": "Elevated"
+   },
+   {
+    "min": 0,
+    "label": "High"
+   }
+  ],
+  "scoreWindow": 3,
+  "maturityMaterial": 0.15,
+  "maturityWindow": 3
+ }
+}

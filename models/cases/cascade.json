@@ -1,0 +1,534 @@
+{
+ "id": "cascade",
+ "name": "Cascade Fitness",
+ "ticker": "CSFT",
+ "dataClass": "demo",
+ "termsLabel": "DEMO INVESTMENT TERMS",
+ "caseTitle": null,
+ "description": "Membership-based boutique fitness operator with high lease obligations and growth-by-leverage strategy.",
+ "asOf": "2026-03-31",
+ "fyEndMonth": 12,
+ "baseYear": 2025,
+ "baseLabel": "FY2025A",
+ "periodLabels": [
+  "FY2026E",
+  "FY2027E",
+  "FY2028E",
+  "FY2029E",
+  "FY2030E"
+ ],
+ "sofr": [
+  0.0425,
+  0.04,
+  0.0375,
+  0.0375,
+  0.0375
+ ],
+ "taxRate": 0.25,
+ "minCash": 0,
+ "sweepPct": 1,
+ "adminPct": 0.04,
+ "accruedMonths": 3,
+ "resolutionLag": 1,
+ "deficiencyRank": 99,
+ "cash": 90,
+ "assetBase": 600,
+ "assetComponents": null,
+ "assetCapRate": null,
+ "assetValueBasis": "Illustrative appraised / collateral value (DEMO)",
+ "evMultiple": 10,
+ "industryFactor": 0.45,
+ "tranches": [
+  {
+   "id": "tl",
+   "name": "First-Lien Term Loan",
+   "kind": "term_loan",
+   "seniority": 1,
+   "secured": true,
+   "principal": 700,
+   "commitment": 0,
+   "rate": 0.083,
+   "spread": 0.0405,
+   "floor": 0,
+   "pik": 0,
+   "floating": true,
+   "maturityDate": "2030-06-30",
+   "amortPct": 0.01,
+   "prepay": false,
+   "collateralPct": 0,
+   "price": 101,
+   "collateral": "",
+   "callProtection": ""
+  },
+  {
+   "id": "sn",
+   "name": "Senior Notes 9.00%",
+   "kind": "senior_notes",
+   "seniority": 3,
+   "secured": false,
+   "principal": 450,
+   "commitment": 0,
+   "rate": 0.09,
+   "spread": 0,
+   "floor": 0,
+   "pik": 0,
+   "floating": false,
+   "maturityDate": "2031-02-15",
+   "amortPct": 0,
+   "prepay": false,
+   "collateralPct": 0,
+   "price": 104,
+   "collateral": "",
+   "callProtection": ""
+  }
+ ],
+ "target": {
+  "trancheId": "sn",
+  "index": 2,
+  "holdYears": 3,
+  "feePct": 0.005,
+  "face": 100,
+  "payFreq": 1
+ },
+ "assumptions": {
+  "base": {
+   "revenueGrowth": [
+    0.06,
+    0.06,
+    0.06,
+    0.06,
+    0.06
+   ],
+   "grossMargin": [
+    0.55,
+    0.552,
+    0.554,
+    0.556,
+    0.558
+   ],
+   "ebitdaMargin": [
+    0.22,
+    0.222,
+    0.224,
+    0.226,
+    0.228
+   ],
+   "capexPct": 0.06,
+   "nwcPctOfRevChange": 0.02,
+   "nwcExtraOutflowPct": 0,
+   "rateShock": 0,
+   "refiRate": 0.095,
+   "maxRefiNetLeverage": 8.5,
+   "minRefiCoverage": 1.2,
+   "exitMultiple": 10,
+   "exitPrice": 100,
+   "distressMultiple": 5.5,
+   "assetValueDecline": 0,
+   "liquidationRecovery": 0.2,
+   "assetSales": [
+    0,
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "downside": {
+   "revenueGrowth": [
+    -0.066,
+    -0.033,
+    0.03,
+    0.02,
+    0.02
+   ],
+   "grossMargin": [
+    0.5250000000000001,
+    0.5150000000000001,
+    0.52,
+    0.5250000000000001,
+    0.53
+   ],
+   "ebitdaMargin": [
+    0.195,
+    0.185,
+    0.19,
+    0.195,
+    0.2
+   ],
+   "capexPct": 0.056999999999999995,
+   "nwcPctOfRevChange": 0.02,
+   "nwcExtraOutflowPct": 0.002,
+   "rateShock": 0.015,
+   "refiRate": 0.12,
+   "maxRefiNetLeverage": 5.5,
+   "minRefiCoverage": 1.8,
+   "exitMultiple": 8.5,
+   "exitPrice": 90,
+   "distressMultiple": 5.5,
+   "assetValueDecline": 0.15,
+   "liquidationRecovery": 0.2,
+   "assetSales": [
+    0,
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "severe": {
+   "revenueGrowth": [
+    -0.198,
+    -0.11000000000000001,
+    -0.022000000000000002,
+    0.01,
+    0.02
+   ],
+   "grossMargin": [
+    0.4900000000000001,
+    0.4700000000000001,
+    0.4800000000000001,
+    0.4900000000000001,
+    0.5
+   ],
+   "ebitdaMargin": [
+    0.16,
+    0.14,
+    0.15,
+    0.16,
+    0.16999999999999998
+   ],
+   "capexPct": 0.048,
+   "nwcPctOfRevChange": 0.02,
+   "nwcExtraOutflowPct": 0.006,
+   "rateShock": 0.03,
+   "refiRate": 0.14500000000000002,
+   "maxRefiNetLeverage": 5,
+   "minRefiCoverage": 2,
+   "exitMultiple": 7,
+   "exitPrice": 70,
+   "distressMultiple": 5.5,
+   "assetValueDecline": 0.35,
+   "liquidationRecovery": 0.2,
+   "assetSales": [
+    0,
+    0,
+    0,
+    0,
+    0
+   ]
+  }
+ },
+ "probabilities": {
+  "base": 0.55,
+  "downside": 0.3,
+  "severe": 0.15
+ },
+ "thresholds": {
+  "hurdleIrr": 0.12,
+  "minYield": 0.09,
+  "maxNetLeverage": 6,
+  "minRecovery": 0.6,
+  "minCovenantHeadroom": 0.15,
+  "minDownsideIrr": 0
+ },
+ "covenants": [
+  {
+   "id": "lev",
+   "label": "Maximum net leverage",
+   "type": "maxNetLeverage",
+   "thresholds": [
+    6.5,
+    6.5,
+    6.5,
+    6.5,
+    6.5
+   ],
+   "basis": "hypothetical",
+   "note": "Demo covenant (illustrative)"
+  }
+ ],
+ "openHighDiligence": 6,
+ "historicalSpec": {
+  "mode": "bridge",
+  "columns": [
+   {
+    "id": "FY2022",
+    "label": "FY2022A",
+    "kind": "fy",
+    "year": 2022
+   },
+   {
+    "id": "FY2023",
+    "label": "FY2023A",
+    "kind": "fy",
+    "year": 2023
+   },
+   {
+    "id": "FY2024",
+    "label": "FY2024A",
+    "kind": "fy",
+    "year": 2024
+   },
+   {
+    "id": "FY2025",
+    "label": "FY2025A",
+    "kind": "fy",
+    "year": 2025
+   }
+  ],
+  "inputs": [
+   {
+    "key": "revenue",
+    "label": "Revenue",
+    "group": "income",
+    "values": {
+     "FY2022": 720,
+     "FY2023": 810,
+     "FY2024": 860,
+     "FY2025": 900
+    }
+   },
+   {
+    "key": "cogs",
+    "label": "COGS",
+    "group": "income",
+    "values": {
+     "FY2022": 331.2,
+     "FY2023": 368.54999999999995,
+     "FY2024": 386.99999999999994,
+     "FY2025": 404.99999999999994
+    }
+   },
+   {
+    "key": "opex",
+    "label": "Operating expenses (cash, ex-D&A)",
+    "group": "income",
+    "values": {
+     "FY2022": 237.60000000000002,
+     "FY2023": 267.30000000000007,
+     "FY2024": 283.80000000000007,
+     "FY2025": 297.00000000000006
+    }
+   },
+   {
+    "key": "da",
+    "label": "Depreciation & amortization",
+    "group": "income",
+    "values": {
+     "FY2022": 50.400000000000006,
+     "FY2023": 56.7,
+     "FY2024": 60.2,
+     "FY2025": 63.00000000000001
+    }
+   },
+   {
+    "key": "interest",
+    "label": "Interest expense",
+    "group": "income",
+    "values": {
+     "FY2022": 83.80999999999999,
+     "FY2023": 88.74,
+     "FY2024": 93.66999999999999,
+     "FY2025": 98.6
+    }
+   },
+   {
+    "key": "taxes",
+    "label": "Taxes",
+    "group": "income",
+    "values": {
+     "FY2022": 4.247499999999999,
+     "FY2023": 7.177500000000002,
+     "FY2024": 8.832500000000003,
+     "FY2025": 9.100000000000001
+    }
+   },
+   {
+    "key": "capex",
+    "label": "Capex",
+    "group": "cash",
+    "values": {
+     "FY2022": 43.199999999999996,
+     "FY2023": 48.6,
+     "FY2024": 51.6,
+     "FY2025": 54
+    }
+   },
+   {
+    "key": "dnwc",
+    "label": "Increase in working capital",
+    "group": "cash",
+    "values": {
+     "FY2022": 0.8150943396226421,
+     "FY2023": 1.8,
+     "FY2024": 1,
+     "FY2025": 0.8
+    }
+   }
+  ],
+  "lines": {
+   "revenue": [
+    [
+     "revenue",
+     1
+    ]
+   ],
+   "cogs": [
+    [
+     "cogs",
+     1
+    ]
+   ],
+   "opexAdj": [
+    [
+     "opex",
+     1
+    ]
+   ],
+   "da": [
+    [
+     "da",
+     1
+    ]
+   ],
+   "sbc": [],
+   "interest": [
+    [
+     "interest",
+     1
+    ]
+   ],
+   "taxes": [
+    [
+     "taxes",
+     1
+    ]
+   ],
+   "capex": [
+    [
+     "capex",
+     1
+    ]
+   ],
+   "dnwc": [
+    [
+     "dnwc",
+     1
+    ]
+   ]
+  }
+ },
+ "sources": [
+  {
+   "id": "cascade-fin",
+   "source": "CreditIQ demo dataset",
+   "document": "Cascade Fitness — illustrative financial statements FY2022–FY2025",
+   "documentDate": "2026-03-31",
+   "retrievedDate": "2026-03-31",
+   "dataType": "Income statement / cash flow",
+   "period": "FY2022–FY2025",
+   "isDemo": true
+  },
+  {
+   "id": "cascade-debt",
+   "source": "CreditIQ demo dataset",
+   "document": "Cascade Fitness — illustrative capital structure & covenants",
+   "documentDate": "2026-03-31",
+   "retrievedDate": "2026-03-31",
+   "dataType": "Debt schedule",
+   "period": "As of 2026-03-31",
+   "isDemo": true
+  },
+  {
+   "id": "cascade-px",
+   "source": "CreditIQ demo dataset",
+   "document": "Illustrative indicative bid marks (% of par)",
+   "documentDate": "2026-03-31",
+   "retrievedDate": "2026-03-31",
+   "dataType": "Market price",
+   "period": "2026-03-31",
+   "isDemo": true
+  }
+ ],
+ "provenance": [],
+ "notes": [
+  "All figures are fictional and illustrative."
+ ],
+ "thesis": "Priced above par with ~5.4x net leverage, thin asset coverage (0.5x) and discretionary consumer exposure. Downside recovery on the notes is poor and call protection caps the upside. Avoid at current levels.",
+ "config": {
+  "scoreWeights": {
+   "leverage": 15,
+   "coverage": 15,
+   "liquidity": 10,
+   "fcf": 10,
+   "maturity": 10,
+   "marginStability": 10,
+   "revenueStability": 8,
+   "assetCoverage": 12,
+   "industry": 10
+  },
+  "scoreThresholds": {
+   "leverage": {
+    "best": 2,
+    "worst": 7,
+    "unit": "x net debt / EBITDA"
+   },
+   "coverage": {
+    "best": 5,
+    "worst": 1,
+    "unit": "x EBITDA / interest"
+   },
+   "liquidity": {
+    "best": 2,
+    "worst": 0.5,
+    "unit": "x liquidity / 12m obligations"
+   },
+   "fcf": {
+    "best": 0.12,
+    "worst": -0.02,
+    "unit": "FCF / total debt"
+   },
+   "maturity": {
+    "best": 0,
+    "worst": 0.5,
+    "unit": "% of debt due within window"
+   },
+   "marginStability": {
+    "best": 0.01,
+    "worst": 0.05,
+    "unit": "std-dev of EBITDA margin (pts)"
+   },
+   "revenueStability": {
+    "best": 0.03,
+    "worst": 0.15,
+    "unit": "std-dev of revenue growth"
+   },
+   "assetCoverage": {
+    "best": 2,
+    "worst": 0.6,
+    "unit": "x asset base / total debt"
+   }
+  },
+  "riskBands": [
+   {
+    "min": 75,
+    "label": "Low"
+   },
+   {
+    "min": 60,
+    "label": "Moderate"
+   },
+   {
+    "min": 45,
+    "label": "Elevated"
+   },
+   {
+    "min": 0,
+    "label": "High"
+   }
+  ],
+  "scoreWindow": 3,
+  "maturityMaterial": 0.15,
+  "maturityWindow": 3
+ }
+}

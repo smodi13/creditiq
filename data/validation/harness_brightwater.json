@@ -1,0 +1,971 @@
+{
+ "case": "brightwater",
+ "workbook": "models/CreditIQ_BRIGHTWATER_Model.xlsx",
+ "sha256_before": "ae1a73ecb87e7aa8520278ccf21b48acab666fdb16310678a2a780aacac97331",
+ "sha256_after": "ae1a73ecb87e7aa8520278ccf21b48acab666fdb16310678a2a780aacac97331",
+ "workbook_unchanged": true,
+ "tests_passed": 30,
+ "tests_total": 30,
+ "tests": [
+  {
+   "id": "A1",
+   "name": "downside revenue growth \u22125 pts: revenue\u2193 EBITDA\u2193 FCF-before-working-capital\u2193 leverage\u2191 coverage\u2193",
+   "status": "PASS",
+   "expected": "revenue, EBITDA, FCF before working capital and coverage fall; net leverage rises",
+   "detail": "revenue 2213\u21922093; EBITDA 77.45\u219273.25; FCF -76.1\u2192-63.38; net leverage 16.54\u219217.32; coverage 0.5979\u21920.5654",
+   "assumptions_changed": {
+    "Assumptions!G84": {
+     "from": -0.078,
+     "to": -0.128
+    },
+    "Assumptions!H84": {
+     "from": -0.039,
+     "to": -0.089
+    },
+    "Assumptions!I84": {
+     "from": -0.005,
+     "to": -0.055
+    },
+    "Assumptions!J84": {
+     "from": -0.01,
+     "to": -0.060000000000000005
+    },
+    "Assumptions!K84": {
+     "from": -0.01,
+     "to": -0.060000000000000005
+    }
+   },
+   "outputs_before": {
+    "rev1": 2212.8,
+    "ebitda1": 77.448,
+    "fcf1": -76.0968,
+    "netlev1": 16.5413800227249,
+    "cov1": 0.597869383974062
+   },
+   "outputs_after": {
+    "rev1": 2092.8,
+    "ebitda1": 73.248,
+    "fcf1": -63.3768,
+    "netlev1": 17.3161970292704,
+    "cov1": 0.56544696618805
+   }
+  },
+  {
+   "id": "A2",
+   "name": "exact: period-1 revenue = prior revenue \u00d7 (1 + g \u2212 5 pts); EBITDA = revenue \u00d7 margin",
+   "status": "PASS",
+   "expected": "closed-form revenue and EBITDA",
+   "detail": "revenue 2092.8000 vs expected 2092.8000; EBITDA 73.2480 vs 73.2480",
+   "assumptions_changed": {
+    "Assumptions!G84": {
+     "from": -0.078,
+     "to": -0.128
+    },
+    "Assumptions!H84": {
+     "from": -0.039,
+     "to": -0.089
+    },
+    "Assumptions!I84": {
+     "from": -0.005,
+     "to": -0.055
+    },
+    "Assumptions!J84": {
+     "from": -0.01,
+     "to": -0.060000000000000005
+    },
+    "Assumptions!K84": {
+     "from": -0.01,
+     "to": -0.060000000000000005
+    }
+   },
+   "outputs_before": {
+    "rev1": 2212.8,
+    "ebitda1": 77.448
+   },
+   "outputs_after": {
+    "rev1": 2092.8,
+    "ebitda1": 73.248
+   }
+  },
+  {
+   "id": "A3",
+   "name": "going-concern recovery value does not rise (distressed multiple \u00d7 event EBITDA)",
+   "status": "PASS",
+   "expected": "going-concern value \u2264 baseline",
+   "detail": "going-concern value 195.6\u2192175.4",
+   "assumptions_changed": {
+    "Assumptions!G84": {
+     "from": -0.078,
+     "to": -0.128
+    },
+    "Assumptions!H84": {
+     "from": -0.039,
+     "to": -0.089
+    },
+    "Assumptions!I84": {
+     "from": -0.005,
+     "to": -0.055
+    },
+    "Assumptions!J84": {
+     "from": -0.01,
+     "to": -0.060000000000000005
+    },
+    "Assumptions!K84": {
+     "from": -0.01,
+     "to": -0.060000000000000005
+    }
+   },
+   "outputs_before": {
+    "gc": 195.6380736
+   },
+   "outputs_after": {
+    "gc": 175.4017536
+   }
+  },
+  {
+   "id": "A4",
+   "name": "downside-scenario return responds: downside IRR, MOIC and recovery % do not rise \u2014 or any rise is fully explained (asset-based recovery unchanged, extra cash from working-capital release / default timing)",
+   "status": "PASS",
+   "expected": "downside IRR/MOIC/recovery \u2264 baseline, or explained",
+   "detail": "downside IRR 0.00689\u21920.01931; MOIC 1.018\u21921.05; recovery 0.5485\u21920.5733; NON-MONOTONE, explained: claims 1308\u21921295, cash at event 0\u21920, valuation period 2027\u21922027, liquidation value unchanged 530.4",
+   "assumptions_changed": {
+    "Assumptions!G84": {
+     "from": -0.078,
+     "to": -0.128
+    },
+    "Assumptions!H84": {
+     "from": -0.039,
+     "to": -0.089
+    },
+    "Assumptions!I84": {
+     "from": -0.005,
+     "to": -0.055
+    },
+    "Assumptions!J84": {
+     "from": -0.01,
+     "to": -0.060000000000000005
+    },
+    "Assumptions!K84": {
+     "from": -0.01,
+     "to": -0.060000000000000005
+    }
+   },
+   "outputs_before": {
+    "irr": 0.00688989684099931,
+    "moic": 1.01771586082989,
+    "rec": 0.548450942344359,
+    "ecash": 0,
+    "eyear": 2027,
+    "liqv": 530.4,
+    "gc": 195.6380736,
+    "claims": [
+     221.6231087,
+     524.3147,
+     256.875,
+     305.625
+    ]
+   },
+   "outputs_after": {
+    "irr": 0.0193102279365428,
+    "moic": 1.05034172138342,
+    "rec": 0.57330858986025,
+    "ecash": 0,
+    "eyear": 2027,
+    "liqv": 530.4,
+    "gc": 175.4017536,
+    "claims": [
+     208.5898787,
+     524.3147,
+     256.875,
+     305.625
+    ]
+   }
+  },
+  {
+   "id": "A5",
+   "name": "base case unchanged by a downside-only edit",
+   "status": "PASS",
+   "expected": "base IRR/MOIC identical",
+   "detail": "base IRR 0.1308\u21920.1308",
+   "assumptions_changed": {
+    "Assumptions!G84": {
+     "from": -0.078,
+     "to": -0.128
+    },
+    "Assumptions!H84": {
+     "from": -0.039,
+     "to": -0.089
+    },
+    "Assumptions!I84": {
+     "from": -0.005,
+     "to": -0.055
+    },
+    "Assumptions!J84": {
+     "from": -0.01,
+     "to": -0.060000000000000005
+    },
+    "Assumptions!K84": {
+     "from": -0.01,
+     "to": -0.060000000000000005
+    }
+   },
+   "outputs_before": {
+    "base_irr": 0.130821524311548
+   },
+   "outputs_after": {
+    "base_irr": 0.130821524311548
+   }
+  },
+  {
+   "id": "B1",
+   "name": "EBITDA margin \u22123 pts: EBITDA\u2193, net leverage\u2191, coverage\u2193, projected credit score\u2193",
+   "status": "PASS",
+   "expected": "EBITDA and coverage fall, leverage rises, score falls",
+   "detail": "EBITDA 77.45\u219211.06; net leverage 16.54\u2192121.8; coverage 0.5979\u21920.08541; projected score 23.65\u219222.49",
+   "assumptions_changed": {
+    "Assumptions!G86": {
+     "from": 0.035,
+     "to": 0.0050000000000000044
+    },
+    "Assumptions!H86": {
+     "from": 0.023,
+     "to": -0.006999999999999999
+    },
+    "Assumptions!I86": {
+     "from": 0.029,
+     "to": -0.0009999999999999974
+    },
+    "Assumptions!J86": {
+     "from": 0.035,
+     "to": 0.0050000000000000044
+    },
+    "Assumptions!K86": {
+     "from": 0.041,
+     "to": 0.011000000000000003
+    }
+   },
+   "outputs_before": {
+    "ebitda1": 77.448,
+    "netlev1": 16.5413800227249,
+    "cov1": 0.597869383974062,
+    "projscore": 23.6467169533622
+   },
+   "outputs_after": {
+    "ebitda1": 11.064,
+    "netlev1": 121.789660159074,
+    "cov1": 0.0854099119962946,
+    "projscore": 22.4885714285714
+   }
+  },
+  {
+   "id": "B2",
+   "name": "exact: EBITDA = unchanged revenue \u00d7 (margin \u2212 3 pts); cash coverage = EBITDA \u00f7 cash interest",
+   "status": "PASS",
+   "expected": "closed form",
+   "detail": "EBITDA 11.0640 vs expected 11.0640",
+   "assumptions_changed": {
+    "Assumptions!G86": {
+     "from": 0.035,
+     "to": 0.0050000000000000044
+    },
+    "Assumptions!H86": {
+     "from": 0.023,
+     "to": -0.006999999999999999
+    },
+    "Assumptions!I86": {
+     "from": 0.029,
+     "to": -0.0009999999999999974
+    },
+    "Assumptions!J86": {
+     "from": 0.035,
+     "to": 0.0050000000000000044
+    },
+    "Assumptions!K86": {
+     "from": 0.041,
+     "to": 0.011000000000000003
+    }
+   },
+   "outputs_before": {
+    "ebitda1": 77.448,
+    "cov1": 0.597869383974062
+   },
+   "outputs_after": {
+    "ebitda1": 11.064,
+    "cov1": 0.0854099119962946
+   }
+  },
+  {
+   "id": "B3",
+   "name": "returns respond: IRR and MOIC of the selected scenario do not rise; covenant breaches do not fall; refinancing failures do not fall",
+   "status": "PASS",
+   "expected": "no improvement in any risk or return metric",
+   "detail": "IRR 0.00689\u2192-0.0643; MOIC 1.018\u21920.8474; breaches 5\u21925; refinancing failures 4\u21924",
+   "assumptions_changed": {
+    "Assumptions!G86": {
+     "from": 0.035,
+     "to": 0.0050000000000000044
+    },
+    "Assumptions!H86": {
+     "from": 0.023,
+     "to": -0.006999999999999999
+    },
+    "Assumptions!I86": {
+     "from": 0.029,
+     "to": -0.0009999999999999974
+    },
+    "Assumptions!J86": {
+     "from": 0.035,
+     "to": 0.0050000000000000044
+    },
+    "Assumptions!K86": {
+     "from": 0.041,
+     "to": 0.011000000000000003
+    }
+   },
+   "outputs_before": {
+    "irr": 0.00688989684099931,
+    "moic": 1.01771586082989,
+    "bt": 5,
+    "refifail": 4
+   },
+   "outputs_after": {
+    "irr": -0.0643006889274359,
+    "moic": 0.847445803676942,
+    "bt": 5,
+    "refifail": 4
+   }
+  },
+  {
+   "id": "C1",
+   "name": "SOFR +100 bp: period-1 cash interest rises by floating balances \u00d7 \u0394rate (floors respected)",
+   "status": "PASS",
+   "expected": "\u0394interest = \u03a3 floating balance \u00d7 (max(S+1%,floor) \u2212 max(S,floor))",
+   "detail": "\u03947.0000 vs expected 7.0000",
+   "assumptions_changed": {
+    "Assumptions!G49": {
+     "from": 0.0425,
+     "to": 0.052500000000000005
+    },
+    "Assumptions!H49": {
+     "from": 0.04,
+     "to": 0.05
+    },
+    "Assumptions!I49": {
+     "from": 0.0375,
+     "to": 0.0475
+    },
+    "Assumptions!J49": {
+     "from": 0.0375,
+     "to": 0.0475
+    },
+    "Assumptions!K49": {
+     "from": 0.0375,
+     "to": 0.0475
+    }
+   },
+   "outputs_before": {
+    "icash1": 129.54
+   },
+   "outputs_after": {
+    "icash1": 136.54
+   }
+  },
+  {
+   "id": "C2",
+   "name": "interest increase flows to cash flow one-for-one net of tax; coverage never improves; covenant breaches do not fall",
+   "status": "PASS",
+   "expected": "\u0394FCF = \u2212\u0394interest \u2212 \u0394tax",
+   "detail": "\u0394FCF -7.0000, \u0394interest 7.0000, \u0394tax 0.0000; coverage 0.5979\u21920.5672; breaches 5\u21925",
+   "assumptions_changed": {
+    "Assumptions!G49": {
+     "from": 0.0425,
+     "to": 0.052500000000000005
+    },
+    "Assumptions!H49": {
+     "from": 0.04,
+     "to": 0.05
+    },
+    "Assumptions!I49": {
+     "from": 0.0375,
+     "to": 0.0475
+    },
+    "Assumptions!J49": {
+     "from": 0.0375,
+     "to": 0.0475
+    },
+    "Assumptions!K49": {
+     "from": 0.0375,
+     "to": 0.0475
+    }
+   },
+   "outputs_before": {
+    "fcf1": -76.0968,
+    "cov1": 0.597869383974062,
+    "bt": 5
+   },
+   "outputs_after": {
+    "fcf1": -83.0968,
+    "cov1": 0.567218397539183,
+    "bt": 5
+   }
+  },
+  {
+   "id": "C2b",
+   "name": "return on the position: a floating-rate target tranche earns more coupon cash (IRR is then free to rise); a fixed-rate target's coupon cash is unchanged",
+   "status": "PASS",
+   "expected": "coupon cash \u2265 baseline (floating) / = baseline (fixed)",
+   "detail": "target tranche floating; coupon cash 23.35\u219225.35; IRR 0.00689\u21920.0094; MOIC 1.018\u21921.024",
+   "assumptions_changed": {
+    "Assumptions!G49": {
+     "from": 0.0425,
+     "to": 0.052500000000000005
+    },
+    "Assumptions!H49": {
+     "from": 0.04,
+     "to": 0.05
+    },
+    "Assumptions!I49": {
+     "from": 0.0375,
+     "to": 0.0475
+    },
+    "Assumptions!J49": {
+     "from": 0.0375,
+     "to": 0.0475
+    },
+    "Assumptions!K49": {
+     "from": 0.0375,
+     "to": 0.0475
+    }
+   },
+   "outputs_before": {
+    "cint": 23.35,
+    "irr": 0.00688989684099931,
+    "moic": 1.01771586082989
+   },
+   "outputs_after": {
+    "cint": 25.35,
+    "irr": 0.00940023631315189,
+    "moic": 1.02387739857049
+   }
+  },
+  {
+   "id": "C3",
+   "name": "revolver draw does not fall; EBITDA unchanged",
+   "status": "PASS",
+   "expected": "draw \u2265 baseline; EBITDA identical",
+   "detail": "draw 36.3\u219243.3",
+   "assumptions_changed": {
+    "Assumptions!G49": {
+     "from": 0.0425,
+     "to": 0.052500000000000005
+    },
+    "Assumptions!H49": {
+     "from": 0.04,
+     "to": 0.05
+    },
+    "Assumptions!I49": {
+     "from": 0.0375,
+     "to": 0.0475
+    },
+    "Assumptions!J49": {
+     "from": 0.0375,
+     "to": 0.0475
+    },
+    "Assumptions!K49": {
+     "from": 0.0375,
+     "to": 0.0475
+    }
+   },
+   "outputs_before": {
+    "draw1": 36.2968000000001,
+    "ebitda1": 77.448
+   },
+   "outputs_after": {
+    "draw1": 43.2968000000001,
+    "ebitda1": 77.448
+   }
+  },
+  {
+   "id": "D1",
+   "name": "recovery value \u221265% (scenario 1): recovery %\u2193, IRR\u2193, MOIC\u2193; recovery value used = override",
+   "status": "PASS",
+   "expected": "recovery %, IRR, MOIC fall",
+   "detail": "recovery % 0.8664\u21920.1134; IRR 0.1308\u2192-0.3373; MOIC 1.393\u21920.4079",
+   "assumptions_changed": {
+    "Assumptions!C10": {
+     "from": 2,
+     "to": 1
+    },
+    "Assumptions!C14": {
+     "from": null,
+     "to": 220.640112
+    }
+   },
+   "outputs_before": {
+    "recval": 630.40032,
+    "recpct": 0.866427146668372,
+    "irr": 0.130821524311548,
+    "moic": 1.39264718551909
+   },
+   "outputs_after": {
+    "recval": 220.640112,
+    "recpct": 0.11342750351883,
+    "irr": -0.337340169417693,
+    "moic": 0.407931329946091
+   }
+  },
+  {
+   "id": "D2",
+   "name": "recovery value +80%: recovery %\u2191 (capped at 100%), IRR\u2191 unless already fully recovered",
+   "status": "PASS",
+   "expected": "recovery % \u2264 100% and rising; IRR rising",
+   "detail": "recovery % 0.8664\u21921; IRR 0.1308\u21920.1797",
+   "assumptions_changed": {
+    "Assumptions!C10": {
+     "from": 2,
+     "to": 1
+    },
+    "Assumptions!C14": {
+     "from": null,
+     "to": 1134.720576
+    }
+   },
+   "outputs_before": {
+    "recval": 630.40032,
+    "recpct": 0.866427146668372,
+    "irr": 0.130821524311548,
+    "moic": 1.39264718551909
+   },
+   "outputs_after": {
+    "recval": 1134.720576,
+    "recpct": 1,
+    "irr": 0.179713126715643,
+    "moic": 1.56732363821916
+   }
+  },
+  {
+   "id": "D3l",
+   "name": "recovery waterfall bounds at the low override: no tranche above its claim; total recoveries \u2264 net distributable value",
+   "status": "PASS",
+   "expected": "priority/bounds",
+   "detail": "\u03a3 recoveries 211.81 \u2264 net value 211.81; \u03a3 claims 1237.46",
+   "assumptions_changed": {},
+   "outputs_before": {},
+   "outputs_after": {
+    "tot_rec": [
+     152.55956,
+     59.25494752,
+     0,
+     0
+    ],
+    "claims": [
+     152.55956,
+     522.4037,
+     256.875,
+     305.625
+    ],
+    "rnet": 211.81450752
+   }
+  },
+  {
+   "id": "D3h",
+   "name": "recovery waterfall bounds at the high override: no tranche above its claim; total recoveries \u2264 net distributable value",
+   "status": "PASS",
+   "expected": "priority/bounds",
+   "detail": "\u03a3 recoveries 1089.33 \u2264 net value 1089.33; \u03a3 claims 1237.46",
+   "assumptions_changed": {},
+   "outputs_before": {},
+   "outputs_after": {
+    "tot_rec": [
+     152.55956,
+     522.4037,
+     256.875,
+     157.49349296
+    ],
+    "claims": [
+     152.55956,
+     522.4037,
+     256.875,
+     305.625
+    ],
+    "rnet": 1089.33175296
+   }
+  },
+  {
+   "id": "D4",
+   "name": "raising recovery value never lowers any tranche's recovery",
+   "status": "PASS",
+   "expected": "monotone by tranche",
+   "detail": "per-tranche recoveries weakly increase",
+   "assumptions_changed": {},
+   "outputs_before": {
+    "tot_rec": [
+     152.55956,
+     59.25494752,
+     0,
+     0
+    ]
+   },
+   "outputs_after": {
+    "tot_rec": [
+     152.55956,
+     522.4037,
+     256.875,
+     157.49349296
+    ]
+   }
+  },
+  {
+   "id": "D5",
+   "name": "going-concern value = distressed multiple \u00d7 event EBITDA (multiple +1.0x)",
+   "status": "PASS",
+   "expected": "\u0394 = 1.0 \u00d7 event EBITDA",
+   "detail": "going-concern value 195.6\u2192244.5; \u0394 = 48.910 vs event EBITDA 48.910",
+   "assumptions_changed": {
+    "Assumptions!C97": {
+     "from": 4,
+     "to": 5.0
+    }
+   },
+   "outputs_before": {
+    "gc": 195.6380736,
+    "recval": 530.4
+   },
+   "outputs_after": {
+    "gc": 244.547592,
+    "recval": 530.4
+   }
+  },
+  {
+   "id": "D6",
+   "name": "liquidation value = asset base \u00d7 (1 \u2212 decline) \u00d7 recovery factor (factor +10 pts); recovery value is the greater of going concern and liquidation, plus cash",
+   "status": "PASS",
+   "expected": "exact scaling; recovery value does not fall",
+   "detail": "liquidation value 530.4\u2192618.8 (expected 618.8); recovery value 530.4\u2192618.8",
+   "assumptions_changed": {
+    "Assumptions!C99": {
+     "from": 0.6,
+     "to": 0.7
+    }
+   },
+   "outputs_before": {
+    "liqv": 530.4,
+    "recval": 530.4
+   },
+   "outputs_after": {
+    "liqv": 618.8,
+    "recval": 618.8
+   }
+  },
+  {
+   "id": "E1",
+   "name": "purchase price +5 pts: IRR\u2193 MOIC\u2193 current yield\u2193; \u22125 pts: all \u2191",
+   "status": "PASS",
+   "expected": "IRR, MOIC, yield move opposite to price",
+   "detail": "IRR 0.03341 / 0.00689 / -0.01723 at \u22125 / base / +5",
+   "assumptions_changed": {
+    "Assumptions!C32": {
+     "from": 78,
+     "to": 83
+    }
+   },
+   "outputs_before": {
+    "irr": 0.00688989684099931,
+    "moic": 1.01771586082989,
+    "cy": 0.151282051282051
+   },
+   "outputs_after": {
+    "irr": -0.0172325513198896,
+    "moic": 0.956407676442549,
+    "cy": 0.142168674698795
+   }
+  },
+  {
+   "id": "E2",
+   "name": "exact: cost = face \u00d7 price \u00d7 (1 + fees); cash received unchanged; capital gain moves by \u2212\u0394price \u00d7 face; IRR matches an independent solve of the same cash flows",
+   "status": "PASS",
+   "expected": "closed form",
+   "detail": "cost 73.36 / 78.39 / 83.42; cash received 79.78 unchanged; capital gain -16.57 / -21.57 / -26.57",
+   "assumptions_changed": {
+    "Assumptions!C32": {
+     "from": 78,
+     "to": 73
+    }
+   },
+   "outputs_before": {
+    "cost": 78.39,
+    "inflow": 79.7787463304553,
+    "capgain": -21.5712536695447,
+    "irr": 0.00688989684099931
+   },
+   "outputs_after": {
+    "cost": 73.365,
+    "inflow": 79.7787463304553,
+    "capgain": -16.5712536695447,
+    "irr": 0.0334074543221313
+   }
+  },
+  {
+   "id": "F1",
+   "name": "maturity moved to within ~9 months: debt due inside the alert window \u2191, refinancing requirement in the new maturity period \u2191, credit score \u2193",
+   "status": "PASS",
+   "expected": "more debt due soon; score falls",
+   "detail": "due window 480\u21921000; refinancing requirement in period 1: 0\u2192355; score 30.45\u219224.93",
+   "assumptions_changed": {
+    "Assumptions!J54": {
+     "from": "2028-03-31T00:00:00",
+     "to": "2026-12-26T00:00:00"
+    }
+   },
+   "outputs_before": {
+    "due_window": 480,
+    "req": 0,
+    "score": 30.4510981913506
+   },
+   "outputs_after": {
+    "due_window": 1000,
+    "req": 355,
+    "score": 24.9306002304147
+   }
+  },
+  {
+   "id": "F2",
+   "name": "maturity pushed out 12 years: debt due in the alert window \u2193, refinancing requirement \u2193, refinancing failures do not rise",
+   "status": "PASS",
+   "expected": "less near-term debt, no new failures",
+   "detail": "due window 480\u2192180; \u03a3 refinancing requirement 998.9\u2192698.9; failures 4\u21923",
+   "assumptions_changed": {
+    "Assumptions!J56": {
+     "from": "2027-05-15T00:00:00",
+     "to": "2038-03-28T00:00:00"
+    }
+   },
+   "outputs_before": {
+    "due_window": 480,
+    "req": 998.8904,
+    "refifail": 4
+   },
+   "outputs_after": {
+    "due_window": 180,
+    "req": 698.8904000000001,
+    "refifail": 3
+   }
+  },
+  {
+   "id": "F3",
+   "name": "refinancing unavailable in the Base case (access test fails, opening cash 5, no asset sales): refinancing failures\u2191, payment default modelled, recovery computed",
+   "status": "PASS",
+   "expected": "failure \u2192 default \u2192 recovery",
+   "detail": "refinancing failures 0\u21924; default 1\u21921; recovery value 630.4",
+   "assumptions_changed": {
+    "Assumptions!C74": {
+     "from": 8.5,
+     "to": 0.0
+    },
+    "Assumptions!C75": {
+     "from": 1.2,
+     "to": 99.0
+    },
+    "Assumptions!C11": {
+     "from": 45,
+     "to": 5.0
+    },
+    "Assumptions!G68": {
+     "from": 0,
+     "to": 0.0
+    },
+    "Assumptions!H68": {
+     "from": 0,
+     "to": 0.0
+    },
+    "Assumptions!I68": {
+     "from": 0,
+     "to": 0.0
+    },
+    "Assumptions!J68": {
+     "from": 0,
+     "to": 0.0
+    },
+    "Assumptions!K68": {
+     "from": 0,
+     "to": 0.0
+    },
+    "Assumptions!C10": {
+     "from": 2,
+     "to": 1
+    }
+   },
+   "outputs_before": {
+    "refifail": 0,
+    "hasdef": 1,
+    "recval": 630.40032
+   },
+   "outputs_after": {
+    "refifail": 4,
+    "hasdef": 1,
+    "recval": 630.40032
+   }
+  },
+  {
+   "id": "F4",
+   "name": "market access always open (Base case): refinancing failures do not rise and no default is introduced where the baseline had none",
+   "status": "PASS",
+   "expected": "PASS/FAIL changes only when the model conditions warrant",
+   "detail": "failures 0\u21920; default 1\u21921",
+   "assumptions_changed": {
+    "Assumptions!C74": {
+     "from": 8.5,
+     "to": 99.0
+    },
+    "Assumptions!C75": {
+     "from": 1.2,
+     "to": 0.0
+    },
+    "Assumptions!C10": {
+     "from": 2,
+     "to": 1
+    }
+   },
+   "outputs_before": {
+    "refifail": 0,
+    "hasdef": 1
+   },
+   "outputs_after": {
+    "refifail": 0,
+    "hasdef": 1
+   }
+  },
+  {
+   "id": "G1",
+   "name": "covenant headroom = threshold \u2212 metric (max tests) or metric \u2212 threshold (min tests); status flips exactly at the threshold; negative headroom is never PASS \u2014 1 active covenants \u00d7 5 periods",
+   "status": "PASS",
+   "expected": "BREACH iff headroom < 0",
+   "detail": "5 covenant-period tests; 2 breach-side \u2192 BREACH, 2 pass-side \u2192 PASS, 1 at-threshold (|headroom|\u22480, flag = [headroom<0]); violations: []",
+   "assumptions_changed": {
+    "Assumptions!G61": {
+     "from": 8.5,
+     "to": 16.8722076231794
+    },
+    "Assumptions!H61": {
+     "from": 8.5,
+     "to": 28.5681105622991
+    },
+    "Assumptions!I61": {
+     "from": 8.5,
+     "to": 24.075075750904233
+    },
+    "Assumptions!J61": {
+     "from": 8.5,
+     "to": 22.306011774507198
+    },
+    "Assumptions!K61": {
+     "from": 8.5,
+     "to": 19.438583795030777
+    }
+   },
+   "outputs_before": {
+    "bt": 5
+   },
+   "outputs_after": {
+    "bt": 2
+   }
+  },
+  {
+   "id": "G2",
+   "name": "risk flow (selected Downside): total breaches = \u03a3 breach flags; Scenarios-tab count agrees; Investment Summary covenant evidence is consistent with its own value and requirement",
+   "status": "PASS",
+   "expected": "breach count and evidence reflect the breaches",
+   "detail": "breaches 5\u21922 (\u03a3 flags 2); Scenarios-tab count 2; evidence row [0.53401404026047, 0.15] \u2192 PASS",
+   "assumptions_changed": {
+    "Assumptions!G61": {
+     "from": 8.5,
+     "to": 16.8722076231794
+    },
+    "Assumptions!H61": {
+     "from": 8.5,
+     "to": 28.5681105622991
+    },
+    "Assumptions!I61": {
+     "from": 8.5,
+     "to": 24.075075750904233
+    },
+    "Assumptions!J61": {
+     "from": 8.5,
+     "to": 22.306011774507198
+    },
+    "Assumptions!K61": {
+     "from": 8.5,
+     "to": 19.438583795030777
+    }
+   },
+   "outputs_before": {
+    "bt": 5
+   },
+   "outputs_after": {
+    "bt": 2,
+    "bt_sel": 2,
+    "evidence": "PASS"
+   }
+  },
+  {
+   "id": "G3",
+   "name": "base case with every active covenant breached in all five periods: breaches counted = covenants \u00d7 periods; base-case Investment Summary covenant-headroom evidence FAILS; minimum headroom is negative",
+   "status": "PASS",
+   "expected": "breach propagates to risk evidence",
+   "detail": "breaches 0\u21925 (expected 5); Investment Summary evidence \u2192 FAIL; violations []",
+   "assumptions_changed": {
+    "Assumptions!G61": {
+     "from": 8.5,
+     "to": 7.704967624967623
+    },
+    "Assumptions!H61": {
+     "from": 8.5,
+     "to": 7.555504900758931
+    },
+    "Assumptions!I61": {
+     "from": 8.5,
+     "to": 7.471292163823419
+    },
+    "Assumptions!J61": {
+     "from": 8.5,
+     "to": 7.420259878037216
+    },
+    "Assumptions!K61": {
+     "from": 8.5,
+     "to": 7.363969572272213
+    },
+    "Assumptions!C10": {
+     "from": 2,
+     "to": 1
+    }
+   },
+   "outputs_before": {
+    "bt": 0
+   },
+   "outputs_after": {
+    "bt": 5,
+    "evidence": "FAIL"
+   }
+  },
+  {
+   "id": "H1",
+   "name": "scenario selector drives the detailed tabs: base revenue > downside revenue > severe revenue",
+   "status": "PASS",
+   "expected": "ordered",
+   "detail": "revenue (selector 1/2/3): 2376 / 2213 / 1838",
+   "assumptions_changed": {},
+   "outputs_before": {},
+   "outputs_after": {}
+  },
+  {
+   "id": "H2",
+   "name": "covenant breaches in the downside scenarios are at least those in the base case",
+   "status": "PASS",
+   "expected": "non-decreasing with severity",
+   "detail": "breaches base/downside/severe: 0 / 5 / 5",
+   "assumptions_changed": {},
+   "outputs_before": {},
+   "outputs_after": {}
+  }
+ ]
+}

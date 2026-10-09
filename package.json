@@ -1,0 +1,45 @@
+{
+  "name": "creditiq",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint src tests",
+    "model:build": "npm run export:cases && python3 scripts/build_model.py amcx && python3 scripts/build_model.py bdn && python3 scripts/build_model.py brightwater && python3 scripts/reconcile.py",
+    "model:audit": "python3 scripts/audit_model.py",
+    "export:cases": "tsx scripts/export_cases.ts",
+    "data:verify": "python3 scripts/real_cases.py",
+    "model:reconcile": "python3 scripts/reconcile.py",
+    "model:harness": "python3 scripts/model_harness.py",
+    "validate": "npm test && npm run data:verify && npm run model:audit && npm run model:harness:all",
+    "model:harness:amcx": "python3 scripts/model_harness.py amcx",
+    "model:harness:bdn": "python3 scripts/model_harness.py bdn",
+    "model:harness:brightwater": "python3 scripts/model_harness.py brightwater",
+    "model:harness:all": "python3 scripts/model_harness.py --parallel"
+  },
+  "dependencies": {
+    "next": "^16.4.0",
+    "react": "^19.3.0",
+    "react-dom": "^19.3.0",
+    "recharts": "^3.10.1",
+    "zod": "^4.6.5"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4.3.3",
+    "@types/node": "^26.6.4",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "eslint": "^9.39.5",
+    "eslint-config-next": "^16.4.0",
+    "postcss": "^8.5.29",
+    "tailwindcss": "^4.3.3",
+    "tsx": "^4.23.15",
+    "typescript": "^6.0.3",
+    "vitest": "^5.0.3"
+  }
+}

@@ -1,0 +1,540 @@
+{
+ "id": "ironclad",
+ "name": "Ironclad Steel Products",
+ "ticker": "ICSP",
+ "dataClass": "demo",
+ "termsLabel": "DEMO INVESTMENT TERMS",
+ "caseTitle": null,
+ "description": "Mini-mill producer of specialty bar and plate steel with cyclical end markets.",
+ "asOf": "2026-03-31",
+ "fyEndMonth": 12,
+ "baseYear": 2025,
+ "baseLabel": "FY2025A",
+ "periodLabels": [
+  "FY2026E",
+  "FY2027E",
+  "FY2028E",
+  "FY2029E",
+  "FY2030E"
+ ],
+ "sofr": [
+  0.0425,
+  0.04,
+  0.0375,
+  0.0375,
+  0.0375
+ ],
+ "taxRate": 0.25,
+ "minCash": 0,
+ "sweepPct": 1,
+ "adminPct": 0.04,
+ "accruedMonths": 3,
+ "resolutionLag": 1,
+ "deficiencyRank": 99,
+ "cash": 210,
+ "assetBase": 2400,
+ "assetComponents": null,
+ "assetCapRate": null,
+ "assetValueBasis": "Illustrative appraised / collateral value (DEMO)",
+ "evMultiple": 6,
+ "industryFactor": 0.45,
+ "tranches": [
+  {
+   "id": "abl",
+   "name": "ABL Revolver",
+   "kind": "revolver",
+   "seniority": 1,
+   "secured": true,
+   "principal": 0,
+   "commitment": 400,
+   "rate": 0.065,
+   "spread": 0.0225,
+   "floor": 0,
+   "pik": 0,
+   "floating": true,
+   "maturityDate": "2029-04-30",
+   "amortPct": 0,
+   "prepay": true,
+   "collateralPct": 0,
+   "price": 100,
+   "collateral": "",
+   "callProtection": ""
+  },
+  {
+   "id": "sec",
+   "name": "Senior Secured Notes 6.90%",
+   "kind": "senior_notes",
+   "seniority": 1,
+   "secured": true,
+   "principal": 600,
+   "commitment": 0,
+   "rate": 0.069,
+   "spread": 0,
+   "floor": 0,
+   "pik": 0,
+   "floating": false,
+   "maturityDate": "2030-04-15",
+   "amortPct": 0,
+   "prepay": false,
+   "collateralPct": 0,
+   "price": 100.5,
+   "collateral": "",
+   "callProtection": ""
+  },
+  {
+   "id": "un",
+   "name": "Senior Unsecured Notes 7.50%",
+   "kind": "unsecured_notes",
+   "seniority": 3,
+   "secured": false,
+   "principal": 400,
+   "commitment": 0,
+   "rate": 0.075,
+   "spread": 0,
+   "floor": 0,
+   "pik": 0,
+   "floating": false,
+   "maturityDate": "2029-08-15",
+   "amortPct": 0,
+   "prepay": false,
+   "collateralPct": 0,
+   "price": 97,
+   "collateral": "",
+   "callProtection": ""
+  }
+ ],
+ "target": {
+  "trancheId": "un",
+  "index": 3,
+  "holdYears": 3,
+  "feePct": 0.005,
+  "face": 100,
+  "payFreq": 1
+ },
+ "assumptions": {
+  "base": {
+   "revenueGrowth": [
+    0.02,
+    0.02,
+    0.02,
+    0.02,
+    0.02
+   ],
+   "grossMargin": [
+    0.2,
+    0.202,
+    0.20400000000000001,
+    0.20600000000000002,
+    0.20800000000000002
+   ],
+   "ebitdaMargin": [
+    0.12,
+    0.122,
+    0.124,
+    0.126,
+    0.128
+   ],
+   "capexPct": 0.05,
+   "nwcPctOfRevChange": 0.15,
+   "nwcExtraOutflowPct": 0,
+   "rateShock": 0,
+   "refiRate": 0.075,
+   "maxRefiNetLeverage": 8.5,
+   "minRefiCoverage": 1.2,
+   "exitMultiple": 6,
+   "exitPrice": 100,
+   "distressMultiple": 4.5,
+   "assetValueDecline": 0,
+   "liquidationRecovery": 0.55,
+   "assetSales": [
+    0,
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "downside": {
+   "revenueGrowth": [
+    -0.08399999999999999,
+    -0.041999999999999996,
+    0.01,
+    0.02,
+    0.02
+   ],
+   "grossMargin": [
+    0.1675,
+    0.1545,
+    0.161,
+    0.1675,
+    0.17400000000000002
+   ],
+   "ebitdaMargin": [
+    0.0875,
+    0.07449999999999998,
+    0.08099999999999999,
+    0.0875,
+    0.094
+   ],
+   "capexPct": 0.0475,
+   "nwcPctOfRevChange": 0.15,
+   "nwcExtraOutflowPct": 0.002,
+   "rateShock": 0.015,
+   "refiRate": 0.1,
+   "maxRefiNetLeverage": 5.5,
+   "minRefiCoverage": 1.8,
+   "exitMultiple": 4.5,
+   "exitPrice": 90,
+   "distressMultiple": 4.5,
+   "assetValueDecline": 0.15,
+   "liquidationRecovery": 0.55,
+   "assetSales": [
+    0,
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "severe": {
+   "revenueGrowth": [
+    -0.252,
+    -0.13999999999999999,
+    -0.027999999999999997,
+    0.01,
+    0.02
+   ],
+   "grossMargin": [
+    0.12200000000000001,
+    0.096,
+    0.109,
+    0.12200000000000001,
+    0.135
+   ],
+   "ebitdaMargin": [
+    0.041999999999999996,
+    0.015999999999999986,
+    0.028999999999999984,
+    0.041999999999999996,
+    0.05499999999999999
+   ],
+   "capexPct": 0.04000000000000001,
+   "nwcPctOfRevChange": 0.15,
+   "nwcExtraOutflowPct": 0.006,
+   "rateShock": 0.03,
+   "refiRate": 0.125,
+   "maxRefiNetLeverage": 5,
+   "minRefiCoverage": 2,
+   "exitMultiple": 3,
+   "exitPrice": 70,
+   "distressMultiple": 4.5,
+   "assetValueDecline": 0.35,
+   "liquidationRecovery": 0.55,
+   "assetSales": [
+    0,
+    0,
+    0,
+    0,
+    0
+   ]
+  }
+ },
+ "probabilities": {
+  "base": 0.55,
+  "downside": 0.3,
+  "severe": 0.15
+ },
+ "thresholds": {
+  "hurdleIrr": 0.12,
+  "minYield": 0.09,
+  "maxNetLeverage": 6,
+  "minRecovery": 0.6,
+  "minCovenantHeadroom": 0.15,
+  "minDownsideIrr": 0
+ },
+ "covenants": [],
+ "openHighDiligence": 6,
+ "historicalSpec": {
+  "mode": "bridge",
+  "columns": [
+   {
+    "id": "FY2022",
+    "label": "FY2022A",
+    "kind": "fy",
+    "year": 2022
+   },
+   {
+    "id": "FY2023",
+    "label": "FY2023A",
+    "kind": "fy",
+    "year": 2023
+   },
+   {
+    "id": "FY2024",
+    "label": "FY2024A",
+    "kind": "fy",
+    "year": 2024
+   },
+   {
+    "id": "FY2025",
+    "label": "FY2025A",
+    "kind": "fy",
+    "year": 2025
+   }
+  ],
+  "inputs": [
+   {
+    "key": "revenue",
+    "label": "Revenue",
+    "group": "income",
+    "values": {
+     "FY2022": 3250,
+     "FY2023": 3500,
+     "FY2024": 3350,
+     "FY2025": 3200
+    }
+   },
+   {
+    "key": "cogs",
+    "label": "COGS",
+    "group": "income",
+    "values": {
+     "FY2022": 2535,
+     "FY2023": 2765,
+     "FY2024": 2663.2499999999995,
+     "FY2025": 2560
+    }
+   },
+   {
+    "key": "opex",
+    "label": "Operating expenses (cash, ex-D&A)",
+    "group": "income",
+    "values": {
+     "FY2022": 259.99999999999994,
+     "FY2023": 280,
+     "FY2024": 268.00000000000045,
+     "FY2025": 256
+    }
+   },
+   {
+    "key": "da",
+    "label": "Depreciation & amortization",
+    "group": "income",
+    "values": {
+     "FY2022": 130,
+     "FY2023": 140,
+     "FY2024": 134,
+     "FY2025": 128
+    }
+   },
+   {
+    "key": "interest",
+    "label": "Interest expense",
+    "group": "income",
+    "values": {
+     "FY2022": 60.690000000000005,
+     "FY2023": 64.26,
+     "FY2024": 67.83,
+     "FY2025": 71.4
+    }
+   },
+   {
+    "key": "taxes",
+    "label": "Taxes",
+    "group": "income",
+    "values": {
+     "FY2022": 66.07750000000001,
+     "FY2023": 62.685,
+     "FY2024": 54.230000000000004,
+     "FY2025": 46.15
+    }
+   },
+   {
+    "key": "capex",
+    "label": "Capex",
+    "group": "cash",
+    "values": {
+     "FY2022": 162.5,
+     "FY2023": 175,
+     "FY2024": 167.5,
+     "FY2025": 160
+    }
+   },
+   {
+    "key": "dnwc",
+    "label": "Increase in working capital",
+    "group": "cash",
+    "values": {
+     "FY2022": 9.558823529411802,
+     "FY2023": 37.5,
+     "FY2024": -22.5,
+     "FY2025": -22.5
+    }
+   }
+  ],
+  "lines": {
+   "revenue": [
+    [
+     "revenue",
+     1
+    ]
+   ],
+   "cogs": [
+    [
+     "cogs",
+     1
+    ]
+   ],
+   "opexAdj": [
+    [
+     "opex",
+     1
+    ]
+   ],
+   "da": [
+    [
+     "da",
+     1
+    ]
+   ],
+   "sbc": [],
+   "interest": [
+    [
+     "interest",
+     1
+    ]
+   ],
+   "taxes": [
+    [
+     "taxes",
+     1
+    ]
+   ],
+   "capex": [
+    [
+     "capex",
+     1
+    ]
+   ],
+   "dnwc": [
+    [
+     "dnwc",
+     1
+    ]
+   ]
+  }
+ },
+ "sources": [
+  {
+   "id": "ironclad-fin",
+   "source": "CreditIQ demo dataset",
+   "document": "Ironclad Steel Products — illustrative financial statements FY2022–FY2025",
+   "documentDate": "2026-03-31",
+   "retrievedDate": "2026-03-31",
+   "dataType": "Income statement / cash flow",
+   "period": "FY2022–FY2025",
+   "isDemo": true
+  },
+  {
+   "id": "ironclad-debt",
+   "source": "CreditIQ demo dataset",
+   "document": "Ironclad Steel Products — illustrative capital structure & covenants",
+   "documentDate": "2026-03-31",
+   "retrievedDate": "2026-03-31",
+   "dataType": "Debt schedule",
+   "period": "As of 2026-03-31",
+   "isDemo": true
+  },
+  {
+   "id": "ironclad-px",
+   "source": "CreditIQ demo dataset",
+   "document": "Illustrative indicative bid marks (% of par)",
+   "documentDate": "2026-03-31",
+   "retrievedDate": "2026-03-31",
+   "dataType": "Market price",
+   "period": "2026-03-31",
+   "isDemo": true
+  }
+ ],
+ "provenance": [],
+ "notes": [
+  "All figures are fictional and illustrative."
+ ],
+ "thesis": "Low leverage today, but steel is the most cyclical name on our list. Unsecured notes at 97 pay a fair coupon; we want to see what the severe case does to secured-vs-unsecured recovery before sizing.",
+ "config": {
+  "scoreWeights": {
+   "leverage": 15,
+   "coverage": 15,
+   "liquidity": 10,
+   "fcf": 10,
+   "maturity": 10,
+   "marginStability": 10,
+   "revenueStability": 8,
+   "assetCoverage": 12,
+   "industry": 10
+  },
+  "scoreThresholds": {
+   "leverage": {
+    "best": 2,
+    "worst": 7,
+    "unit": "x net debt / EBITDA"
+   },
+   "coverage": {
+    "best": 5,
+    "worst": 1,
+    "unit": "x EBITDA / interest"
+   },
+   "liquidity": {
+    "best": 2,
+    "worst": 0.5,
+    "unit": "x liquidity / 12m obligations"
+   },
+   "fcf": {
+    "best": 0.12,
+    "worst": -0.02,
+    "unit": "FCF / total debt"
+   },
+   "maturity": {
+    "best": 0,
+    "worst": 0.5,
+    "unit": "% of debt due within window"
+   },
+   "marginStability": {
+    "best": 0.01,
+    "worst": 0.05,
+    "unit": "std-dev of EBITDA margin (pts)"
+   },
+   "revenueStability": {
+    "best": 0.03,
+    "worst": 0.15,
+    "unit": "std-dev of revenue growth"
+   },
+   "assetCoverage": {
+    "best": 2,
+    "worst": 0.6,
+    "unit": "x asset base / total debt"
+   }
+  },
+  "riskBands": [
+   {
+    "min": 75,
+    "label": "Low"
+   },
+   {
+    "min": 60,
+    "label": "Moderate"
+   },
+   {
+    "min": 45,
+    "label": "Elevated"
+   },
+   {
+    "min": 0,
+    "label": "High"
+   }
+  ],
+  "scoreWindow": 3,
+  "maturityMaterial": 0.15,
+  "maturityWindow": 3
+ }
+}
