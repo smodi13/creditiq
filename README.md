@@ -4,6 +4,8 @@
 
 > **Independent research project.** It is not a Fortress (or any firm's) product, was not used by anyone, and does not reproduce any firm's process. All investment terms in the real-company cases — purchase prices, the BDN loan, collateral pool, cap rate, scenarios, probabilities — are **hypothetical analyst assumptions**. Nothing here is a market quote, a real transaction or investment advice.
 
+**Live app:** https://creditiq-eta.vercel.app (public; SEC lookup is disabled there because `SEC_USER_AGENT` is not set).
+
 ## What it models
 Underwriting a position in a company's debt, in the order an analyst would: **assumptions → financial statements → cash flow → debt schedule → credit metrics → covenants → refinancing → default → recovery waterfall → returns → recommendation**, under Base / Downside / Severe scenarios. It answers: *what are we paid, what do we get back if it goes wrong, and is that enough?*
 
